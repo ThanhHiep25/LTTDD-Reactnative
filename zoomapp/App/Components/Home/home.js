@@ -3,54 +3,37 @@ import React from "react";
 const HomeScreens = () => {
   return (
     <View style={styles.container}>
-      <View>
-        <Image
-          source={require("./../../../assets/Zoomlogo.png")}
-          style={styles.logo}
-        ></Image>
-      </View>
-
+       <Image
+        source={require("./../../../assets/Zoomlogo.png")}
+        style={styles.logo}
+      ></Image>
       <Text style={styles.text}>Bắt đầu cuộc họp</Text>
       <Text style={styles.tittle1}>
-        Bắt đầy hoặc tham gia một cuộc họp video đang diễn ra
+        Bắt đầu hoặc tham gia một cuộc họp video đang diễn ra
       </Text>
       <Image
         source={require("./../../../assets/Monitor.png")}
         style={styles.imgMonitor}
       ></Image>
-      <div style={styles.imggroup}>
-        <Image
-          source={require("./../../../assets/Monitor.png")}
-          style={styles.imgMonitor}
-          
-        ></Image>
-        <Image
-          source={require("./../../../assets/Monitor.png")}
-          style={styles.imgMonitor}
-        ></Image>
-      </div>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    flex: 1,
-    justifyContent: "center",
     alignItems: "center",
   },
   logo: {
-    width: 220,
+    width: 200,
     height: 50,
-    margin: 20,
+    marginTop: 30,
   },
   text: {
     color: "rgba(0, 0, 0, 1)",
     fontStyle: "normal",
     fontWeight: "700",
     fontSize: "34px",
-    marginTop: 50,
+    marginTop: 10,
   },
   tittle1: {
     fontSize: "16px",

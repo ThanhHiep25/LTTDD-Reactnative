@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "zoom-app",
-    "slug": "zoom-app",
+    "name": "zoomapp",
+    "slug": "zoomapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
