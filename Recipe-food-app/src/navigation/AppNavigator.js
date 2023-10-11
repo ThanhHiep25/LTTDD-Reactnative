@@ -9,8 +9,12 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-       
+      <Stack.Navigator screenOptions={{ headerShown: true }}>
+        <Stack.Screen
+          name="welcome"
+          component={WelcomeScreen}
+          options={{ title: "Welcome" }}
+        />
         <Stack.Screen
           name="name"
           component={NameScreen}
@@ -24,8 +28,3 @@ const AppNavigator = () => {
 const styles = StyleSheet.create({});
 
 export default AppNavigator;
-//<Stack.Screen
-   //       name="welcome"
-    //      component={WelcomeScreen}
-    //      options={{ title: "Welcome" }}
-// />

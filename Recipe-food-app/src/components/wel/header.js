@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent:'center',
     alignItems:'center',
+    marginTop:40,
   },
   imgSald: {
     width: 400,
