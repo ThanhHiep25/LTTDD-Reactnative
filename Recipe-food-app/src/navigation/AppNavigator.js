@@ -4,18 +4,19 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WelcomeScreen from "../screens/welcome";
 import NameScreen from "../screens/name";
+import DmBanh from "../screens/dmBanh"
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-       
-        <Stack.Screen
-          name="name"
-          component={NameScreen}
-          options={{ title: "NameScreen" }}
-        />
+      <Stack.Screen
+         name="dmBanh"
+         component={DmBanh}
+         options={{ title: "DanhMucBanh" }}
+      />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -29,3 +30,9 @@ export default AppNavigator;
     //      component={WelcomeScreen}
     //      options={{ title: "Welcome" }}
 // />
+
+{/* <Stack.Screen
+          name="name"
+          component={NameScreen}
+          options={{ title: "NameScreen" }}
+        /> */}
