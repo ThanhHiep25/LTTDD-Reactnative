@@ -10,6 +10,7 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
+
       <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
          name="dmBanh"
@@ -17,6 +18,19 @@ const AppNavigator = () => {
          options={{ title: "DanhMucBanh" }}
       />
         
+
+      {/* <Stack.Navigator screenOptions={{ headerShown: true }}> */}
+        <Stack.Screen
+          name="welcome"
+          component={WelcomeScreen}
+          options={{ title: "Welcome" }}
+        />
+        <Stack.Screen
+          name="name"
+          component={NameScreen}
+          options={{ title: "NameScreen" }}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -25,14 +39,5 @@ const AppNavigator = () => {
 const styles = StyleSheet.create({});
 
 export default AppNavigator;
-//<Stack.Screen
-   //       name="welcome"
-    //      component={WelcomeScreen}
-    //      options={{ title: "Welcome" }}
-// />
 
-{/* <Stack.Screen
-          name="name"
-          component={NameScreen}
-          options={{ title: "NameScreen" }}
-        /> */}
+

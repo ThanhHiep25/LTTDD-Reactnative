@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
   tittle: {
-    fontFamily: "Sansita-Regular",
     fontSize: 20,
     fontWeight: 400,
     paddingTop: 20,
@@ -41,16 +40,16 @@ const styles = StyleSheet.create({
   },
   textH: {
     fontSize: 24,
-    fontFamily: "Segoe UI",
+
     fontWeight: 700,
     marginLeft: 30,
   },
-  textC:{
-    fontSize:16,
-    fontFamily: "Segoe UI",
+  textC: {
+    fontSize: 16,
+
     marginLeft: 20,
-    padding:10,
-  }
+    padding: 10,
+  },
 });
 
 export default Main;
