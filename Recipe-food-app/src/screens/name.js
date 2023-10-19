@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "../components/na/hearder";
+import Footer from "../components/na/footer";
 
 const Name = () => {
   return (
@@ -12,6 +13,7 @@ const Name = () => {
     >
       <View style={styles.container}>
         <Header />
+        <Footer/>
       </View>
     </LinearGradient>
   );

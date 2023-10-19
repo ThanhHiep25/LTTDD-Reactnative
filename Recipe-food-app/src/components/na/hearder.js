@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -9,20 +10,16 @@ import {
 } from "react-native";
 
 const HeaderName = () => {
-  var [name, setName] = useState("");
+  const navigation = useNavigation();
   var [email, setEmail] = useState("");
   var [pass, setPass] = useState("");
   var [isVisible, setIsVisible] = useState(false);
   return (
     <View style={styles.container}>
-      <Text style={styles.textTen}>Mời nhập tên của bạn :</Text>
-      <TextInput
-        style={styles.textInTen}
-        onChangeText={(text) => {
-          setName(text);
-        }}
-        value={name}
-      ></TextInput>
+      <Image
+        source={require("../../../assets/IMG/namell/lacai.png")}
+        style={styles.img}
+      ></Image>
       <Text style={styles.textEmail}>Email :</Text>
       <TextInput style={styles.textInEmail}></TextInput>
       <Text
@@ -52,18 +49,22 @@ const HeaderName = () => {
             style={styles.imgEye}
           ></Image>
         </Pressable>
-      </View>{" "}
-      <Image
-        source={require("./../../../assets/IMG/namell/ramen.gif")}
-        style={styles.imgRa}
-      ></Image>
+      </View>
+
+      <Text style={styles.text1}>
+        ** Chúng tôi có thể gửi gợi ý về các công thức nấu ăn của bạn qua email.
+      </Text>
+
+      <Pressable style={styles.Pre} onPress={()=>navigation.navigate('home')}>
+        <Text style={styles.textLogin}>Đăng nhập</Text>
+      </Pressable>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 4,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -114,6 +115,11 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingRight: 50,
   },
+  text1:{
+    fontSize:16,
+    margin:40,
+    textAlign:'center',
+  },
   imgEye: {
     width: 30,
     height: 30,
@@ -121,10 +127,28 @@ const styles = StyleSheet.create({
     marginLeft: -40,
     marginTop: 5,
   },
+  img: {
+    width: 100,
+    height: 100,
+  },
   imgRa: {
     width: 200,
     height: 200,
     margin: 20,
+  },
+  textLogin: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#ffff",
+    textAlign: "center",
+  },
+  Pre: {
+    margin: 40,
+    backgroundColor: "#9ED2BE",
+    height: 50,
+    width: 230,
+    borderRadius: 20,
+    padding: 10,
   },
 });
 
