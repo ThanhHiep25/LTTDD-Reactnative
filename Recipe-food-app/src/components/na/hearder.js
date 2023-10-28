@@ -8,12 +8,22 @@ import {
   Image,
   TextInput,
 } from "react-native";
+import User from "../../../datauser";
 
 const HeaderName = () => {
   const navigation = useNavigation();
-  var [email, setEmail] = useState("");
-  var [pass, setPass] = useState("");
-  var [isVisible, setIsVisible] = useState(false);
+  const [name, setName] = useState();
+  const [pass, setPass] = useState();
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleCheck = () => {
+    const user = User.find((user) => user.email == name && user.pass == pass);
+    if (user) {
+      navigation.navigate("home");
+    } else {
+      alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
+    }
+  };
   return (
     <View style={styles.container}>
       <Image
@@ -21,16 +31,14 @@ const HeaderName = () => {
         style={styles.img}
       ></Image>
       <Text style={styles.textEmail}>Email :</Text>
-      <TextInput style={styles.textInEmail}></TextInput>
-      <Text
-        style={styles.texPass}
+      <TextInput
+        style={styles.textInEmail}
+        value={name}
         onChangeText={(text) => {
-          setEmail(text);
+          setName(text);
         }}
-        value={email}
-      >
-        Mật khẩu
-      </Text>
+      ></TextInput>
+      <Text style={styles.texPass}>Mật khẩu</Text>
       <View style={styles.group1}>
         <TextInput
           style={[
@@ -39,8 +47,8 @@ const HeaderName = () => {
               secureTextEntry: true,
             },
           ]}
-          onChangeText={(text) => setPass(text)}
           value={pass}
+          onChangeText={(text) => setPass(text)}
           secureTextEntry={true}
         ></TextInput>
         <Pressable onPress={() => setIsVisible(!isVisible)}>
@@ -55,7 +63,7 @@ const HeaderName = () => {
         ** Chúng tôi có thể gửi gợi ý về các công thức nấu ăn của bạn qua email.
       </Text>
 
-      <Pressable style={styles.Pre} onPress={()=>navigation.navigate('home')}>
+      <Pressable style={styles.Pre} onPress={() => handleCheck()}>
         <Text style={styles.textLogin}>Đăng nhập</Text>
       </Pressable>
     </View>
@@ -115,10 +123,10 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingRight: 50,
   },
-  text1:{
-    fontSize:16,
-    margin:40,
-    textAlign:'center',
+  text1: {
+    fontSize: 16,
+    margin: 40,
+    textAlign: "center",
   },
   imgEye: {
     width: 30,

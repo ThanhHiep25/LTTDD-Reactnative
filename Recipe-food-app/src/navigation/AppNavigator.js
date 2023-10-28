@@ -7,30 +7,19 @@ import NameScreen from "../screens/name";
 import DmBanh from "../screens/dmBanh";
 import Home from "../screens/homeScreen";
 
-const AppNavigat = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="welcome" component={WelcomeScreen} />
-        <Stack.Screen name="name" component={NameScreen} />
-        <Stack.Screen name="dmBanh" component={DmBanh} />
-        <Stack.Screen name="home" component={Home} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
-
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+      
         <Stack.Screen name="home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-
+<Stack.Screen name="welcome" component={WelcomeScreen} />
 const styles = StyleSheet.create({});
-
+  
+        <Stack.Screen name="name" component={NameScreen} />
 export default AppNavigator;
