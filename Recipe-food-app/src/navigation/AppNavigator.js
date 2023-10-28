@@ -12,7 +12,6 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-      
         <Stack.Screen name="home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -20,6 +19,6 @@ const AppNavigator = () => {
 };
 <Stack.Screen name="welcome" component={WelcomeScreen} />
 const styles = StyleSheet.create({});
-  
-        <Stack.Screen name="name" component={NameScreen} />
+
+<Stack.Screen name="name" component={NameScreen} />
 export default AppNavigator;
