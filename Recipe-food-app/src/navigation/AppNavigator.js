@@ -6,13 +6,14 @@ import WelcomeScreen from "../screens/welcome";
 import NameScreen from "../screens/name";
 import DmBanh from "../screens/dmBanh";
 import Home from "../screens/homeScreen";
+import Setting from "../screens/setting";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="home" component={Home} />
+      <Stack.Screen name="setting" component={Setting} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -22,3 +23,4 @@ const styles = StyleSheet.create({});
 
 <Stack.Screen name="name" component={NameScreen} />
 export default AppNavigator;
+  <Stack.Screen name="home" component={Home} />

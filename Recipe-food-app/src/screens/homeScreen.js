@@ -238,13 +238,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#EDE389",
     padding: 10,
     borderRadius: 15,
-    shadowColor: "#000000",
-    shadowOffset: {
-      width: 3,
-      height: 3,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
+  
   },
   Pre1: {
     alignItems: "center",
