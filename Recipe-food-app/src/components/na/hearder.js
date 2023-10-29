@@ -19,7 +19,7 @@ const HeaderName = () => {
   const handleCheck = () => {
     const user = User.find((user) => user.email == name && user.pass == pass);
     if (user) {
-      navigation.navigate("home");
+      navigation.navigate("home", user);
     } else {
       alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
     }

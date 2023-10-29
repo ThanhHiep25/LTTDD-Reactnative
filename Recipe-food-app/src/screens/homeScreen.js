@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FlatList,
   Image,
@@ -11,12 +11,26 @@ import {
 } from "react-native";
 import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
+import { useRoute } from "@react-navigation/native";
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const route = useRoute();
+  const user = route.params;
+  const [search, setSearch] = useState("");
+  const [selected, setSelected] = useState([]);
+
+  const onDeletePress = (index) => {
+    setSelected(selected.slice(index, -1));
+    setSearch("");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.view}>
-        <Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("setting");
+          }}
+        >
           <Image
             source={require("../../assets/IMG/home/setting.png")}
             style={styles.img}
@@ -32,7 +46,7 @@ const Home = () => {
       </View>
 
       <View style={styles.view1}>
-        <Text style={styles.text}>Chào mừng, Hiệp</Text>
+        <Text style={styles.text}>Chào mừng,</Text>
         <Text style={styles.text1}>Nay chúng ta bắt đầu nấu gì đây !!</Text>
       </View>
 
@@ -40,13 +54,46 @@ const Home = () => {
         <TextInput
           style={styles.textIn}
           placeholder="Search Recipe Food"
+          value={search}
+          onChangeText={(text) => {
+            setSearch(text);
+          }}
         ></TextInput>
-        <Pressable>
+        <Pressable
+          onPress={() => {
+            const dataSearch = datahome.filter((item) => {
+              return item.type == search;
+            });
+            setSelected(dataSearch);
+          }}
+        >
           <Image
             source={require("../../assets/IMG/home/search.png")}
             style={styles.imgSe}
           />
         </Pressable>
+      </View>
+
+      <View style={styles.view2}>
+        <FlatList
+          data={selected}
+          horizontal={true}
+          scrollToOverflowEnabled={true}
+          renderItem={({ item }) => (
+            <View style={styles.view3}>
+              <View style={styles.PreSe}>
+                <Text style={styles.textPreSe}>{item.name}</Text>
+                <Pressable onPress={onDeletePress}>
+                  <Image
+                    source={require("../../assets/IMG/setting/delete1.png")}
+                    style={styles.imgDelete}
+                  />
+                </Pressable>
+              </View>
+            </View>
+          )}
+          keyExtractor={(item) => item.id}
+        />
       </View>
 
       <View style={styles.view2}>
@@ -168,6 +215,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 100,
     resizeMode: "contain",
+    borderRadius: 15,
   },
   img4: {
     width: 50,
@@ -180,6 +228,11 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     marginLeft: 20,
     borderRadius: 5,
+  },
+  imgDelete: {
+    width: 20,
+    height: 20,
+    resizeMode: "contain",
   },
   text: {
     fontSize: 30,
@@ -238,7 +291,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#EDE389",
     padding: 10,
     borderRadius: 15,
-  
   },
   Pre1: {
     alignItems: "center",
@@ -248,6 +300,29 @@ const styles = StyleSheet.create({
     marginTop: 20,
     padding: 3,
     borderRadius: 20,
+  },
+  PreSe: {
+    width: "auto",
+    height: 50,
+    marginTop: 5,
+    padding: 10,
+    alignItems: "center",
+    flexDirection: "row",
+    borderRadius: 10,
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    backgroundColor: "#b3b1b17d",
+  },
+  textPreSe: {
+    color: "#eeebebf",
+    fontSize: 16,
+    fontWeight: 700,
+    marginRight: 20,
   },
 });
 

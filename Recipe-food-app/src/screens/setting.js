@@ -12,7 +12,7 @@ const Setting = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.view}>
-        <Pressable>
+        <Pressable onPress={()=> {navigation.goBack()}}>
           <Image
             source={require("../../assets/IMG/setting/Groupback.png")}
             style={styles.back}
