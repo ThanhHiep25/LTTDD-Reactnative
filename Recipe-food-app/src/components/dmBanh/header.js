@@ -1,13 +1,19 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
-const header = () => {
+import { StyleSheet, View, Text, Image, Pressable } from "react-native";
+const header = ({ navigation }) => {
   return (
     <View style={style.container}>
       <View style={style.container1}>
-        <Image
-          source={require("./../../../assets/IMG/dmBanh/back.png")}
-          style={style.backLogo}
-        ></Image>
+        <Pressable
+          onPress={() => {
+            navigation.navigate('home');
+          }}
+        >
+          <Image
+            source={require("./../../../assets/IMG/dmBanh/back.png")}
+            style={style.backLogo}
+          ></Image>
+        </Pressable>
       </View>
       <View style={style.container2}>
         <Image
@@ -24,7 +30,6 @@ const style = StyleSheet.create({
   container: {
     display: "flex",
     flex: "1",
-   
   },
   container1: {
     marginTop: "50px",
