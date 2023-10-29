@@ -10,19 +10,25 @@ import {
   View,
 } from "react-native";
 import datahome from "../../datahome";
+import dataDanhMuc from "../../dataDanhmuc";
 
 const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.view}>
-        <Image
-          source={require("../../assets/IMG/home/setting.png")}
-          style={styles.img}
-        ></Image>
-        <Image
-          source={require("../../assets/IMG/home/User.png")}
-          style={styles.img1}
-        />
+        <Pressable>
+          <Image
+            source={require("../../assets/IMG/home/setting.png")}
+            style={styles.img}
+          ></Image>
+        </Pressable>
+
+        <Pressable>
+          <Image
+            source={require("../../assets/IMG/home/User.png")}
+            style={styles.img1}
+          />
+        </Pressable>
       </View>
 
       <View style={styles.view1}>
@@ -55,7 +61,7 @@ const Home = () => {
                 <View style={styles.view3_1}>
                   <Image source={item.img} style={styles.img3} />
                 </View>{" "}
-                <Text style={styles.textPre}>{item.name}</Text>
+                <Text style={styles.textPre}>{item.name} :</Text>
                 <ScrollView showsVerticalScrollIndicator={false}>
                   <Text style={styles.textPre1}>{item.des}</Text>
                 </ScrollView>
@@ -76,7 +82,17 @@ const Home = () => {
         </View>
         <View style={styles.view4_2}>
           <View style={styles.view4_2_1}>
-            <View style={styles.view4_2_1_1}></View>
+            <FlatList
+              data={dataDanhMuc}
+              numColumns={4}
+              renderItem={({ item }) => (
+                <Pressable style={styles.Pre1}>
+                  <Image source={item.imgLocal} style={styles.img4} />
+                  <Text style={styles.textPre2}>{item.name}</Text>
+                </Pressable>
+              )}
+              keyExtractor={(item) => item.id}
+            />
           </View>
         </View>
       </View>
@@ -127,13 +143,16 @@ const styles = StyleSheet.create({
   },
   view4_2_1: {
     height: 300,
-    width: 380,
+    width: "auto",
     backgroundColor: "#EBFADD",
     borderRadius: 20,
-  },
-  view4_2_1_1: {
-    flexDirection: "row",
-    justifyContent: "space-around",
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
   },
   img: {
     width: 30,
@@ -148,6 +167,11 @@ const styles = StyleSheet.create({
   img3: {
     width: 150,
     height: 100,
+    resizeMode: "contain",
+  },
+  img4: {
+    width: 50,
+    height: 50,
     resizeMode: "contain",
   },
   imgSe: {
@@ -178,11 +202,19 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 700,
     marginTop: 5,
+    height: 100,
   },
   textPre1: {
     fontSize: 16,
     textAlign: "justify",
     marginTop: 10,
+  },
+  textPre2: {
+    fontSize: 16,
+    textAlign: "center",
+    marginTop: 10,
+    fontWeight: "bold",
+    color: "#969696ca",
   },
   text3: {
     fontSize: 20,
@@ -206,6 +238,22 @@ const styles = StyleSheet.create({
     backgroundColor: "#EDE389",
     padding: 10,
     borderRadius: 15,
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+  },
+  Pre1: {
+    alignItems: "center",
+    width: 75,
+    height: 120,
+    margin: 10,
+    marginTop: 20,
+    padding: 3,
+    borderRadius: 20,
   },
 });
 
