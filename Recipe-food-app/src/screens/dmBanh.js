@@ -3,7 +3,7 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import Header from "../components/dmBanh/header";
 import Main from "../components/dmBanh/main";
 import { LinearGradient } from "expo-linear-gradient";
-const dmBanh = () => {
+const dmBanh = ({navigation}) => {
   return (
     <LinearGradient
       colors={["#FADB8A", "#FBE6AF", "#FCEFCD", "#FDF3DA"]}

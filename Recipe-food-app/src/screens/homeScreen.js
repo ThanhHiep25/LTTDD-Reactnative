@@ -133,7 +133,12 @@ const Home = ({ navigation }) => {
               data={dataDanhMuc}
               numColumns={4}
               renderItem={({ item }) => (
-                <Pressable style={styles.Pre1}>
+                <Pressable style={styles.Pre1}
+                  onPress={()=>{
+                    if(item.id==1)
+                    navigation.navigate('dmbanh')
+                  }}
+                  >
                   <Image source={item.imgLocal} style={styles.img4} />
                   <Text style={styles.textPre2}>{item.name}</Text>
                 </Pressable>
