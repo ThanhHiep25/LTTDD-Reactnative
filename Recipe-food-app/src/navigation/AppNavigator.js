@@ -7,21 +7,31 @@ import NameScreen from "../screens/name";
 import DmBanh from "../screens/dmBanh";
 import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
+import Thongtincanhan from "../screens/Thongtincanhan";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-       
-     
-        <Stack.Screen name="home" component={Home} />
-        <Stack.Screen name="setting" component={Setting} />
+        <Stack.Screen name="thongtin" component={Thongtincanhan}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
- <Stack.Screen name="welcome" component={WelcomeScreen} />
+
 const styles = StyleSheet.create({});
-   <Stack.Screen name="name" component={NameScreen} />
+<Stack.Screen name="welcome" component={WelcomeScreen} />;
+{
+  ("")
+}
+<Stack.Screen name="name" component={NameScreen} />;
+{
+  ("")
+}
+<Stack.Screen name="home" component={Home} />
+{
+  ("")
+}
+        <Stack.Screen name="setting" component={Setting} />
 export default AppNavigator;

@@ -5,6 +5,7 @@ const User = [
     email: "abc",
     title: "Good ",
     pass: "1",
+    imgUser: require("./assets/IMG/home/User.png"),
   },
   {
     id: 2,
