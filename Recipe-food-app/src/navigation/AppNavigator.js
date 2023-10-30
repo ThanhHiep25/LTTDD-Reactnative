@@ -15,12 +15,15 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
+       
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-
+      
+      <Stack.Screen name="home" component={Home} />
+      <Stack.Screen name="dmbanh" component={dmBanh} />
         <Stack.Screen name="thongtin" component={Thongtincanhan}/>
 
-        <Stack.Screen name="home" component={Home} />
-        <Stack.Screen name="dmbanh" component={dmBanh} />
+        
+       
 
         <Stack.Screen name="setting" component={Setting} />
 
