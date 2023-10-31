@@ -11,7 +11,7 @@ const dmBanh = ({navigation}) => {
     >
       <View style={style.container}>
         <ScrollView style={style.container}>
-          <Header></Header>
+        
           <Main />
         </ScrollView>
       </View>

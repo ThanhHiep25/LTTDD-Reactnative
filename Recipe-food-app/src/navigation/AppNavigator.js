@@ -14,9 +14,12 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
+       
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="thongtin" component={Thongtincanhan} />
-    
+
+        <Stack.Screen name="thongtin" component={Thongtincanhan}/>
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
