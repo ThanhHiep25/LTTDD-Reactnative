@@ -9,43 +9,56 @@ import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
 import Thongtincanhan from "../screens/Thongtincanhan";
 import dmBanh from "../screens/dmBanh";
+import Lauca from "../screens/Lau/Lauca";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-       
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="lauca" component={Lauca} />
 
-        <Stack.Screen name="thongtin" component={Thongtincanhan}/>
+        <Stack.Screen name="welcome" component={WelcomeScreen} />
+        <Stack.Screen name="name" component={NameScreen} />
+        <Stack.Screen name="home" component={Home} />
 
+        <Stack.Screen name="setting" component={Setting} />
+        <Stack.Screen name="dmbanh" component={dmBanh} />
 
+        <Stack.Screen name="thongtin" component={Thongtincanhan} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
- <Stack.Screen name="setting" component={Setting} />
 {
   ("");
 }
-<Stack.Screen name="name" component={NameScreen} />
+
 {
   ("");
 }
-<Stack.Screen name="home" component={Home} />
+
 {
   ("");
 }
-<Stack.Screen name="setting" component={Setting} />
-{
-  ("");
-} <Stack.Screen name="dmbanh" component={dmBanh} />
+
 {
   ("");
 }
-<Stack.Screen name="welcome" component={WelcomeScreen} />
+
+{
+  ("");
+}
+
+{
+  ("");
+}
+
+{
+  ("");
+}
+
 const styles = StyleSheet.create({});
-<Stack.Screen name="name" component={NameScreen} />
 
 export default AppNavigator;
