@@ -1,3 +1,4 @@
+import { useRoute } from "@react-navigation/native";
 import React from "react";
 import {
   StyleSheet,
@@ -9,6 +10,8 @@ import {
 } from "react-native";
 
 const Setting = ({navigation}) => {
+  const route = useRoute();
+  const user = route.params; 
   return (
     <View style={styles.container}>
       <View style={styles.view}>
@@ -21,7 +24,7 @@ const Setting = ({navigation}) => {
       </View>
 
       <View style={styles.view1}>
-        <Pressable style={styles.Pre}>
+        <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('thongtin',user)}}>
           <Text style={styles.textPre}>Thông tin cá nhân</Text>
           <Image
             source={require("../../assets/IMG/setting/thongtin.gif")}

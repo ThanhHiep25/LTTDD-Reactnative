@@ -1,12 +1,15 @@
+import { useRoute } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, Text, Image, Pressable } from "react-native";
 
 const Thongtincanhan = () => {
+  const route = useRoute();
+  const user = route.params; 
   return (
     <View style={styles.contrainer}>
       <View style={styles.view}>
         <Image style={styles.img} />
-        <Text style={styles.text}>Name ot Name</Text>
+        <Text style={styles.text}>{user.name}</Text>
       </View>
 
       <View style={styles.view1}>
