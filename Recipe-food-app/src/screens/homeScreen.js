@@ -28,7 +28,7 @@ const Home = ({ navigation }) => {
       <View style={styles.view}>
         <Pressable
           onPress={() => {
-            navigation.navigate("setting");
+            navigation.navigate("setting", user);
           }}
         >
           <Image

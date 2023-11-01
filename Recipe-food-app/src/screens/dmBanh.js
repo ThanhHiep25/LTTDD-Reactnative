@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
-import Header from "../components/dmBanh/header";
 import Main from "../components/dmBanh/main";
 import { LinearGradient } from "expo-linear-gradient";
 const dmBanh = ({navigation}) => {
