@@ -104,7 +104,7 @@ const Home = ({ navigation }) => {
           scrollToOverflowEnabled={true}
           renderItem={({ item }) => (
             <View style={styles.view3}>
-              <Pressable style={styles.Pre}>
+              <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('gdct', item)}}>
                 <View style={styles.view3_1}>
                   <Image source={item.img} style={styles.img3} />
                 </View>{" "}
