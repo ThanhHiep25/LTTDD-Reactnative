@@ -9,18 +9,17 @@ import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
 import Thongtincanhan from "../screens/Thongtincanhan";
 import dmBanh from "../screens/dmBanh";
-import Lauca from "../screens/Lau/Lauca";
+import GD_CT from "../screens/Screen_GDCT/gd_Monan";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="lauca" component={Lauca} />
-
+        <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="gdct" component={GD_CT} />
         <Stack.Screen name="welcome" component={WelcomeScreen} />
         <Stack.Screen name="name" component={NameScreen} />
-        <Stack.Screen name="home" component={Home} />
 
         <Stack.Screen name="setting" component={Setting} />
         <Stack.Screen name="dmbanh" component={dmBanh} />
