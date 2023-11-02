@@ -8,10 +8,14 @@ import {
   Text,
   TextInput,
   View,
+  TouchableOpacity,
+  SafeAreaViewComponent,
+  SafeAreaView
 } from "react-native";
 import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
 import { useRoute } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
 
 const Home = ({ navigation }) => {
   const route = useRoute();
@@ -24,7 +28,9 @@ const Home = ({ navigation }) => {
     setSearch("");
   };
   return (
-    <View style={styles.container}>
+   
+    <View style={styles.container}> 
+   
       <View style={styles.view}>
         <Pressable
           onPress={() => {
@@ -103,17 +109,17 @@ const Home = ({ navigation }) => {
           horizontal={true}
           scrollToOverflowEnabled={true}
           renderItem={({ item }) => (
-            <View style={styles.view3}>
+            <SafeAreaView style={styles.view3}>
               <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('gdct', item)}}>
                 <View style={styles.view3_1}>
                   <Image source={item.img} style={styles.img3} />
-                </View>{" "}
+                </View>
                 <Text style={styles.textPre}>{item.name} :</Text>
                 <ScrollView showsVerticalScrollIndicator={false}>
                   <Text style={styles.textPre1}>{item.des}</Text>
                 </ScrollView>
               </Pressable>
-            </View>
+            </SafeAreaView>
           )}
           keyExtractor={(item) => item.id}
         />
@@ -154,7 +160,6 @@ const Home = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#ffff",
   },
   view: {

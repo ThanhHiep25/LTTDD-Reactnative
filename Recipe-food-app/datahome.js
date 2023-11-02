@@ -59,7 +59,7 @@ const datahome = [
       " được ăn kèm với hành lá",
       " rau răm, và các loại topping như quẩy, ruốc,...",
     ],
-    type: "Cháo",
+    type: "Cháo", 
   },
   {
     id: 3,
