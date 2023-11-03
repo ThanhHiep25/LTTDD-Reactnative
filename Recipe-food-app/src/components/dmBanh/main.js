@@ -7,12 +7,14 @@ import {
   Text,
   Image,
   Pressable,
+  FlatList,
+  SafeAreaView,
 } from "react-native";
 
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 
 const Main = () => {
-  const foodIems = [
+  const foodItems = [
     {
       image: require("./../../../assets/IMG/dmBanh/muttinVietQuoc.png"),
       Name: "Bánh muffin việt quất",
@@ -38,7 +40,6 @@ const Main = () => {
       Name: "Bánh su kem Singapo",
       details: "Trứng gà 1 quả\n Bột mì 150 gr\n Sữa tươi không\n . . .",
     },
-   
   ];
   return (
     <View style={style.container}>
@@ -63,21 +64,27 @@ const Main = () => {
           <Text style={style.text}> Làm Bánh</Text>
         </View>
       </View>
-            <View style={style.body}>{foodIems.map((item, index) => (
-        <View
-          style={{
-            ...style.subcontainer,
-            backgroundColor: colors[index % colors.length],
+      <View style={style.body}>
+        <FlatList
+          numColumns={2}
+          data={foodItems}
+          renderItem={({ item, index }) => {
+            return (
+              <SafeAreaView
+                style={{
+                  ...style.fooditem,
+                  backgroundColor: colors[index % colors.length],
+                }}
+              >
+                <Image source={item.image} style={style.images} />
+                <Text style={style.nameFood}>{item.Name}</Text>
+                <Text>Nguyên liệu</Text>
+                <Text style={style.detailsFood}>{item.details}</Text>
+              </SafeAreaView>
+            );
           }}
-          key={index}
-        >
-          <Image source={item.image} style={style.images} />
-          <Text style={style.nameFood}>{item.Name}</Text>
-          <Text>Nguyên liệu</Text>
-          <Text style={style.detailsFood}>{item.details}</Text>
-        </View>
-      ))}</View>
-      
+        />
+      </View>
     </View>
   );
 };
@@ -85,23 +92,18 @@ const style = StyleSheet.create({
   container: {
     display: "flex",
     flex: "1",
-    
-   
   },
   body: {
     display: "flex",
-    flex: "2",
+    flex: "1",
     flexDirection: "row",
     marginHorizontal: 10,
     marginVertical: 5,
-    flexWrap: "wrap",
-
-    justifyContent: "space-between",
+    resizeMode:'contain'
   },
   header: {
     flexDirection: "row",
-    marginBottom:30
-   
+    marginBottom: 30,
   },
 
   images: {
@@ -124,8 +126,8 @@ const style = StyleSheet.create({
   },
   container2: {
     alignItems: "center",
-    marginLeft:'80px',
-    marginTop:80
+    marginLeft: "80px",
+    marginTop: 80,
   },
   text: {
     marginTop: "10px",
@@ -133,8 +135,8 @@ const style = StyleSheet.create({
     fontWeight: "bold",
     fontFamily: "Segoe UI",
   },
-  subcontainer: {
-    margin: "10px",
+  fooditem: {
+    margin: "5px",
     borderColor: "black",
     borderWidth: "2",
     justifyContent: "center",
@@ -142,7 +144,6 @@ const style = StyleSheet.create({
     height: "236px",
     borderRadius: "30px",
     shadowColor: "black",
-
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     alignItems: "center",

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính Tiền Điện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Tính Tiền Điện</h1>
+        <label for="chiSoCu">Số cũ:</label>
+        <input type="number" id="chiSoCu" required><br><br>
+        
+        <label for="chiSoMoi">Số mới:</label>
+        <input type="number" id="chiSoMoi" required><br><br>
+
+
+        <label>Thành tiền:</label>
+        <input type="" id="result" readonly><br><br>
+
+        
+
+
+        <button onclick="tinhTienDien()">Tính</button>
+
+        
+    </div>
+
+    <script>
+        function tinhTienDien() {
+            const chiSoCu = parseFloat(document.getElementById('chiSoCu').value);
+            const chiSoMoi = parseFloat(document.getElementById('chiSoMoi').value);
+            const resultField = document.getElementById('result');
+            const giaDien = [1484, 1533, 1786, 2242, 2503, 2587];
+            const VAT = 0.1;
+
+            resultField.value = '';
+
+            if (chiSoCu > chiSoMoi || chiSoCu < 0 || chiSoMoi < 0) {
+                document.getElementById('result').innerText = "Lỗi: Nhập sai chỉ số.";
+            } else {
+                let soKWh = chiSoMoi - chiSoCu;
+                let tienDien = 0;
+
+                for (let i = 0; i < giaDien.length; i++) {
+                    if (soKWh > 0) {
+                        let soKWhTrongBac = Math.min(soKWh, 50);
+                        tienDien += soKWhTrongBac * giaDien[i];
+                        soKWh -= soKWhTrongBac;
+                    } else {
+                        break;
+                    }
+                }
+
+                tienDien *= (1 + VAT);
+                resultField.value = tienDien;
+            }
+        }
+    </script>
+</body>
+</html>
