@@ -9,65 +9,49 @@ import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
 import Thongtincanhan from "../screens/Thongtincanhan";
 
+import dmBanh from "../screens/dmBanh";
+import GD_CT from "../screens/Screen_GDCT/gd_Monan";
+
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+
+
+
+      <Stack.Navigator screenOptions={{ headerShown: false}}>
+      <Stack.Screen name="dmbanh" component={DmBanh} />
         <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="gdct" component={GD_CT} />
         <Stack.Screen name="welcome" component={WelcomeScreen} />
         <Stack.Screen name="name" component={NameScreen} />
 
 
-        <Stack.Screen name="dmbanh" component={DmBanh} />
+
+        
         <Stack.Screen name="thongtin" component={Thongtincanhan}/>
         
+
+
+
+        <Stack.Screen name="setting" component={Setting} />
+        <Stack.Screen name="thongtin" component={Thongtincanhan} />
 
 
 
 
 
         <Stack.Screen name="thongtin" component={Thongtincanhan} />
+
+        <Stack.Screen name="dmbanh" component={dmBanh} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-{
-  ("");
-}
 
-{
-  ("");
-}
-
-{
-  ("");
-}
-
-<Stack.Screen name="setting" component={Setting} />
-{
-  ("");
-} <Stack.Screen name="dmbanh" component={DmBanh} />
-
-
-{
-  ("");
-}
-
-{
-  ("");
-}
-
-{
-  ("");
-}
-
-{
-  ("");
-}
 
 const styles = StyleSheet.create({});
 

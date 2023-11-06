@@ -12,9 +12,6 @@ import {
   SafeAreaView,
 } from "react-native";
 
-
-
-
 import { LinearGradient } from "expo-linear-gradient";
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 const dmBanh = ({ navigation }) => {
@@ -90,7 +87,9 @@ const dmBanh = ({ navigation }) => {
                       <Text style={style.nameFood}>{item.Name}</Text>
                       <View style={style.nguyenlieu}>
                         <Text style={style.detailsFood}>Nguyên liệu</Text>
-                        <Text style={style.detailsFood&&{marginLeft:20}}>{item.details}</Text>
+                        <Text style={style.detailsFood && { marginLeft: 20 }}>
+                          {item.details}
+                        </Text>
                       </View>
                     </SafeAreaView>
                   );
@@ -160,8 +159,8 @@ const style = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 3.84,
     shadowOffset: {
-      width: 0, 
-      height: 5, 
+      width: 0,
+      height: 5,
     },
     alignItems: "center",
     marginHorizontal: 20,
@@ -174,8 +173,8 @@ const style = StyleSheet.create({
   detailsFood: {
     fontSize: "12px",
   },
-  nguyenlieu:{   
-    width:130
-  }
+  nguyenlieu: {
+    width: 130,
+  },
 });
 export default dmBanh;
