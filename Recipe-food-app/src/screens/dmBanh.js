@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useState } from "react";
 import {
   StyleSheet,
@@ -10,6 +11,9 @@ import {
   FlatList,
   SafeAreaView,
 } from "react-native";
+
+
+
 
 import { LinearGradient } from "expo-linear-gradient";
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];

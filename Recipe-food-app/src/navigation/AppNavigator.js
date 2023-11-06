@@ -14,40 +14,61 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-       
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="gdct" component={GD_CT} />
+        <Stack.Screen name="welcome" component={WelcomeScreen} />
+        <Stack.Screen name="name" component={NameScreen} />
+
 
         <Stack.Screen name="dmbanh" component={DmBanh} />
         <Stack.Screen name="thongtin" component={Thongtincanhan}/>
         
 
 
+
+
+
+        <Stack.Screen name="thongtin" component={Thongtincanhan} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
- <Stack.Screen name="setting" component={Setting} />
 {
   ("");
 }
-<Stack.Screen name="name" component={NameScreen} />
+
 {
   ("");
 }
-<Stack.Screen name="home" component={Home} />
+
 {
   ("");
 }
+
 <Stack.Screen name="setting" component={Setting} />
 {
   ("");
 } <Stack.Screen name="dmbanh" component={DmBanh} />
+
+
 {
   ("");
 }
-<Stack.Screen name="welcome" component={WelcomeScreen} />
+
+{
+  ("");
+}
+
+{
+  ("");
+}
+
+{
+  ("");
+}
+
 const styles = StyleSheet.create({});
-<Stack.Screen name="name" component={NameScreen} />
 
 export default AppNavigator;
