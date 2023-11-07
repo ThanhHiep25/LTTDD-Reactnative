@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FlatList,
   Image,
@@ -10,27 +10,48 @@ import {
   View,
   TouchableOpacity,
   SafeAreaViewComponent,
-  SafeAreaView
+  SafeAreaView,
 } from "react-native";
 import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+import foodIems from "../../dataMonan";
 
 const Home = ({ navigation }) => {
   const route = useRoute();
   const user = route.params;
+
+  var [dsmonan, setDsmonan] = useState([]);
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState([]);
-
+  var dmMonan=(item)=> {
+    if (item.id == 1) setDsmonan(foodIems.Banh);
+    else if (item.id == 2) setDsmonan(foodIems.foodIemsSoup);
+    else if (item.id == 3) setDsmonan(foodIems.nuong);
+    else if (item.id == 4) setDsmonan(foodIems.Lau);
+    else if (item.id == 5) setDsmonan(foodIems.Nuoctraicay);
+    else if (item.id == 6) setDsmonan(foodIems.Anvat);
+    else if (item.id == 7) setDsmonan(foodIems.Salad);
+    else if (item.id == 8) setDsmonan(foodIems.NuocCham);
+    navigation.navigate("dmbanh", {
+      bgcl: item.bgcl,
+      title: item.name,
+      img: item.imgLocal,
+      dsmon: dsmonan,
+    });
+    
+  }
   const onDeletePress = (index) => {
     setSelected(selected.slice(index, -1));
     setSearch("");
   };
+  useEffect(()=>{
+   dmMonan
+  },[])
+ 
   return (
-   
-    <View style={styles.container}> 
-   
+    <View style={styles.container}>
       <View style={styles.view}>
         <Pressable
           onPress={() => {
@@ -110,7 +131,12 @@ const Home = ({ navigation }) => {
           scrollToOverflowEnabled={true}
           renderItem={({ item }) => (
             <SafeAreaView style={styles.view3}>
-              <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('gdct', item)}}>
+              <Pressable
+                style={styles.Pre}
+                onPress={() => {
+                  navigation.navigate("gdct", item);
+                }}
+              >
                 <View style={styles.view3_1}>
                   <Image source={item.img} style={styles.img3} />
                 </View>
@@ -139,12 +165,13 @@ const Home = ({ navigation }) => {
               data={dataDanhMuc}
               numColumns={4}
               renderItem={({ item }) => (
-                <Pressable style={styles.Pre1}
-                  onPress={()=>{
-                    if(item.id==1)
-                    navigation.navigate('dmbanh')
+                <Pressable
+                  style={styles.Pre1}
+                  onPress={() => {
+                    dmMonan(item);
+                   
                   }}
-                  >
+                >
                   <Image source={item.imgLocal} style={styles.img4} />
                   <Text style={styles.textPre2}>{item.name}</Text>
                 </Pressable>
@@ -160,7 +187,8 @@ const Home = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
+
     backgroundColor: "#ffff",
   },
   view: {
