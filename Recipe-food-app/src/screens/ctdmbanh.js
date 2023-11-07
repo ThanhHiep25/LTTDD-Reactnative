@@ -1,20 +1,16 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import Banh from "../components/dmBanh/banh";
-const dmBanh = ({navigation}) => {
+//import Chitietdmbanh from "../components/chitietcacdm/chitietdmbanh";
+import Chitietdmbanh from "../components/chitietcacdm/chitietdmbanh2";
+const ctdmbanh = ({navigation}) => {
   return (
-    <LinearGradient
-      colors={["#FADB8A", "#FBE6AF", "#FCEFCD", "#FDF3DA"]}
-      style={style.container}
-    >
       <View style={style.container}>
         <ScrollView style={style.container}>
         
-          <Banh />
+          <Chitietdmbanh />
         </ScrollView>
       </View>
-    </LinearGradient>
   );
 };
 
@@ -24,4 +20,4 @@ const style = StyleSheet.create({
     flex: "1",
   },
 });
-export default dmBanh;
+export default ctdmbanh;

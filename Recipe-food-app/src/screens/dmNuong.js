@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
+import Nuong from "../components/dmNuong/nuong";
 import { LinearGradient } from "expo-linear-gradient";
-import Banh from "../components/dmBanh/banh";
-const dmBanh = ({navigation}) => {
+const dmNuong = ({navigation}) => {
   return (
     <LinearGradient
       colors={["#FADB8A", "#FBE6AF", "#FCEFCD", "#FDF3DA"]}
@@ -11,7 +11,7 @@ const dmBanh = ({navigation}) => {
       <View style={style.container}>
         <ScrollView style={style.container}>
         
-          <Banh />
+          <Nuong />
         </ScrollView>
       </View>
     </LinearGradient>
@@ -24,4 +24,4 @@ const style = StyleSheet.create({
     flex: "1",
   },
 });
-export default dmBanh;
+export default dmNuong;

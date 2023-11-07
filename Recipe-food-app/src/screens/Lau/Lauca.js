@@ -6,14 +6,14 @@ const Lauca = () => {
     <View style={styles.container}>
       <View style={styles.view}>
         <Image
-          source={require("../../../assets/IMG/Lau/lau.gif")}
+          source={require("../../../assets/IMG/Lau/lau2.gif")}
           style={styles.img}
         />
       </View>
 
       <View style={styles.view1}>
         <Image
-          source={require("../../../assets/IMG/Lau/Group.png")}
+          source={require("../../../assets/IMG/Lau/back.png")}
           style={styles.img1}
         />
       </View>

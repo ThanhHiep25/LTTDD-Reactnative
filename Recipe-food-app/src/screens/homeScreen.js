@@ -137,11 +137,27 @@ const Home = ({ navigation }) => {
                   onPress={()=>{
                     if(item.id==1)
                     navigation.navigate('dmbanh')
+                    if(item.id==2)
+                    navigation.navigate('dmsup')
+                    if(item.id==3)
+                    navigation.navigate('dmnuong')
+                    if(item.id==4)
+                    navigation.navigate('dmlau')
+                    if(item.id==5)
+                    navigation.navigate('dmnuoctraicay')
+                    if(item.id==6)
+                    navigation.navigate('dmmonanvat')
+                    if(item.id==7)
+                    navigation.navigate('dmsalad')
+                    if(item.id==8)
+                    navigation.navigate('dmnuoccham')
                   }}
                   >
                   <Image source={item.imgLocal} style={styles.img4} />
                   <Text style={styles.textPre2}>{item.name}</Text>
                 </Pressable>
+
+                
               )}
               keyExtractor={(item) => item.id}
             />
