@@ -15,13 +15,14 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="welcome" component={WelcomeScreen} />
         <Stack.Screen name="dmbanh" component={DmBanh} />
-        <Stack.Screen name="home" component={Home} />
+       
         <Stack.Screen name="gdct" component={GD_CT} />
         <Stack.Screen name="name" component={NameScreen} />
         <Stack.Screen name="setting" component={Setting} />
-        
+        <Stack.Screen name="thongtincanhan" component={Thongtincanhan} />
       </Stack.Navigator>
     </NavigationContainer>
   );

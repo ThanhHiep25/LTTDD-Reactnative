@@ -16,36 +16,10 @@ import dataDM from "./../../dataDanhmuc"
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 
 const dmBanh = ({ navigation,route }) => {
-  const foodItems = [
-    {
-      image: require("./../../assets/IMG/dmBanh/banh-su-kem-singapore.png"),
-      Name: "Bánh muffin việt quất",
-      details: "Trứng gà 1 quả\n Bột mì 150 gr\n Sữa tươi không\n . . .",
-    },
-    {
-      image: require("./../../assets/IMG/dmBanh/banh-su-kem-singapore.png"),
-      Name: "Bánh su kem Singapo",
-      details: "Trứng gà 1 quả\n Bột mì 150 gr\n Sữa tươi không\n . . .",
-    },
-    {
-      image: require("./../../assets/IMG/dmBanh/banh-su-kem-singapore.png"),
-      Name: "Bánh su kem Singapo",
-      details: "Trứng gà 1 quả\n Bột mì 150 gr\n Sữa tươi không\n . . .",
-    },
-    {
-      image: require("./../../assets/IMG/dmBanh/banh-su-kem-singapore.png"),
-      Name: "Bánh su kem Singapo",
-      details: "Trứng gà 1 quả\n Bột mì 150 gr\n Sữa tươi không\n . . .",
-    },
-    {
-      image: require("./../../assets/IMG/dmBanh/banh-su-kem-singapore.png"),
-      Name: "Bánh su kem Singapo",
-      details: "Trứng gà 1 quả\n Bột mì 150 gr\n Sữa tươi không\n . . .",
-    },
-  ];
+  const foodItems =route.params.dsmon
   return (
     <LinearGradient
-      colors={["#FADB8A", "#FBE6AF", "#FCEFCD", "#FDF3DA"]}
+      colors={route.params.bgcl}
       style={style.container}
     >
       <View style={style.container}>
@@ -68,10 +42,10 @@ const dmBanh = ({ navigation,route }) => {
             <View style={style.body}>
               <View style={style.titlePage}>
                 <Image
-                  source={require("./../../assets/IMG/dmBanh/iconLamBanh.png")}
+                  source={route.params.img}
                   style={style.lambanhLogo}
                 ></Image>
-                <Text style={style.Titletext}> Làm Bánh</Text>
+                <Text style={style.Titletext}> {route.params.title}</Text>
               </View>
               <FlatList
                 numColumns={2}
@@ -88,7 +62,7 @@ const dmBanh = ({ navigation,route }) => {
                       <Text style={style.nameFood}>{item.Name}</Text>
                       <View style={style.nguyenlieu}>
                         <Text style={style.detailsFood}>Nguyên liệu</Text>
-                        <Text style={style.detailsFood && { marginLeft: 20 }}>
+                        <Text ellipsizeMode="tail" numberOfLines={4} style={style.detailsFood && { marginLeft: 20 }}>
                           {item.details}
                         </Text>
                       </View>
@@ -173,6 +147,7 @@ const style = StyleSheet.create({
   },
   detailsFood: {
     fontSize: "12px",
+    
   },
   nguyenlieu: {
     width: 130,
