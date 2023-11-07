@@ -11,10 +11,11 @@ import {
   FlatList,
   SafeAreaView,
 } from "react-native";
-
 import { LinearGradient } from "expo-linear-gradient";
+import dataDM from "./../../dataDanhmuc"
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
-const dmBanh = ({ navigation }) => {
+
+const dmBanh = ({ navigation,route }) => {
   const foodItems = [
     {
       image: require("./../../assets/IMG/dmBanh/banh-su-kem-singapore.png"),

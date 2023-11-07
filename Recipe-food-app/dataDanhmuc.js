@@ -3,6 +3,7 @@ const dataDanhMuc = [
     id: 1,
     name: "Làm bánh",
     imgLocal: require("./assets/IMG/home/lambanh.png"),
+    
   },
   {
     id: 2,
