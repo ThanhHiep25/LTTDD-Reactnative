@@ -16,39 +16,39 @@ import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import foodIems from "../../dataMonan";
+//import foodIems from "../../dataMonan";
+
 
 const Home = ({ navigation }) => {
   const route = useRoute();
   const user = route.params;
 
-  var [dsmonan, setDsmonan] = useState([]);
+  //var [dsmonan, setDsmonan] = useState([]);
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState([]);
-  var dmMonan=(item)=> {
-    if (item.id == 1) setDsmonan(foodIems.Banh);
-    else if (item.id == 2) setDsmonan(foodIems.foodIemsSoup);
-    else if (item.id == 3) setDsmonan(foodIems.nuong);
-    else if (item.id == 4) setDsmonan(foodIems.Lau);
-    else if (item.id == 5) setDsmonan(foodIems.Nuoctraicay);
-    else if (item.id == 6) setDsmonan(foodIems.Anvat);
-    else if (item.id == 7) setDsmonan(foodIems.Salad);
-    else if (item.id == 8) setDsmonan(foodIems.NuocCham);
-    navigation.navigate("dmbanh", {
-      bgcl: item.bgcl,
-      title: item.name,
-      img: item.imgLocal,
-      dsmon: dsmonan,
-    });
-    
-  }
+  // var dmMonan=(item)=> {
+  //   if (item.id == 1) setDsmonan(foodIems.Banh);
+  //   else if (item.id == 2) setDsmonan(foodIems.foodIemsSoup);
+  //   else if (item.id == 3) setDsmonan(foodIems.nuong);
+  //   else if (item.id == 4) setDsmonan(foodIems.Lau);
+  //   else if (item.id == 5) setDsmonan(foodIems.Nuoctraicay);
+  //   else if (item.id == 6) setDsmonan(foodIems.Anvat);
+  //   else if (item.id == 7) setDsmonan(foodIems.Salad);
+  //   else if (item.id == 8) setDsmonan(foodIems.NuocCham);
+  //   navigation.navigate("dmbanh", {
+  //     bgcl: item.bgcl,
+  //     title: item.name,
+  //     img: item.imgLocal,
+  //     dsmon: dsmonan,
+  //   }); 
+  //}
   const onDeletePress = (index) => {
     setSelected(selected.slice(index, -1));
     setSearch("");
   };
-  useEffect(()=>{
-   dmMonan
-  },[])
+  // useEffect(()=>{
+  //  dmMonan
+  // },[])
  
   return (
     <View style={styles.container}>
@@ -165,32 +165,21 @@ const Home = ({ navigation }) => {
               data={dataDanhMuc}
               numColumns={4}
               renderItem={({ item }) => (
-<<<<<<< HEAD
+                  // <Pressable
+                  // style={styles.Pre1}
+                  // onPress={() => {
+                  //   dmMonan(item);
+                  // }}>  
                 <Pressable
                   style={styles.Pre1}
                   onPress={() => {
-                    dmMonan(item);
-                   
-=======
-                <Pressable style={styles.Pre1}
-                  onPress={()=>{
-                    if(item.id==1)
-                    navigation.navigate('dmbanh')
-                    if(item.id==2)
-                    navigation.navigate('dmsup')
-                    if(item.id==3)
-                    navigation.navigate('dmnuong')
-                    if(item.id==4)
-                    navigation.navigate('dmlau')
-                    if(item.id==5)
-                    navigation.navigate('dmnuoctraicay')
-                    if(item.id==6)
-                    navigation.navigate('dmmonanvat')
-                    if(item.id==7)
-                    navigation.navigate('dmsalad')
-                    if(item.id==8)
-                    navigation.navigate('dmnuoccham')
->>>>>>> 4f492fa7e757ec3aa6de1f87106f1f912fa69310
+                    navigation.navigate("dmbanh", {
+                      bgcl: item.bgcl,
+                      title: item.name,
+                      img: item.imgLocal,
+                      colorItem: item.colorItem,
+                      id: item.id,
+                    });
                   }}
                 >
                   <Image source={item.imgLocal} style={styles.img4} />
