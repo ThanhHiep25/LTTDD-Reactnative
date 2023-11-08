@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   StyleSheet,
   View,
@@ -12,16 +12,26 @@ import {
   SafeAreaView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import dataDM from "./../../dataDanhmuc"
-const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
+import datamonan from "../../dataMonan";
 
-const dmBanh = ({ navigation,route }) => {
-  const foodItems =route.params.dsmon
+const dmBanh = ({ navigation, route }) => {
+  const colors = route.params.colorItem;
+  const id = route.params.id;
+  var [dsmonan, setDsmonan] = useState([]);
+
+  //chạy lại setDsmonan nếu id thay đổi
+  useEffect(() => {
+    if (id == 1) setDsmonan(datamonan.Banh);
+    else if (id == 2) setDsmonan(datamonan.foodIemsSoup);
+    else if (id == 3) setDsmonan(datamonan.nuong);
+    else if (id == 4) setDsmonan(datamonan.Lau);
+    else if (id == 5) setDsmonan(datamonan.Nuoctraicay);
+    else if (id == 6) setDsmonan(datamonan.Anvat);
+    else if (id == 7) setDsmonan(datamonan.Salad);
+    else if (id == 8) setDsmonan(datamonan.NuocCham);
+  }, [id]);
   return (
-    <LinearGradient
-      colors={route.params.bgcl}
-      style={style.container}
-    >
+    <LinearGradient colors={route.params.bgcl} style={style.container}>
       <View style={style.container}>
         <ScrollView style={style.container}>
           <View style={style.container}>
@@ -49,7 +59,7 @@ const dmBanh = ({ navigation,route }) => {
               </View>
               <FlatList
                 numColumns={2}
-                data={foodItems}
+                data={dsmonan}
                 renderItem={({ item, index }) => {
                   return (
                     <SafeAreaView
@@ -62,7 +72,11 @@ const dmBanh = ({ navigation,route }) => {
                       <Text style={style.nameFood}>{item.Name}</Text>
                       <View style={style.nguyenlieu}>
                         <Text style={style.detailsFood}>Nguyên liệu</Text>
-                        <Text ellipsizeMode="tail" numberOfLines={4} style={style.detailsFood && { marginLeft: 20 }}>
+                        <Text
+                          ellipsizeMode="tail"
+                          numberOfLines={4}
+                          style={style.detailsFood && { marginLeft: 20 }}
+                        >
                           {item.details}
                         </Text>
                       </View>
@@ -147,7 +161,6 @@ const style = StyleSheet.create({
   },
   detailsFood: {
     fontSize: "12px",
-    
   },
   nguyenlieu: {
     width: 130,
