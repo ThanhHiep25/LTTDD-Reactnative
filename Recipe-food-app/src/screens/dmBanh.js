@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 
 import { useState } from "react";
 import {
@@ -17,6 +18,12 @@ const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 
 const dmBanh = ({ navigation,route }) => {
   const foodItems =route.params.dsmon
+=======
+import { StyleSheet, View, ScrollView } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import Banh from "../components/dmBanh/banh";
+const dmBanh = ({navigation}) => {
+>>>>>>> 4f492fa7e757ec3aa6de1f87106f1f912fa69310
   return (
     <LinearGradient
       colors={route.params.bgcl}
@@ -24,6 +31,7 @@ const dmBanh = ({ navigation,route }) => {
     >
       <View style={style.container}>
         <ScrollView style={style.container}>
+<<<<<<< HEAD
           <View style={style.container}>
             <View style={style.header}>
               <View style={style.containerheader1}>
@@ -72,6 +80,10 @@ const dmBanh = ({ navigation,route }) => {
               />
             </View>
           </View>
+=======
+        
+          <Banh />
+>>>>>>> 4f492fa7e757ec3aa6de1f87106f1f912fa69310
         </ScrollView>
       </View>
     </LinearGradient>
