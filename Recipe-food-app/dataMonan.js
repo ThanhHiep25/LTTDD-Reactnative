@@ -35,6 +35,8 @@ const foodIems = {
         - Cho khuôn bánh vào nồi chiên không dầu, chỉnh nhiệt độ 150 độ C và nướng trong vòng 40 phút. Hết thời gian, lấy khuôn bánh ra rồi úp ngược xuống khoảng 3-5 phút để hạn chế tình trạng lõm hoặc xẹp bánh.
         - Dùng dao rọc hình tròn xung quanh mép khuôn để lấy bánh ra. Bóc phần giấy nến ra và cắt thành những miếng nhỏ vừa ăn.
     `,
+    đg: "2189",
+    //link: "https://www.youtube.com/watch?v=gnQYO1INOQ0",
     },
     {
       image: require("./assets/IMG/Banh/Banhsukem.jpg"),
