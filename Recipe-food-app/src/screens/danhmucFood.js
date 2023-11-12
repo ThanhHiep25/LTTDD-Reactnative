@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   StyleSheet,
   View,
@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import datamonan from "../../dataMonan";
-
+import * as Animatable from "react-native-animatable";
 const dmBanh = ({ navigation, route }) => {
   const colors = route.params.colorItem;
   const id = route.params.id;
@@ -29,7 +29,7 @@ const dmBanh = ({ navigation, route }) => {
     else if (id == 6) setDsmonan(datamonan.Anvat);
     else if (id == 7) setDsmonan(datamonan.Salad);
     else if (id == 8) setDsmonan(datamonan.NuocCham);
-  }, [id]);
+  }, []);
   return (
     <LinearGradient colors={route.params.bgcl} style={style.container}>
       <View style={style.container}>
@@ -57,30 +57,36 @@ const dmBanh = ({ navigation, route }) => {
                 ></Image>
                 <Text style={style.Titletext}> {route.params.title}</Text>
               </View>
+
               <FlatList
                 numColumns={2}
                 data={dsmonan}
                 renderItem={({ item, index }) => {
                   return (
-                    <SafeAreaView
-                      style={{
-                        ...style.fooditem,
-                        backgroundColor: colors[index % colors.length],
-                      }}
-                    >
-                      <Image source={item.image} style={style.imagesFooditem} />
-                      <Text style={style.nameFood}>{item.Name}</Text>
-                      <View style={style.nguyenlieu}>
-                        <Text style={style.detailsFood}>Nguyên liệu</Text>
-                        <Text
-                          ellipsizeMode="tail"
-                          numberOfLines={4}
-                          style={style.detailsFood && { marginLeft: 20 }}
-                        >
-                          {item.details}
-                        </Text>
-                      </View>
-                    </SafeAreaView>
+                    <Animatable.View animation="fadeIn" duration={1000}>
+                      <SafeAreaView
+                        style={{
+                          ...style.fooditem,
+                          backgroundColor: colors[index % colors.length],
+                        }}
+                      >
+                        <Image
+                          source={item.image}
+                          style={style.imagesFooditem}
+                        />
+                        <Text style={style.nameFood}>{item.Name}</Text>
+                        <View style={style.nguyenlieu}>
+                          <Text style={style.detailsFood}>Nguyên liệu</Text>
+                          <Text
+                            ellipsizeMode="tail"
+                            numberOfLines={4}
+                            style={style.detailsFood && { marginLeft: 20 }}
+                          >
+                            {item.details}
+                          </Text>
+                        </View>
+                      </SafeAreaView>
+                    </Animatable.View>
                   );
                 }}
               />
