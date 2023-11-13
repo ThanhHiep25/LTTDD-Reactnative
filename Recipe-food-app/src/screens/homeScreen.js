@@ -16,11 +16,15 @@ import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+//import foodIems from "../../dataMonan";
+
 
 const Home = ({ navigation }) => {
   const route = useRoute();
   const user = route.params;
 
+  //var [dsmonan, setDsmonan] = useState([]);
+ 
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState([]);
   var dmMonan = (item) => {
@@ -39,10 +43,17 @@ const Home = ({ navigation }) => {
       dsmon: dsmonan,
     });
   };
+
   const onDeletePress = (index) => {
     setSelected(selected.slice(index, -1));
     setSearch("");
   };
+
+  // useEffect(()=>{
+  //  dmMonan
+  // },[])
+ 
+
   useEffect(() => {
     dmMonan;
   }, []);
@@ -163,6 +174,13 @@ const Home = ({ navigation }) => {
               data={dataDanhMuc}
               numColumns={4}
               renderItem={({ item }) => (
+
+                  // <Pressable
+                  // style={styles.Pre1}
+                  // onPress={() => {
+                  //   dmMonan(item);
+                  // }}>  
+
                 <Pressable
                   style={styles.Pre1}
                   onPress={() => {
@@ -173,7 +191,9 @@ const Home = ({ navigation }) => {
                       colorItem: item.colorItem,
                       id: item.id,
                     });
+
                     dmMonan(item);
+
                   }}
                 >
                   <Pressable

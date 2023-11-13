@@ -9,6 +9,10 @@ import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
 import Thongtincanhan from "../screens/Thongtincanhan";
 import GD_CT from "../screens/Screen_GDCT/gd_Monan";
+
+import dmBanh from "../screens/danhmucFood";
+import dmctFood from "../screens/danhmucChitietFood";
+
 import dmBanh from "../screens/dmBanh";
 import dmSup from "../screens/dmSup";
 import dmNuong from "../screens/dmNuong";
@@ -19,10 +23,12 @@ import dmSalad from "../screens/dmSalad";
 import dmNuocCham from "../screens/dmNuocCham";
 import ctdmbanh from "../screens/ctdmbanh";
 import Chitietdmbanh2 from "../components/chitietcacdm/chitietdmbanh2";
+
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
+
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="welcome" component={WelcomeScreen} />
@@ -32,26 +38,11 @@ const AppNavigator = () => {
         <Stack.Screen name="name" component={NameScreen} />
         <Stack.Screen name="setting" component={Setting} />
         <Stack.Screen name="thongtincanhan" component={Thongtincanhan} />
-
-        {/* <Stack.Screen name="welcome" component={WelcomeScreen} />
-        
-        <Stack.Screen name="name" component={NameScreen} /> */}
         <Stack.Screen name="home" component={Home} />
-        <Stack.Screen name="setting" component={Setting} />
-
         <Stack.Screen name="dmbanh" component={dmBanh} />
-        {/* <Stack.Screen name="Chitietdmbanh2" component={Chitietdmbanh2} /> */}
-        {/* <Stack.Screen name="Lauca" component={Lauca} /> */}
-        <Stack.Screen name="ctdmbanh" component={ctdmbanh} />
-        <Stack.Screen name="dmsup" component={dmSup} />
-        <Stack.Screen name="dmnuong" component={dmNuong} />
-        <Stack.Screen name="dmlau" component={dmLau} />
-        <Stack.Screen name="dmnuoctraicay" component={dmNuoctraicay} />
-        <Stack.Screen name="dmmonanvat" component={dmMonAnVat} />
-        <Stack.Screen name="dmsalad" component={dmSalad} />
-        <Stack.Screen name="dmnuoccham" component={dmNuocCham} />
+        <Stack.Screen name="dmctFood" component={dmctFood} />
 
-        {/* <Stack.Screen name="thongtin" component={Thongtincanhan} /> */}
+
       </Stack.Navigator>
     </NavigationContainer>
   );

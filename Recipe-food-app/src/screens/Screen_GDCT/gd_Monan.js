@@ -10,7 +10,7 @@ const GD_CT = () => {
     <View style={styles.container}>
       <View style={styles.view}>
         <Image
-          source={require("../../../assets/IMG/Lau/lau.gif")}
+          source={require("../../../assets/IMG/Lau/lau2.gif")}
           style={styles.img}
         />
       </View>
@@ -22,7 +22,7 @@ const GD_CT = () => {
           }}
         >
           <Image
-            source={require("../../../assets/IMG/Lau/Group.png")}
+            source={require("../../../assets/IMG/Lau/back.png")}
             style={styles.img1}
           />
         </Pressable>

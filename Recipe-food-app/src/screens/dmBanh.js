@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+
+import { useState, useEffect, useRef } from "react";
 import {
   StyleSheet,
   View,
@@ -11,20 +12,33 @@ import {
   SafeAreaView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import dataDM from "./../../dataDanhmuc"
+
+import datamonan from "../../dataMonan";
+import * as Animatable from "react-native-animatable";
+import dataDM from "./../../dataDanhmuc";
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 import { StyleSheet, View, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Banh from "../components/dmBanh/banh";
-const dmBanh = ({ navigation,route }) => {
-  const foodItems =route.params.dsmon
+const dmBanh = ({ navigation, route }) => { //chạy lại setDsmonan nếu id thay đổi
+  useEffect(() => {
+    if (id == 1) setDsmonan(datamonan.Banh);
+    else if (id == 2) setDsmonan(datamonan.foodIemsSoup);
+    else if (id == 3) setDsmonan(datamonan.nuong);
+    else if (id == 4) setDsmonan(datamonan.Lau);
+    else if (id == 5) setDsmonan(datamonan.Nuoctraicay);
+    else if (id == 6) setDsmonan(datamonan.Anvat);
+    else if (id == 7) setDsmonan(datamonan.Salad);
+    else if (id == 8) setDsmonan(datamonan.NuocCham);
+  }, []);
+const colors = route.params.colorItem;
+  const id = route.params.id;
+  var [dsmonan, setDsmonan] = useState([]);
+  const foodItems = route.params.dsmon;
   return (
-    <LinearGradient
-      colors={route.params.bgcl}
-      style={style.container}
-    >
+    <LinearGradient colors={route.params.bgcl} style={style.container}>
       <View style={style.container}>
-        <ScrollView style={style.container}>
+        <View style={style.container}>
           <View style={style.container}>
             <View style={style.header}>
               <View style={style.containerheader1}>
@@ -48,11 +62,38 @@ const dmBanh = ({ navigation,route }) => {
                 ></Image>
                 <Text style={style.Titletext}> {route.params.title}</Text>
               </View>
-              <FlatList
+
+             <FlatList
                 numColumns={2}
-                data={foodItems}
+                data={dsmonan}
                 renderItem={({ item, index }) => {
                   return (
+                    <View></View>
+                     /*  <Animatable.View animation="fadeIn" duration={1000}>
+                      <SafeAreaView
+                        style={{
+                          ...style.fooditem,
+                          backgroundColor: colors[index % colors.length],
+                        }}
+                      >
+                        <Image
+                          source={item.image}
+                          style={style.imagesFooditem}
+                        />
+                        <Text style={style.nameFood}>{item.Name}</Text>
+                        <View style={style.nguyenlieu}>
+                          <Text style={style.detailsFood}>Nguyên liệu</Text>
+                          <Text
+                            ellipsizeMode="tail"
+                            numberOfLines={4}
+                            style={style.detailsFood && { marginLeft: 20 }}
+                          >
+                            {item.details}
+                          </Text>
+                        </View>
+                      </SafeAreaView>
+                    </Animatable.View>
+
                     <SafeAreaView
                       style={{
                         ...style.fooditem,
@@ -63,17 +104,22 @@ const dmBanh = ({ navigation,route }) => {
                       <Text style={style.nameFood}>{item.Name}</Text>
                       <View style={style.nguyenlieu}>
                         <Text style={style.detailsFood}>Nguyên liệu</Text>
-                        <Text ellipsizeMode="tail" numberOfLines={4} style={style.detailsFood && { marginLeft: 20 }}>
+                        <Text
+                          ellipsizeMode="tail"
+                          numberOfLines={4}
+                          style={style.detailsFood && { marginLeft: 20 }}
+                        >
                           {item.details}
                         </Text>
                       </View>
-                    </SafeAreaView>
-                  );
-                }}
+                    </SafeAreaView>*/
+                  
+                  ) }
+                }
               />
             </View>
           </View>
-        </ScrollView>
+        </View>
       </View>
     </LinearGradient>
   );
@@ -148,7 +194,6 @@ const style = StyleSheet.create({
   },
   detailsFood: {
     fontSize: "12px",
-    
   },
   nguyenlieu: {
     width: 130,
