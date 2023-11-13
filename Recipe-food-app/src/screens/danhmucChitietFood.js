@@ -91,11 +91,11 @@ const dmctFood = ({ navigation, route }) => {
                     <View style={styles.star}>
                         <View style={styles.viewdg}>
                             <Icon name="alarm-outline" size={25} color="black"/>
-                            <Text style={styles.tdg}>123 min</Text>
+                            <Text style={styles.tdg}>{item.min} min</Text>
                         </View>
                         <View style={styles.viewdg}>
                             <Icon name="flame" size={25} color="red" /> 
-                            <Text style={styles.tdg}>124 Kcal</Text>
+                            <Text style={styles.tdg}>{item.kcal} Kcal</Text>
                         </View>
                         
                         <View style={styles.viewdg}>
@@ -109,17 +109,17 @@ const dmctFood = ({ navigation, route }) => {
                     <View style={styles.v3}>
                         <View style={styles.viewdg}>
                             <Icon name="thumbs-up-outline" size={25} color="black" />
-                            <Text style={styles.tdg}>100</Text>
+                            <Text style={styles.tdg}>{item.like}</Text>
                         </View>
 
                         <View style={styles.viewdg}>
                             <Icon name="chatbox-outline" size={25} color="black" /> 
-                            <Text style={styles.tdg}>20</Text>
+                            <Text style={styles.tdg}>{item.cmt}</Text>
                         </View>
 
                         <View style={styles.viewdg}>
                             <Icon name="bookmark-outline" size={25} color="black" />
-                            <Text style={styles.tdg}>5</Text>
+                            <Text style={styles.tdg}>{item.share}</Text>
                             {/* <Icon name="heart-outline" size={25} color="black" />  */}
                         </View>
                                                                                                 

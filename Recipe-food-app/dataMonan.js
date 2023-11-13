@@ -35,7 +35,12 @@ const foodIems = {
         - Cho khuôn bánh vào nồi chiên không dầu, chỉnh nhiệt độ 150 độ C và nướng trong vòng 40 phút. Hết thời gian, lấy khuôn bánh ra rồi úp ngược xuống khoảng 3-5 phút để hạn chế tình trạng lõm hoặc xẹp bánh.
         - Dùng dao rọc hình tròn xung quanh mép khuôn để lấy bánh ra. Bóc phần giấy nến ra và cắt thành những miếng nhỏ vừa ăn.
     `,
+    min: "35",
+    kcal: "297,1",
     đg: "4.9/5 (1683)",
+    like: "1286",
+    cmt: "261",
+    share: "128",
     //link: "https://www.youtube.com/watch?v=gnQYO1INOQ0",
     },
     {
@@ -73,6 +78,12 @@ const foodIems = {
         - Lấy phần kem trong tủ lạnh ra, đánh đều lại thêm 1 lần nữa rồi bỏ vào túi bắt kem.
         - Khi bánh đã nguội, dùng dao hoặc kéo có đầu nhọn rạch 1 đường ở phần đáy bánh rồi bơm kem vào và thưởng thức.
     `, 
+    min: "35",
+    kcal: "334,1",
+    đg: "4.7/5 (1253)",
+    like: "912",
+    cmt: "145",
+    share: "26",
       },
     {
       image: require("./assets/IMG/Banh/Banhflan.jpg"),
@@ -100,7 +111,13 @@ const foodIems = {
             - Cho nước vào nồi hấp đun sôi, đặt tầng hấp vào nồi, cho khuôn bánh flan vào nồi, dùng một cái khăn sạch lên mặt khuôn bánh, một cái khăn phủ lên miệng nồi rồi đậy nắp nồi lại.
             - Để lửa nhỏ và hấp trong vòng 30 phút. Thường xuyên mở nắp để nước không đọng lại ở nắp như vậy bánh flan sẽ thơm ngon hơn.
             - Kiểm tra thấy bề mặt bánh trơn láng, dùng tăm xiên sâu vào hỗn hợp mà không bị dính que tăm thì bánh đã chín. Để nguội và cho vào ngăn mát tủ lạnh.
-        `, 
+        `,
+        min: "35",
+    kcal: "145,6",
+    đg: "4.6/5 (945)",
+    like: "847",
+    cmt: "152",
+    share: "28", 
       },
     {
       image: require("./assets/IMG/Banh/Banhdongxu.png"),
@@ -131,6 +148,12 @@ const foodIems = {
             Bước 3: Thành phần
             - Bánh đồng xu phô mai kéo sợi với lớp vỏ ngoài mềm mịn, thơm đậm hương vani ngọt ngào với phần nhân trong là phô mai mozzarella béo ngọt, dai dai chắc chắn sẽ khiến bạn thích mê ngay từ lần đầu thưởng thức.
         `,
+        min: "35",
+    kcal: "700",
+    đg: "4.4/5 (1468)",
+    like: "836",
+    cmt: "256",
+    share: "173",
       },
     {
       image: require("./assets/IMG/Banh/Banhcupcake.png"),
@@ -161,6 +184,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Những chiếc bánh cupcake vàng ươm, nở đều và đẹp, mùi thơm cực hấp dẫn của trứng, sữa hòa quyện. Bánh tuy không có nhân nhưng ăn vẫn vô cùng mềm, xốp và ngọt ngào. Hoặc bạn có thể bắt thêm 1 lớp kem hoặc topping (kẹo, trái cây,...) lên trên để bánh hấp dẫn hơn cũng được nhé.
         `,
+        min: "35",
+    kcal: "305",
+    đg: "4.1/5 (738)",
+    like: "125",
+    cmt: "18",
+    share: "15",
       },
     {
       image: require("./assets/IMG/Banh/Banhdonut.png"),
@@ -191,6 +220,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Bánh donut sau khi hoàn thành trông vô cùng bắt mắt và xinh xắn luôn. Khi thưởng thức, bạn sẽ cảm nhận được lớp vỏ bánh giòn tan, phía trong thì lại dẻo mềm kết hợp cùng sốt chocolate ngọt ngọt, đăng đắng, cực kỳ hấp dẫn. Với những ai không có lò nướng thì đây là công thức rất phù hợp nè.        
         `,
+        min: "35",
+    kcal: "300",
+    đg: "4.6/5 (1133)",
+    like: "527",
+    cmt: "128",
+    share: "35",
       },
     {
       image: require("./assets/IMG/Banh/Banhkhoaimochien.jpg"),
@@ -217,6 +252,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Bánh khoai mỡ được chiên trong dầu giòn có lớp ngoài giòn rụm nhưng bên trong thì mềm, dẻo, nóng hổi. Bạn có thể ăn hoài cũng không thấy ngán.   
         `,
+        min: "35",
+    kcal: "140",
+    đg: "4.0/5 (739)",
+    like: "123",
+    cmt: "23",
+    share: "14",
       },
     {
       image: require("./assets/IMG/Banh/Banhmuffinvietquat.png"),
@@ -247,6 +288,12 @@ const foodIems = {
             - Kế tiếp, bạn cho hỗn hợp vào khuôn giấy, cho thêm một vài trái nam việt quất lên trên và rắc thêm một ít đường trên bề mặt bánh.
             - Sau đó, bạn cho bánh vào lò và nướng ở nhiệt độ 215 độ C trong vòng 10 phút hoặc bạn có thể nướng bánh ở nhiệt độ thấp hơn là 190 độ C trong khoảng 15 - 20 phút.           
         `,
+        min: "35",
+    kcal: "376,7 ",
+    đg: "4.3/5 (827)",
+    like: "231",
+    cmt: "37",
+    share: "12",
       },
   ],
   Lau: [
@@ -281,6 +328,12 @@ const foodIems = {
             - Đậy nắp kín lại, đun cho tới khi nước dùng sôi lên thì để thả hành boa rô, thì là vào cho thơm.
             - Dọn kèm rau, bún ra cùng với lẩu và thưởng thức.
         `, 
+        min: "60",
+    kcal: "1231",
+    đg: "4.1/5 (612)",
+    like: "261",
+    cmt: "24",
+    share: "17",
       },
     {
       image: require("./assets/IMG/Lau/Lauthai.png"),
@@ -315,6 +368,12 @@ const foodIems = {
             Bước 3: Thành phần
             - Bạn cắt bắp thành từng khúc dài 3 - 4cm rồi cho vào nồi lẩu để nước lẩu Thái được ngọt hơn.
         `,
+        min: "60",
+    kcal: "1100",
+    đg: "4.2/5 (821)",
+    like: "421",
+    cmt: "57",
+    share: "38",
       },
     {
       image: require("./assets/IMG/Lau/Lauhaisan.png"),
@@ -339,7 +398,13 @@ const foodIems = {
             
             Bước 3: Thành phần
             - Trước khi ăn, bỏ nấm rơm vào cho nấm chín, các loại hải sản, thịt bò ăn tới đâu nhúng tới đó. Vị chua cay của nước lẩu hòa quyện với vị ngọt từ hải sản khi ăn kèm với bún là rất hấp dẫn luôn đó nha.  
-        `, 
+        `,
+        min: "60",
+    kcal: "1290",
+    đg: "4.9/5 (1293)",
+    like: "900",
+    cmt: "45",
+    share: "67", 
       },
     {
       image: require("./assets/IMG/Lau/Launam.png"),
@@ -376,7 +441,13 @@ const foodIems = {
             Bước 3: Thành phần
             - Sau đó cho nấm vào nấu 3 - 5 phút cho nấm vừa chín tới là được, cuối cùng bạn cho đậu hủ non, tàu hủ ky và phần hành baro đã phi vào, rồi tắt  bếp.
             - Vậy là lẩu nấm chay đã hoàn thành rồi, cho lẩu lên bàn ăn và thưởng thức thôi.
-        `, 
+        `,
+        min: "60",
+    kcal: "900",
+    đg: "4.0/5 (849)",
+    like: "123",
+    cmt: "23",
+    share: "12", 
       },
     {
       image: require("./assets/IMG/Lau/Laubo.jpg"),
@@ -420,6 +491,12 @@ const foodIems = {
             - Nêm nếm nồi nước lẩu với 1 gói gia vị lẩu bò, chao, đường và tiêu cho vừa ăn, sau đó cho khoai môn vào, nấu đến khi khoai mềm thì cho tiếp hành tây vào, sau đó tắt bếp.
             - Cho lẩu ra ngoài, khi nào dùng thì bật bếp lên cho sôi sau đó cho thịt bò, gân bò, sách bò, đậu hủ, nấm và rau ăn kèm vào. Khi các nguyên liệu vừa chín tới thì vớt ra thưởng thức thôi.        
         `,
+        min: "60",
+    kcal: "1180",
+    đg: "4.3/5 (1562)",
+    like: "762",
+    cmt: "20",
+    share: "12",
       },
     {
       image: require("./assets/IMG/Lau/Laude.jpg"),
@@ -455,6 +532,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Sử dụng một chiếc nồi đất. múc phần xương, củ cải vào nồi. Cho khoai môn, thịt dê đã xào, hành tây vào nồi. Múc nước chan vào là món ăn đã hoàn thành.     
         `,
+        min: "60",
+    kcal: "1143",
+    đg: "4.2/5 (1421)",
+    like: "632",
+    cmt: "30",
+    share: "14",
       },
     {
       image: require("./assets/IMG/Lau/Laugalagiang.jpg"),
@@ -492,6 +575,12 @@ const foodIems = {
             - Nồi lẩu gà ta nóng hổi, thơm ngon, từng thớ thịt gà dai dai săn chắc, nước lẩu ngọt thanh chấm phá thêm vị chua nhè nhẹ từ lá giang và vị cay the của ớt, được nêm nếm kỹ vô cùng đậm đà.
             - Với món lẩu gà này, bạn có thể ăn kèm với các loại rau như hoa chuối, rau muống, mồng tơi,... thêm 1 tô bún nữa là có thể mời cả nhà cùng thưởng thức rồi.             
         `,
+        min: "60",
+    kcal: "1120",
+    đg: "4.4/5 (1521)",
+    like: "212",
+    cmt: "32",
+    share: "12",
       },
     {
       image: require("./assets/IMG/Lau/Laumam.png"),
@@ -533,6 +622,12 @@ const foodIems = {
             Bước 6: Thành phẩm
             - Lẩu mắm nóng hổi, bốc khói nghi ngút lại thơm mùi đặc trưng sẽ khiến bạn phải thưởng thức liền. Nước dùng đậm đà từ mắm cá linh và mắm cá sặc quyện với vị ngọt thanh, béo nhẹ từ tôm, mực và cá basa làm bạn nhớ mãi không quên. Thêm vào đó, các loại rau ăn kèm phong phú giúp giải ngấy lại cân bằng vị cho món ăn.          
         `,
+        min: "60",
+    kcal: "980",
+    đg: "4.1/5 (474)",
+    like: "14",
+    cmt: "22",
+    share: "11",
       },
   ],
   nuong: [
@@ -567,6 +662,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Món ba chỉ bò nướng sa tế hoàn thành là mùi thơm nức mũi lan tỏa khắp gian bếp luôn đấy. Từng thớ thịt tươi ngon, mềm thơm thấm đẫm xốt sa tế đậm vị, cay cay, nồng nồng, phải nói là cực đỉnh. Không chỉ thế, khi bạn ăn kèm hành tây, rau mùi, xà lách và kim chi chấm thêm nước xốt sa tế thì món ăn lại càng được phối trộn tinh tế hơn, “nâng cấp” hương vị tuyệt bậc luôn.           
         `, 
+        min: "65",
+    kcal: "400",
+    đg: "4.5/5 (1183)",
+    like: "444",
+    cmt: "12",
+    share: "11",
       },
     {
       image: require("./assets/IMG/DoNuong/Bachtuocnuongsate.png"),
@@ -596,6 +697,12 @@ const foodIems = {
             Bước 4: Thành phần
             - Món bạch tuộc nướng sa tế sẽ khiến nhiều người mê đắm bởi phần bạch tuộc nướng vừa chín tới nên vẫn giữ được độ giòn, ngọt, thấm đều gia vị. Khi ăn bạn sẽ cảm nhận được sự hòa quyện đậm đà của sa tế, vị thơm của tỏi, sả và vị cay của ớt,... Tất cả sẽ tạo nên một món ăn thơm ngon, hài hòa, tròn vị.      
         `, 
+        min: "65",
+    kcal: "380",
+    đg: "4.2/5 (1113)",
+    like: "321",
+    cmt: "42",
+    share: "12",
       },
     {
       image: require("./assets/IMG/DoNuong/Ganuongmatong.png"),
@@ -626,6 +733,12 @@ const foodIems = {
             - Gà nướng mật ong ngon là thịt gà phải nướng chín đều, bên ngoài lớp da phải có màu vàng óng ả của mật ong.
             - Hơn nữa, thịt gà phải có mùi thơm cũng như thấm vị thật đậm đà mới là ngon. 
         `, 
+        min: "65",
+    kcal: "480",
+    đg: "4.3/5 (1102)",
+    like: "41",
+    cmt: "12",
+    share: "10",
       },
     {
       image: require("./assets/IMG/DoNuong/Thitxiennuongraucu.png"),
@@ -657,6 +770,12 @@ const foodIems = {
             Bước 4: Thành phần
             - Khi thịt đã chín đều các mặt bạn cho ra đĩa, và mời mọi người thưởng thức nhé.         
         `,
+        min: "55",
+    kcal: "350",
+    đg: "4.2/5 (1097)",
+    like: "41",
+    cmt: "12",
+    share: "7",
       },
     {
       image: require("./assets/IMG/DoNuong/Sohuyetnuongmohanh.png"),
@@ -685,6 +804,12 @@ const foodIems = {
             Bước 3: Sò huyết nướng mỡ hành
             - Bạn chuẩn bị than hồng, đặt vỉ nướng lên, rồi xếp từng con sò lên vỉ và múc từng muỗng mỡ hành lên bề mặt từng con, nướng chừng 10 phút là bạn có thể thưởng thức món sò huyết này rồi.  
         `,
+        min: "65",
+    kcal: "270",
+    đg: "4.1/5 (901)",
+    like: "26",
+    cmt: "12",
+    share: "8",
       },
     {
       image: require("./assets/IMG/DoNuong/Tomnuongmuoiot.jpg"),
@@ -716,6 +841,12 @@ const foodIems = {
             Bước 4: Nướng tôm
             - Than hoa (hay còn gọi là than củi) là loại than được làm từ gỗ nguyên chất, không bị pha trộn tạp chất. Nguyên liệu được người dùng khá ưa chuộng bởi nhiệt lượng tỏa ra khá tốt mà không sinh khói. Sau khi nhóm than xong, đợi than hồng thì hãy đặt vỉ nướng lên trên, lần lượt xếp tôm dàn đều. Liên tục trở mặt tôm để nguyên liệu không bị cháy. Khoảng 10 - 15 phút, tôm sẽ chuyển sang màu đỏ gạch, dậy mùi thơm nức mũi. Khi đó, bạn nhấc tôm xuống và thưởng thức ngay nhé. 
         `,
+        min: "60",
+    kcal: "400",
+    đg: "4.9/5 (1683)",
+    like: "482",
+    cmt: "145",
+    share: "102",
       },
     {
       image: require("./assets/IMG/DoNuong/Suonsunnuong.png"),
@@ -740,6 +871,12 @@ const foodIems = {
             - Bạn cần làm nóng lò trước khi nướng ở nhiệt độ 200 độ C trong 15 phút. Sau đó, đem sườn đi nướng lần 1 ở nhiệt độ 200 độ trong 20 phút. Tiếp đến, bạn lấy khay nướng ra, lật mặt sườn lại rồi dùng cọ quét lớp nước sốt lên và nướng lần 2 ở nhiệt độ 200 độ trong 10 phút.
             - Sau đó, bạn bày ra đĩa, trang trí thêm cải mầm là có thưởng thức ngay rồi nhé.
         `, 
+        min: "65",
+    kcal: "470",
+    đg: "4.4/5 (1372)",
+    like: "211",
+    cmt: "24",
+    share: "12",
       },
     {
       image: require("./assets/IMG/DoNuong/Bonuonglalot.png"),
@@ -770,6 +907,12 @@ const foodIems = {
             Bước 5: Thành phẩm
             - Bò lá lốt sau khi chín được bày ra đĩa cho đẹp mắt. Món này có thể dùng trong bữa cơm gia đình, hoặc là món khai vị thì tuyệt nhé.
         `,
+        min: "65",
+    kcal: "350",
+    đg: "4.1/5 (1003)",
+    like: "241",
+    cmt: "24",
+    share: "12",
       },
   ],
   Anvat:[
@@ -804,6 +947,12 @@ const foodIems = {
             - Cho đá vào ly, sau đó rót trà sữa vào gần đầy miệng. Tiếp theo cho thêm kem trứng đã xay có màu vàng lên trên cùng.
             -- Mẹo hay: Bạn có thể thêm chút đường nâu lên trên mặt kem trứng, sau đó dùng dụng cụ khò lửa để hơ lửa trên bề mặt kem trứng có màu vàng hơi cháy hấp dẫn.                                                
         `,
+        min: "25",
+    kcal: "250",
+    đg: "4.9/5 (743)",
+    like: "142",
+    cmt: "42",
+    share: "24",
       },
     {
       image: require("./assets/IMG/MonAnVat/Trungcutlonxaome.png"),
@@ -835,6 +984,12 @@ const foodIems = {
             Bước 4 Thành phẩm
             - Như vậy là món cút lộn xào me đã hoàn thành rồi. Lót lên dĩa một ít rau răm rồi để cút lộn lên phía trên. Rắc đậu phộng và hành phi lên rồi thưởng thức thôi nào!                                                        
         `,
+        min: "45",
+    kcal: "300",
+    đg: "4.0/5 (717)",
+    like: "120",
+    cmt: "42",
+    share: "12",
       },
     {
       image: require("./assets/IMG/MonAnVat/Khoaitaynghien.png"),
@@ -863,6 +1018,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Chỉ bằng vài thao tác cơ bản là ta đã có ngay một phần khoai tây nghiền thơm ngon rồi phải không nào! Phần khoai tây mềm mại, tan trong miệng kèm theo vị béo béo của sữa và bơ chắc chắn sẽ khiến các bạn mê mẩn. Bạn có thể kết hợp chúng với các loại gà rán, thịt nướng,... Bạn cũng nên cho thêm chút muối hoặc tiêu vào và dùng khi nóng sẽ ngon hơn.                                                                
         `,
+        min: "45",
+    kcal: "213",
+    đg: "4.1/5 (812)",
+    like: "211",
+    cmt: "42",
+    share: "12",
       },
     {
       image: require("./assets/IMG/MonAnVat/Bapxaomohanh.png"),
@@ -886,6 +1047,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Bắp xào đường phố làm tại nhà đảm bảo an toàn vệ sinh thực phẩm lại không tốn quá nhiều chi phí. Chỉ với vài bước đơn giản là bạn đã có ngay món ăn vặt ngon mê ly rồi. Còn chần chờ gì nữa mà không vào bếp làm ngay thôi nào!                                                                        
         `,
+        min: "45",
+    kcal: "211",
+    đg: "4.2/5 (756)",
+    like: "42",
+    cmt: "22",
+    share: "32",
       },
     {
       image: require("./assets/IMG/MonAnVat/Chagiohaisanphomai.png"),
@@ -929,6 +1096,12 @@ const foodIems = {
             Bước 5: Pha xốt chấm
             - Cho vào chén ½ muỗng cà phê đường, ¼ muỗng cà phê tiêu muối và tiêu trắng và 1 muỗng canh nước cam. Khuấy đều để các gia vị tan trong nước cam rồi cho tiếp vào đó 2 muỗng canh xốt mayonnase và 2 muỗng canh tương cà rồi lại trộn đều lên.                                                                      
         `,
+        min: "45",
+    kcal: "361",
+    đg: "4.2/5 (781)",
+    like: "124",
+    cmt: "42",
+    share: "22",
       },
     {
       image: require("./assets/IMG/MonAnVat/Xoailac.png"),
@@ -953,7 +1126,13 @@ const foodIems = {
             
             Bước 4: Thành phẩm
             - Xoài lắc sau khi làm xong có thể bảo quản trong tủ lạnh ăn dần. Tùy vào khẩu vị và sở thích bạn có thể thay đổi và điều chỉnh gia vị cho phù hợp nhé.                                                                              
-        `, 
+        `,
+        min: "25",
+    kcal: "211",
+    đg: "4.5/5 (981)",
+    like: "422",
+    cmt: "142",
+    share: "97", 
     },
     {
       image: require("./assets/IMG/MonAnVat/Changangamxatac.png"),
@@ -986,6 +1165,12 @@ const foodIems = {
             - Bạn cho hỗn hợp nguyên liệu (tắc, sả, ớt…) đã chuẩn bị trước vào nước ngâm gà, khuấy đều lên rồi đổ vào chân gà.
             - Cuối cùng bạn cho chân gà vào một cái hộp, bảo quản trong ngăn mát tủ lạnh và ăn dần. Bạn có thể ăn sau khi đã ngâm khoảng 2-3 tiếng và điều chỉnh độ cay cũng như độ chua sao cho phù hợp với khẩu vị.                                                                                      
         `, 
+        min: "55",
+    kcal: "297,1",
+    đg: "4.9/5 (442)",
+    like: "142",
+    cmt: "22",
+    share: "12",
       },
     {
       image: require("./assets/IMG/MonAnVat/Goicuon.png"),
@@ -1019,6 +1204,12 @@ const foodIems = {
             - Bạn lấy ít nước để làm ướt bánh tráng, sau đó đặt bánh tráng lên 1 cái dĩa hoặc thớt.
             - Lấy một ít rau xà lách, rau thơm, giá, dưa leo và 1 cọng hẹ đặt lên bánh tráng. Sau đó, cho một ít bún, thịt và bắt đầu cuốn lại. Khi cuốn được 1 vòng, bạn cho thêm 2 con tôm rồi gấp 2 mép bánh tráng ở 2 bên lại. Cuối cùng, chỉ cần cuộn chặt tay đến khi hết miếng bánh tráng là xong.                                                                                              
         `,
+        min: "35",
+    kcal: "211",
+    đg: "4.2/5 (612)",
+    like: "210",
+    cmt: "23",
+    share: "12",
       },
   ],
   NuocCham:[
@@ -1046,6 +1237,12 @@ const foodIems = {
             - Tỉ lệ này chỉ là một tiêu chuẩn để bạn dựa vào pha chế nước mắm, nó có thể có khác biệt tùy theo loại nước mắm, đường, chanh mà bạn chọn mua.
             - Do đó nếu khi thực hiện theo tỉ lệ này mà nước mắm có hơi mặn hoặc chua, ngọt quá thì bạn có thể tự điều chỉnh cho vừa miệng nha. Ngoài ra, bạn có thể tìm hiểu cách làm muối ớt xanh dùng để chấm thịt nướng hay hải sản đều ngon.                                                                                         
         `, 
+        min: "25",
+    kcal: "40",
+    đg: "4.2/5 (500)",
+    like: "122",
+    cmt: "32",
+    share: "12",
       },
     {
       image: require("./assets/IMG/NuocCham/Muoitieuchanh.png"),
@@ -1071,6 +1268,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Vậy là muối tiêu lá chanh của bạn đã hoàn thành rồi đấy. Muối chấm này có thể dùng ngay, dùng để chấm các món thịt luộc, trái cây, hột vịt lộn,... đều rất ngon. Phần muối còn lại, bạn cho vào hũ và đậy nắp kỹ, bảo quản nơi khô ráo nhé!                                                                                                 
         `, 
+        min: "20",
+    kcal: "40",
+    đg: "4.3/5 (912)",
+    like: "424",
+    cmt: "211",
+    share: "51",
       },
     {
       image: require("./assets/IMG/NuocCham/Mamtom.png"),
@@ -1101,6 +1304,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Mắm tôm thơm, có vị chua chua cay cay từ tắc và ớt. Món này khi ăn cùng bún đậu là đúng điệu, ai ăn cũng mê đấy.                                                                                            
         `, 
+        min: "35",
+    kcal: "100",
+    đg: "4.2/5 (521)",
+    like: "110",
+    cmt: "61",
+    share: "21",
       },
     {
       image: require("./assets/IMG/NuocCham/Nuocmamgung.png"),
@@ -1125,6 +1334,12 @@ const foodIems = {
             Bước 2: Pha nước chấm
             - Cho phần hỗn hợp vừa giã vào một cái tô. Cho nước nóng vào khuấy đều để cho đường tan ra. Khi đường tan hết, bạn cho nước mắm vào rồi tiếp tục khuấy đều. Cuối cùng, cho nước cốt chanh vào.                                                                                                    
         `,
+        min: "25",
+    kcal: "80",
+    đg: "4.2/5 (721)",
+    like: "111",
+    cmt: "42",
+    share: "21",
       },
     {
       image: require("./assets/IMG/NuocCham/Muoiotchanh.png"),
@@ -1150,6 +1365,12 @@ const foodIems = {
             - Sau cùng, bạn đổ hỗn hợp thu được ra chén rồi cho số hạt ớt đã giữ lại vào khuấy đều. Bạn cũng có thể cho vào trong hũ đựng rồi để trong ngăn mát tủ lạnh, khi cần thì lấy ra dùng.
             - Muối sữa ớt đỏ có thể bảo quản tới 2 tháng mà không bị hỏng, còn nếu để ở nhiệt độ thường thì muối sẽ nhanh hỏng hơn. Ngoài ra, nếu để trong tủ lạnh một thời gian muối sẽ hơi kẹo lại một chút nhé!                                                        
         `,
+        min: "25",
+    kcal: "61",
+    đg: "4.1/5 (611)",
+    like: "211",
+    cmt: "41",
+    share: "12",
       },
     {
       image: require("./assets/IMG/NuocCham/Nuocmamme.png"),
@@ -1172,6 +1393,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Bạn đổ mắm me đã nấu ra chén, thêm vào 1/2 muỗng canh tỏi phi cùng 1 thìa cà phê tỏi băm và thế là đã hoàn thành nước chấm mắm me rồi.                                                                
         `,
+        min: "25",
+    kcal: "52",
+    đg: "4.2/5 (612)",
+    like: "213",
+    cmt: "51",
+    share: "12",
     },
     {
       image: require("./assets/IMG/NuocCham/Nuocchamchao.png"),
@@ -1195,6 +1422,12 @@ const foodIems = {
             Bước 2: Pha nước sốt chao lá chanh
             - Đầu tiên, bạn lần lượt cho vào chén 1 muỗng canh đường, 1 muỗng canh nước tương, 1 muỗng canh bơ đậu phộng, 3 viên chao, 1 muỗng canh nước chao, nước cốt của 1 quả chanh, ớt băm nhuyễn, lá chanh cắt nhỏ. Cuối cùng là dùng muỗng khuấy đều để các gia vị hòa tan với nhau.                                                             
         `,
+        min: "35",
+    kcal: "55",
+    đg: "4.0/5 (511)",
+    like: "25",
+    cmt: "22",
+    share: "12",
       },
     {
       image: require("./assets/IMG/NuocCham/Mamnem.png"),
@@ -1216,6 +1449,12 @@ const foodIems = {
             - Để thưởng thức, bạn cho mắm nêm ra tô, thêm ớt băm vào tùy theo khẩu vị ăn cay của bạn. Vậy là sốt chấm mắm nêm pha với thơm đã hoàn thành rồi.
             - Vị chua ngọt của trái thơm kết hợp với mặn mặn của mắm nêm và vị cay nồng của tỏi ớt sẽ làm món ăn hấp dẫn vô cùng. Loại sốt này dùng để ăn kèm với bún hay dùng để chấm bánh tráng cuốn,... đều rất ngon.                                                                     
         `,
+        min: "35",
+    kcal: "61",
+    đg: "4.4/5 (411)",
+    like: "111",
+    cmt: "21",
+    share: "11",
       },
   ],
     Nuoctraicay:[
@@ -1236,6 +1475,12 @@ const foodIems = {
             Bước 2: Thành phẩm
             - Cho cà rốt vào máy ép, ép đến khi ra hết nước thì bỏ phần xác hỗn hợp đi nhé. Nếu không có máy ép thì có thể dùng máy xay sinh tố, sau khi xay xong, ta lọc hỗn hợp qua rây hoặc vải mùng là đã xong rồi đấy.                  
         `,
+        min: "20",
+    kcal: "40",
+    đg: "4.6/5 (952)",
+    like: "251",
+    cmt: "92",
+    share: "32",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepduahau.png"),
@@ -1256,6 +1501,12 @@ const foodIems = {
             - Tiếp theo bạn cho lần lượt dưa hấu, nước cốt chanh, đường cùng nước đá vào máy xay sinh tố. Xay hỗn hợp khoảng 2 - 3 phút đến khi nhuyễn và mịn thì tắt máy.
             Bước 4: Để hỗn hợp được mịn hơn và lọc bỏ phần bã chưa xay nhuyễn, bạn có thể lọc sơ qua rây.              
         `, 
+        min: "20",
+    kcal: "45",
+    đg: "4.6/5 (942)",
+    like: "411",
+    cmt: "52",
+    share: "22",
       },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepthom.png"),
@@ -1277,6 +1528,12 @@ const foodIems = {
             
             Bước 3: Tiếp theo bạn lấy phần nước ép đã lọc qua thêm 400ml nước lọc vào khuấy đều. Sau đó thêm đường, mật ong vào tuỳ với khẩu vị của bạn.           
         `, 
+        min: "20",
+    kcal: "40",
+    đg: "4.2/5 (421)",
+    like: "111",
+    cmt: "22",
+    share: "12",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepbidao.png"),
@@ -1296,6 +1553,12 @@ const foodIems = {
             - Nếu không có máy ép, bạn có thể sử dụng máy xay sinh tố để xay, sau đó lọc lấy phần nước và bỏ phần xác đi.
             - Sau khi ép xong, bạn cho ra ly rồi cho thêm đường và muối vào khuấy đều là dùng được rồi đấy!        
         `, 
+        min: "20",
+    kcal: "47",
+    đg: "4.3/5 (611)",
+    like: "211",
+    cmt: "31",
+    share: "12",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Sinhtodau.png"),
@@ -1319,6 +1582,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Chỉ với vài bước đơn giản là bạn đã có ngay ly sinh tố dâu mát lạnh và bổ dưỡng để thưởng thức rồi đấy. Giờ bạn chỉ cần cho ra ly là có thể thưởng thức hương vị tuyệt vời của món nước uống này.                
         `,
+        min: "25",
+    kcal: "45",
+    đg: "4.9/5 (1683)",
+    like: "1030",
+    cmt: "512",
+    share: "251",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Sinhtobo.png"),
@@ -1343,6 +1612,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Chỉ cần vài bước là bạn đã hoàn thành món sinh tố bơ mát lạnh và đầy dinh dưỡng cho cả nhà rồi. Ly sinh tố này là sự kết hợp giữa vị thơm béo của bơ và vị ngọt đặc trưng của sữa đặc khiến ai cũng yêu thích khi uống thử. Còn chần chờ gì nữa mà không vào bếp trổ tài ngay nào!                        
         `, 
+        min: "25",
+    kcal: "45",
+    đg: "4.9/5 (1583)",
+    like: "1000",
+    cmt: "611",
+    share: "421",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepluu.png"),
@@ -1366,6 +1641,12 @@ const foodIems = {
             - Lúc này, bạn chỉ cần dùng tay ấn mạnh túi nhựa thì các hạt lựu sẽ tự vỡ ra. Ngoài dùng tay thì bạn có thể dùng tấm thớt ấn cũng hiệu quả đấy. Bạn ấn càng kỹ thì nước ép thu được càng nhiều.
             - Cuối cùng, bạn dùng kéo cắt một góc túi nhựa rồi đổ nước ép lựu ra cốc là xong.                                
         `,
+        min: "25",
+    kcal: "38",
+    đg: "4.2/5 (611)",
+    like: "211",
+    cmt: "22",
+    share: "12",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Sinhtodua.png"),
@@ -1389,6 +1670,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Sinh tố dừa với màu trắng sữa, đều màu và đẹp mắt. Khi ngửi mang hương thơm béo ngậy và để lâu không bị tách nước. Còn khi thưởng thức, ta có thể cảm nhận được cơm dừa xay mịn, nhuyễn với chút bùi bùi, béo béo mà không hề ngấy chút nào.                                        
         `,
+        min: "25",
+    kcal: "55",
+    đg: "4.2/5 (822)",
+    like: "411",
+    cmt: "42",
+    share: "11",
         },
     ], 
     Salad:[
@@ -1428,6 +1715,12 @@ const foodIems = {
             - Kế đến, bạn cũng cho phần nước trộn salad vào phần thịt gà xé nhỏ, trộn đều và cũng để trong 5 phút để thấm gia vị. Sau cùng, bạn cho thau hành tây đã trộn vào thau thịt gà, thêm lá chanh thái sợi, rau răm, húng quế vào và trộn đều lên là hoàn thành.
             Sau đó, cho một ít bún, thịt và bắt đầu cuốn lại. Khi cuốn được 1 vòng, bạn cho thêm 2 con tôm rồi gấp 2 mép bánh tráng ở 2 bên lại. Cuối cùng, chỉ cần cuộn chặt tay đến khi hết miếng bánh tráng là xong.                                                                                              
         `, 
+        min: "35",
+    kcal: "200",
+    đg: "4.2/5 (923)",
+    like: "214",
+    cmt: "42",
+    share: "12",
         },
       {
         image: require("./assets/IMG/Salad/Saladhoaqua.png"),
@@ -1459,6 +1752,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Chỉ với vài bước đơn giản là bạn đã có ngay một dĩa salad mát lành, vừa ngon vừa giúp chống ngán hiệu quả.                                                     
         `, 
+        min: "35",
+    kcal: "200",
+    đg: "4.2/5 (971)",
+    like: "421",
+    cmt: "211",
+    share: "61",
         },
       {
         image: require("./assets/IMG/Salad/Saladmuc.png"),
@@ -1490,6 +1789,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Món salad sau khi được trộn sẽ mang có vẻ ngoài đẹp mắt với đủ loại màu sắc đầy lôi cuốn. Bạn có thể nhanh chóng bày ra đĩa và đặt thêm lá húng quế lên trên để làm điểm nhấn rồi mang đi thưởng thức cùng những người thân yêu ngay.                                                             
         `,
+        min: "35",
+    kcal: "297,1",
+    đg: "4.3/5 (1011)",
+    like: "421",
+    cmt: "72",
+    share: "12",
         },
       {
         image: require("./assets/IMG/Salad/Saladtrungcahoi.png"),
@@ -1517,6 +1822,12 @@ const foodIems = {
             - Bạn cho các nguyên liệu đã sơ chế bao gồm: Rau xà lách, bắp cải và cà rốt vào tô lớn và cho 3 muỗng canh mayonnaise vào rồi trộn đều.
             - Cuối cùng, bạn cho salad ra dĩa và để trứng gà luộc và trứng cá hồi lên trên là hoàn tất.                                                                     
         `, 
+        min: "35",
+    kcal: "297,1",
+    đg: "4.9/5 (1683)",
+    like: "611",
+    cmt: "126",
+    share: "21",
         },
       {
         image: require("./assets/IMG/Salad/Saladdaugiam.png"),
@@ -1551,6 +1862,12 @@ const foodIems = {
             - Bạn cho xà lách, dưa leo, cà chua, hành tây đã cắt lát vào một cái tô rồi trộn đều sau đó bạn cho nước sốt đã làm ở bước 2 vào, bạn đảo đều nhẹ tay một lần nữa cho đến khi nước sốt thấm vào rau củ quả.
             - Cuối cùng, bạn cho vào ngò rí đã cắt khúc vào rồi trộn đều là hoàn thành.                                                                             
         `,
+        min: "35",
+    kcal: "297,1",
+    đg: "4.5/5 (1001)",
+    like: "616",
+    cmt: "51",
+    share: "12",
         },
       {
         image: require("./assets/IMG/Salad/Saladbapcaitim.png"),
@@ -1581,6 +1898,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Chỉ với vài bước đơn giản là bạn đã có ngay một dĩa salad bắp cải tím sốt mayonnaise rồi đấy. Phần rau củ giòn giòn kết hợp cùng nước sốt mayonnaise béo ngậy chắc chắn sẽ khiến bạn thích mê cho mà xem.                                                                                     
         `,
+        min: "35",
+    kcal: "227,1",
+    đg: "4.4/5 (1411)",
+    like: "422",
+    cmt: "51",
+    share: "22",
         },
       {
         image: require("./assets/IMG/Salad/Saladrongnhothanhcua.png"),
@@ -1598,6 +1921,12 @@ const foodIems = {
         des2: `
             - Rong nho mua về thì ngâm trong nước đá lạnh 10 - 15 phút rồi vớt ra, các nguyên liệu còn lại (cà chua, xà lách, bắp cải tím,..) thì cắt theo ý thích, thanh cua xé sợi rồi trộn đều với sốt là bạn đã có ngay một phần salad thanh cua thơm ngon và bổ dưỡng.                                                                                     
         `,
+        min: "35",
+    kcal: "257,1",
+    đg: "4.5/5 (944)",
+    like: "611",
+    cmt: "311",
+    share: "48",
         },
       {
         image: require("./assets/IMG/Salad/Saladkiwi.png"),
@@ -1624,6 +1953,12 @@ const foodIems = {
             Bước 3: Trộn sốt với salad
             - Cho các thành phần gồm rau xanh, bơ, cà chua, kiwi và hạt bí vào một bát lớn rồi nêm nếm thêm muối, tiêu cho vừa ăn rồi đổ hỗn hợp nước sốt vào, trộn đều lên và thưởng thức món salad hấp dẫn.                                                                                 
         `,
+        min: "35",
+    kcal: "297,1",
+    đg: "4.9/5 (1103)",
+    like: "411",
+    cmt: "51",
+    share: "22",
       },
     ],
     foodIemsSoup : [
@@ -1663,6 +1998,12 @@ const foodIems = {
             Bước 4: Thành phần
             - Súp cua bí đỏ sau khi hoàn thành có màu cam vàng ngon mắt, mùi thơm nức đặc trưng của bí đỏ và cua. Ăn một miếng, bạn có thể cảm nhận được thịt cua mềm ngọt, bí đỏ béo ngậy, tan ngay trong miệng, rất hấp dẫn.  
         `,
+        min: "45",
+    kcal: "297,1",
+    đg: "4.9/5 (1683)",
+    like: "712",
+    cmt: "521",
+    share: "141",
         },
       {
         image: require("./assets/IMG/Sup/Suphotvitlon.png"),
@@ -1692,6 +2033,12 @@ const foodIems = {
             Bước 4: Thành phần
             - Món súp hột vịt lộn có màu sắc sặc sỡ của hột vịt, táo tàu, táo đỏ và kỷ tử vô cùng đẹp mắt. Nước súp đậm đà, thanh ngọt tự nhiên nên rất dễ ăn. Hột vịt thì thơm béo, kết hợp cùng vị ngọt của táo tàu, táo đỏ và vị cay cay của gừng và rau răm vô cùng hấp dẫn. Khi thưởng thức súp hột vịt lộn, bạn cho vào một ít tiêu xay để kích thích vị giác.
         `,
+        min: "45",
+    kcal: "297,1",
+    đg: "4.3/5 (1383)",
+    like: "532",
+    cmt: "242",
+    share: "97",
         },
       {
         image: require("./assets/IMG/Sup/Supluon.png"),
@@ -1721,6 +2068,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Món súp lươn đã hoàn thành rồi, giờ thì múc súp lươn ra tô và cùng thưởng thức với mọi người thôi nào.
         `, 
+        min: "45",
+    kcal: "297,1",
+    đg: "4.2/5 (1251)",
+    like: "511",
+    cmt: "221",
+    share: "41",
         },
       {
         image: require("./assets/IMG/Sup/Supga.jpg"),
@@ -1753,6 +2106,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Vào những ngày trời lạnh, được nếm chén súp có vị thanh thanh của thịt gà hòa quyện cùng bắp ngô ngọt, cho thêm chút rau thơm và tiêu nữa thì còn gì bằng.
         `,
+        min: "45",
+    kcal: "297,1",
+    đg: "4.9/5 (902)",
+    like: "541",
+    cmt: "211",
+    share: "51",
         },
       {
         image: require("./assets/IMG/Sup/Supcahoi.png"),
@@ -1787,6 +2146,12 @@ const foodIems = {
             Bước 4: Thành phẩm
             - Múc súp cá hồi ra tô, cho thêm một ít cá hồi lên mặt cùng một xíu phô mai, món súp cá hồi đã hoàn thành.        
         `, 
+        min: "45",
+    kcal: "297,1",
+    đg: "4.6/5 (981",
+    like: "411",
+    cmt: "211",
+    share: "51",
         },
       {
         image: require("./assets/IMG/Sup/Supmangtaynammo.jpg"),
@@ -1812,6 +2177,12 @@ const foodIems = {
             Bước 3: Thành phẩm
             - Cho thành phẩm ra tô, rắc thêm ít ngò rí lên trên để làm tăng mùi vị của món ăn. Súp măng tây có màu sắc bắt mắt, khi ăn có độ giòn và ngọt của cà rốt, măng tây xen lẫn vị béo của nấm mỡ kết hợp cùng hương thơm của hành tím. Khi ăn cùng cơm trắng cả 2 tạo nên sự hài hòa giữa hương vị đậm đà của súp và vị ngọt tự nhiên của cơm.                
         `,
+        min: "45",
+    kcal: "297,1",
+    đg: "4.1/5 (1097)",
+    like: "511",
+    cmt: "221",
+    share: "92",
         },
       {
         image: require("./assets/IMG/Sup/Suphautrungbachthao.png"),
@@ -1853,7 +2224,13 @@ const foodIems = {
             
             Bước 4: Thành phẩm
             - Múc súp hàu ra tô, cho trứng bắc thảo và trứng cút lên mặt súp. Sau đó, rắc thêm một chút hành ngò, tiêu và nêm nếm 1 ít nước tương là hoàn thành món ăn.                        
-        `, 
+        `,
+        min: "45",
+    kcal: "299,1",
+    đg: "4.9/5 (1302)",
+    like: "611",
+    cmt: "211",
+    share: "71", 
         },
       {
         image: require("./assets/IMG/Sup/Supbaongutoyen.jpg"),
@@ -1890,6 +2267,12 @@ const foodIems = {
             Bước 5: Thành phẩm
             - Sau hơn 1 tiếng đứng bếp, bạn đã sở hữu ngay 1 “mỹ vị nhân gian” nhiều giá trị dinh dưỡng. Nước súp sóng sánh, phần rau ngủ đã mềm, ăn rất ngọt vị. Đặc biệt là bao ngư sau khi hầm cùng các loại rau củ lại càng thêm ngọt nước.                        
         `,
+        min: "45",
+    kcal: "297,1",
+    đg: "4.5/5 (1301)",
+    like: "524",
+    cmt: "422",
+    share: "123",
         },
     ]
     };
