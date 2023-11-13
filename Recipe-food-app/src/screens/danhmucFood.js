@@ -85,7 +85,7 @@ const colors = route.params.colorItem;
                         />
                         <Text style={style.nameFood}>{item.Name}</Text>
                         <View style={style.nguyenlieu}>
-                          <Text style={style.detailsFood}>Nguyên liệu</Text>
+                          <Text style={style.detailsFood}>Mô tả</Text>
                           <Text
                             ellipsizeMode="tail"
                             numberOfLines={4}

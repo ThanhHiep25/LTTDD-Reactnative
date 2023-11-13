@@ -18,7 +18,7 @@ const dataDanhMuc = [
     name: "Đồ nướng",
     imgLocal: require("./assets/IMG/home/donuong.png"),
     bgcl: ["#8ECDDD", "#CAEEFF", "#DCF4FF", "#FFFFFF"],
-    colorItem: ["#DFA67B", "#F3DEBA", "#ABC4AA", "#675D50"]
+    colorItem: ["#DFA67B", "#F3DEBA", "#ABC4AA", "#f5cd79"]
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const dataDanhMuc = [
     name: "Món ăn vặt",
     imgLocal: require("./assets/IMG/home/snack.png"),
     bgcl: ["#8ECDDD", "#CAEEFF", "#DCF4FF", "#FFFFFF"],
-    colorItem: ["#DFA67B", "#F3DEBA", "#ABC4AA", "#675D50"]
+    colorItem: ["#DFA67B", "#F3DEBA", "#ABC4AA", "#f5cd79"]
   },
   {
     id: 7,
