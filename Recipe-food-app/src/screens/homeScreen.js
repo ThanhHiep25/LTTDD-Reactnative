@@ -27,37 +27,11 @@ const Home = ({ navigation }) => {
  
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState([]);
-  var dmMonan = (item) => {
-    if (item.id == 1) setDsmonan(foodIems.Banh);
-    else if (item.id == 2) setDsmonan(foodIems.foodIemsSoup);
-    else if (item.id == 3) setDsmonan(foodIems.nuong);
-    else if (item.id == 4) setDsmonan(foodIems.Lau);
-    else if (item.id == 5) setDsmonan(foodIems.Nuoctraicay);
-    else if (item.id == 6) setDsmonan(foodIems.Anvat);
-    else if (item.id == 7) setDsmonan(foodIems.Salad);
-    else if (item.id == 8) setDsmonan(foodIems.NuocCham);
-    navigation.navigate("dmbanh", {
-      bgcl: item.bgcl,
-      title: item.name,
-      img: item.imgLocal,
-      dsmon: dsmonan,
-    });
-  };
 
   const onDeletePress = (index) => {
     setSelected(selected.slice(index, -1));
     setSearch("");
   };
-
-  // useEffect(()=>{
-  //  dmMonan
-  // },[])
- 
-
-  useEffect(() => {
-    dmMonan;
-  }, []);
-
 
   return (
     <View style={styles.container}>
@@ -175,16 +149,11 @@ const Home = ({ navigation }) => {
               numColumns={4}
               renderItem={({ item }) => (
 
-                  // <Pressable
-                  // style={styles.Pre1}
-                  // onPress={() => {
-                  //   dmMonan(item);
-                  // }}>  
 
                 <Pressable
                   style={styles.Pre1}
                   onPress={() => {
-                    navigation.navigate("dmbanh", {
+                    navigation.navigate("danhmucFood", {
                       bgcl: item.bgcl,
                       title: item.name,
                       img: item.imgLocal,
@@ -192,23 +161,9 @@ const Home = ({ navigation }) => {
                       id: item.id,
                     });
 
-                    dmMonan(item);
-
                   }}
                 >
-                  <Pressable
-                    style={styles.Pre1}
-                    onPress={() => {
-                      if (item.id == 1) navigation.navigate("dmbanh");
-                      if (item.id == 2) navigation.navigate("dmsup");
-                      if (item.id == 3) navigation.navigate("dmnuong");
-                      if (item.id == 4) navigation.navigate("dmlau");
-                      if (item.id == 5) navigation.navigate("dmnuoctraicay");
-                      if (item.id == 6) navigation.navigate("dmmonanvat");
-                      if (item.id == 7) navigation.navigate("dmsalad");
-                      if (item.id == 8) navigation.navigate("dmnuoccham");
-                    }}
-                  />
+    
                   <Image source={item.imgLocal} style={styles.img4} />
                   <Text style={styles.textPre2}>{item.name}</Text>
                 </Pressable>
