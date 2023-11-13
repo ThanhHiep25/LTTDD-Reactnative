@@ -199,4 +199,6 @@ const style = StyleSheet.create({
     width: 130,
   },
 });
+
 export default dmBanh;
+
