@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { StyleSheet, View, ScrollView, Text, Image, Pressable, FlatList } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import Icon from 'react-native-vector-icons/FontAwesome'; // Chọn icon theo thư viện bạn muốn sử dụng
+// import Icon from 'react-native-vector-icons/FontAwesome'; // Chọn icon theo thư viện bạn muốn sử dụng
+// import Icon2 from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import Toast from 'react-native-toast-message';
 //import YoutubePlayer from 'react-native-youtube-iframe';
 
@@ -44,7 +47,7 @@ const dmctFood = ({ navigation, route }) => {
                 >
 
                     <View style={styles.iconback}>
-                        <Icon name="arrow-left" size={25} color="white"/>
+                        <Icon name="arrow-back" size={25} color="white"/>
                     </View>
                 </Pressable>
                 
@@ -80,23 +83,52 @@ const dmctFood = ({ navigation, route }) => {
 
             <View style={styles.v1}>
                 <View style={styles.v11}>
+                    <View style={styles.food}>
+                        <Text style={styles.t1}>{item.Name}</Text>
+                        <Icon name="share-social" size={25} color="black" />  
+                    </View>
+                    
                     <View style={styles.star}>
-                        {/* <Text style={styles.t1}>{item.Name}</Text> */}
+                        <View style={styles.viewdg}>
+                            <Icon name="alarm-outline" size={25} color="black"/>
+                            <Text style={styles.tdg}>123 min</Text>
+                        </View>
+                        <View style={styles.viewdg}>
+                            <Icon name="flame" size={25} color="red" /> 
+                            <Text style={styles.tdg}>124 Kcal</Text>
+                        </View>
+                        
+                        <View style={styles.viewdg}>
+                            <Icon name="star" size={25} color="yellow" />                     
+                            <Text style={styles.tdg}>{item.đg}</Text>
+                        </View>
+                    </View>
 
-                        <Icon name="star" size={20} color="yellow" />
-                        <Icon name="star" size={20} color="yellow" />
-                        <Icon name="star" size={20} color="yellow" />
-                        <Icon name="star" size={20} color="yellow" />
-                        <Icon name="star" size={20} color="yellow" />                        
+                    <Text style={styles.tmota}> {item.details}</Text>
 
-                        <Text style={styles.tdg}>{item.đg} đánh giá</Text>                        
+                    <View style={styles.v3}>
+                        <View style={styles.viewdg}>
+                            <Icon name="thumbs-up-outline" size={25} color="black" />
+                            <Text style={styles.tdg}>100</Text>
+                        </View>
+
+                        <View style={styles.viewdg}>
+                            <Icon name="chatbox-outline" size={25} color="black" /> 
+                            <Text style={styles.tdg}>20</Text>
+                        </View>
+
+                        <View style={styles.viewdg}>
+                            <Icon name="bookmark-outline" size={25} color="black" />
+                            <Text style={styles.tdg}>5</Text>
+                            {/* <Icon name="heart-outline" size={25} color="black" />  */}
+                        </View>
+                                                                                                
                     </View>
                 </View>
-             
             </View>
 
             <View style={styles.v2}>
-                <Text style={styles.t1}>{item.Name}</Text>
+                {/* <Text style={styles.t1}>{item.Name}</Text> */}
                 <Text style={styles.text1}>Nguyên liệu</Text>
                 <Text style={styles.textdes1}>{item.des1}</Text>
                 <Text style={styles.text2}>Cách nấu món ăn</Text>
@@ -120,11 +152,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     t1:{
-        //marginTop: 10,
-        //marginLeft: 20,
-        //fontSize: 22,
-        fontSize: 20,
-        fontWeight: 700,
+        marginLeft: 15,
+        fontSize: 25,
+        fontWeight: '700',
         color: "#E87104",
     },
     backLogo: {
@@ -141,10 +171,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         alignItems: 'center',
         backgroundColor: 'orange', 
-        //borderColor: 'black',
-        borderWidth: 1, 
-        borderRadius: 50, 
-        padding: 5, 
+        borderRadius: 50,  
     },
     view2:{        
         justifyContent: 'center',
@@ -186,24 +213,52 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 40,  
     },
     v1:{
-        flexDirection: 'row',
+        //flexDirection: 'row',
         marginHorizontal: 16,
         marginTop: 10,
     },  
     v11:{
-        flex: 1,
+        //flex: 1,
+        flexDirection: 'column',
+    },
+    food:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
     star:{
         flexDirection: 'row',
+        marginTop: 10,
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        //borderWidth: 1,
+        //borderRadius: 20,
+        //paddingHorizontal: 1, // điều chỉnh giá trị này để tăng khoảng cách
+    },
+    viewdg:{
+        flexDirection: 'row',
     },
     tdg:{
-        paddingLeft: 10,
         fontSize: 15,
-        fontWeight: '400',
-        textDecorationLine: 'underline',
+        fontWeight: '400', 
+        marginTop: 2,       
     },
     v2:{
         margin: 20,
+    },
+    tmota:{
+        fontSize: 15,
+        fontWeight: '400',
+        marginLeft: 15,
+        marginTop: 10,
+    },
+    v3:{
+        marginTop: 25,
+        marginRight: 100,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        //paddingHorizontal: 50, // điều chỉnh giá trị này để tăng khoảng cách
     },
     text1:{
         fontSize: 18,
