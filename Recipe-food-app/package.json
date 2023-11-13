@@ -19,7 +19,12 @@
     "react-dom": "18.2.0",
     "react-native": "0.72.6",
     "react-native-element-dropdown": "^2.10.0",
+    "react-native-toast-message": "^2.1.7",
+    "react-native-vector-icons": "^10.0.2",
     "react-native-web": "~0.19.6",
+    "react-native-web-webview": "^1.0.2",
+    "react-native-youtube": "^2.0.2",
+    "react-native-youtube-iframe": "^2.3.0",
     "react-virtualized": "^9.22.5"
   },
   "devDependencies": {

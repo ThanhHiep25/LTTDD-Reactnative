@@ -20,8 +20,7 @@ const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 import { StyleSheet, View, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Banh from "../components/dmBanh/banh";
-const dmBanh = ({ navigation, route }) => {
-  //chạy lại setDsmonan nếu id thay đổi
+const dmBanh = ({ navigation, route }) => { //chạy lại setDsmonan nếu id thay đổi
   useEffect(() => {
     if (id == 1) setDsmonan(datamonan.Banh);
     else if (id == 2) setDsmonan(datamonan.foodIemsSoup);
@@ -32,7 +31,7 @@ const dmBanh = ({ navigation, route }) => {
     else if (id == 7) setDsmonan(datamonan.Salad);
     else if (id == 8) setDsmonan(datamonan.NuocCham);
   }, []);
-  const colors = route.params.colorItem;
+const colors = route.params.colorItem;
   const id = route.params.id;
   var [dsmonan, setDsmonan] = useState([]);
   const foodItems = route.params.dsmon;
@@ -64,13 +63,13 @@ const dmBanh = ({ navigation, route }) => {
                 <Text style={style.Titletext}> {route.params.title}</Text>
               </View>
 
-              <FlatList
+             <FlatList
                 numColumns={2}
                 data={dsmonan}
                 renderItem={({ item, index }) => {
                   return (
                     <View></View>
-                    /*  <Animatable.View animation="fadeIn" duration={1000}>
+                     /*  <Animatable.View animation="fadeIn" duration={1000}>
                       <SafeAreaView
                         style={{
                           ...style.fooditem,
@@ -114,8 +113,9 @@ const dmBanh = ({ navigation, route }) => {
                         </Text>
                       </View>
                     </SafeAreaView>*/
-                  );
-                }}
+                  
+                  ) }
+                }
               />
             </View>
           </View>
