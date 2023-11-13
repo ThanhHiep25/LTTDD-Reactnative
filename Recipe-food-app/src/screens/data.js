@@ -44,7 +44,7 @@ const foodIems = [
   ];
 
 // Data dm lẩu
-const foodIems = [
+const foodIems1 = [
     {
       image: require("./../../../assets/IMG/Lau/Laucachepgion.png"),
       Name: "Lẩu cá chép giòn",
@@ -89,7 +89,7 @@ const foodIems = [
   ];
 
 // Data dm Nướng
-const foodIems = [
+const foodIems2 = [
     {
       image: require("./../../../assets/IMG/DoNuong/Thitbachinuongsate.png"),
       Name: "Thịt ba chỉ nướng sa tế",
@@ -134,7 +134,7 @@ const foodIems = [
   ];
 
 // Data dm Món ăn vặt
-const foodIems = [
+const foodIems3 = [
     {
       image: require("./../../../assets/IMG/MonAnVat/Trasuakemtrung.png"),
       Name: "Trà sữa kem trứng",
@@ -179,7 +179,7 @@ const foodIems = [
   ];
 
 // Data dm Nước chấm
-const foodIems = [
+const foodIems4 = [
     {
       image: require("./../../../assets/IMG/NuocCham/Nuocmamchuangot.png"),
       Name: "Nước mắm chua ngọt",
@@ -224,7 +224,7 @@ const foodIems = [
   ];
 
 // Data dm Nước trái cây
-const foodIems = [
+const foodIems5 = [
     {
       image: require("./../../../assets/IMG/NuocTraiCay/Nuocepcarot.png"),
       Name: "Nước ép cà rốt",
@@ -269,7 +269,7 @@ const foodIems = [
   ];
 
 // Data dm Salad
-const foodIems = [
+const foodIems6 = [
     {
       image: require("./../../../assets/IMG/Salad/Saladga.png"),
       Name: "Salad gà",
@@ -314,7 +314,7 @@ const foodIems = [
   ];
 
 // Data dm Súp
-const foodIems = [
+const foodIems7 = [
     {
       image: require("./../../../assets/IMG/Sup/Supcuabido.png"),
       Name: "Súp cua bí đỏ",

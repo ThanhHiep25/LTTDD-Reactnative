@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 
 import { useState } from "react";
 import {
@@ -13,25 +12,17 @@ import {
   SafeAreaView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import dataDM from "./../../dataDanhmuc"
+import dataDM from "./../../dataDanhmuc";
 const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
-
-const dmBanh = ({ navigation,route }) => {
-  const foodItems =route.params.dsmon
-=======
 import { StyleSheet, View, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Banh from "../components/dmBanh/banh";
-const dmBanh = ({navigation}) => {
->>>>>>> 4f492fa7e757ec3aa6de1f87106f1f912fa69310
+const dmBanh = ({ navigation }) => {
+  const foodItems = route.params.dsmon;
   return (
-    <LinearGradient
-      colors={route.params.bgcl}
-      style={style.container}
-    >
+    <LinearGradient colors={route.params.bgcl} style={style.container}>
       <View style={style.container}>
         <ScrollView style={style.container}>
-<<<<<<< HEAD
           <View style={style.container}>
             <View style={style.header}>
               <View style={style.containerheader1}>
@@ -70,7 +61,11 @@ const dmBanh = ({navigation}) => {
                       <Text style={style.nameFood}>{item.Name}</Text>
                       <View style={style.nguyenlieu}>
                         <Text style={style.detailsFood}>Nguyên liệu</Text>
-                        <Text ellipsizeMode="tail" numberOfLines={4} style={style.detailsFood && { marginLeft: 20 }}>
+                        <Text
+                          ellipsizeMode="tail"
+                          numberOfLines={4}
+                          style={style.detailsFood && { marginLeft: 20 }}
+                        >
                           {item.details}
                         </Text>
                       </View>
@@ -80,10 +75,7 @@ const dmBanh = ({navigation}) => {
               />
             </View>
           </View>
-=======
-        
           <Banh />
->>>>>>> 4f492fa7e757ec3aa6de1f87106f1f912fa69310
         </ScrollView>
       </View>
     </LinearGradient>
@@ -159,7 +151,6 @@ const style = StyleSheet.create({
   },
   detailsFood: {
     fontSize: "12px",
-    
   },
   nguyenlieu: {
     width: 130,
