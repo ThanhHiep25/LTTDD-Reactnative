@@ -69,9 +69,8 @@ const colors = route.params.colorItem;
                 data={dsmonan}
                 renderItem={({ item, index }) => {
                   return (
-
-                       <Animatable.View animation="fadeIn" duration={1000}>
-
+                   
+                     <Animatable.View animation="fadeIn" duration={1000}>
                       <SafeAreaView
                         style={{
                           ...style.fooditem,
@@ -94,7 +93,7 @@ const colors = route.params.colorItem;
                           </Text>
                         </View>
                       </SafeAreaView>
-                    </Animatable.View>       
+                    </Animatable.View>                
                   ) }
                 }
               />
