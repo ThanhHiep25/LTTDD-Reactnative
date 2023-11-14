@@ -41,7 +41,7 @@ const foodIems = {
     like: "1286",
     cmt: "261",
     share: "128",
-    //link: "https://www.youtube.com/watch?v=gnQYO1INOQ0",
+    link: "https://www.youtube.com/watch?v=gnQYO1INOQ0",
     },
     {
       image: require("./assets/IMG/Banh/Banhsukem.jpg"),
@@ -84,6 +84,7 @@ const foodIems = {
     like: "912",
     cmt: "145",
     share: "26",
+    link: "https://www.youtube.com/watch?v=qa0eK9CdvUE",
       },
     {
       image: require("./assets/IMG/Banh/Banhflan.jpg"),
@@ -118,6 +119,7 @@ const foodIems = {
     like: "847",
     cmt: "152",
     share: "28", 
+    link: "https://www.youtube.com/watch?v=7BH3AOCe_EA&t=29s",
       },
     {
       image: require("./assets/IMG/Banh/Banhdongxu.png"),
@@ -154,6 +156,7 @@ const foodIems = {
     like: "836",
     cmt: "256",
     share: "173",
+    link: "https://www.youtube.com/watch?v=wfaQ63lpqhw",
       },
     {
       image: require("./assets/IMG/Banh/Banhcupcake.png"),
@@ -190,6 +193,7 @@ const foodIems = {
     like: "125",
     cmt: "18",
     share: "15",
+    link: "https://www.youtube.com/watch?v=KFMoShpkd6s",
       },
     {
       image: require("./assets/IMG/Banh/Banhdonut.png"),
@@ -226,6 +230,7 @@ const foodIems = {
     like: "527",
     cmt: "128",
     share: "35",
+    link: "https://www.youtube.com/watch?v=hk0U4W5vWsE&t=2s",
       },
     {
       image: require("./assets/IMG/Banh/Banhkhoaimochien.jpg"),
@@ -258,6 +263,7 @@ const foodIems = {
     like: "123",
     cmt: "23",
     share: "14",
+    link: "https://www.youtube.com/watch?v=ttC1lW3NzqU",
       },
     {
       image: require("./assets/IMG/Banh/Banhmuffinvietquat.png"),
@@ -294,6 +300,7 @@ const foodIems = {
     like: "231",
     cmt: "37",
     share: "12",
+    link: "https://www.youtube.com/watch?v=7h4KE64zXuE&t=1s",
       },
   ],
   Lau: [
@@ -334,6 +341,7 @@ const foodIems = {
     like: "261",
     cmt: "24",
     share: "17",
+    link: "https://www.youtube.com/watch?v=1XnOkWdlUC4",
       },
     {
       image: require("./assets/IMG/Lau/Lauthai.png"),
@@ -374,6 +382,7 @@ const foodIems = {
     like: "421",
     cmt: "57",
     share: "38",
+    link: "https://www.youtube.com/watch?v=pSBwgYfoA00",
       },
     {
       image: require("./assets/IMG/Lau/Lauhaisan.png"),
@@ -405,6 +414,7 @@ const foodIems = {
     like: "900",
     cmt: "45",
     share: "67", 
+    link: "https://www.youtube.com/watch?v=mLPMIUFyARU",
       },
     {
       image: require("./assets/IMG/Lau/Launam.png"),
@@ -448,6 +458,7 @@ const foodIems = {
     like: "123",
     cmt: "23",
     share: "12", 
+    link: "https://www.youtube.com/watch?v=-neKwXGbYM0",
       },
     {
       image: require("./assets/IMG/Lau/Laubo.jpg"),
@@ -497,6 +508,7 @@ const foodIems = {
     like: "762",
     cmt: "20",
     share: "12",
+    link: "https://www.youtube.com/watch?v=bh75YjORi58",
       },
     {
       image: require("./assets/IMG/Lau/Laude.jpg"),
@@ -538,6 +550,7 @@ const foodIems = {
     like: "632",
     cmt: "30",
     share: "14",
+    link: "https://www.youtube.com/watch?v=tFASHtE8OpA",
       },
     {
       image: require("./assets/IMG/Lau/Laugalagiang.jpg"),
@@ -581,6 +594,7 @@ const foodIems = {
     like: "212",
     cmt: "32",
     share: "12",
+    link: "https://www.youtube.com/watch?v=jKSmEEkK6SE",
       },
     {
       image: require("./assets/IMG/Lau/Laumam.png"),
@@ -628,6 +642,7 @@ const foodIems = {
     like: "14",
     cmt: "22",
     share: "11",
+    link: "https://www.youtube.com/watch?v=3goLsgW6Nfk",
       },
   ],
   nuong: [
@@ -668,6 +683,7 @@ const foodIems = {
     like: "444",
     cmt: "12",
     share: "11",
+    link: "https://www.youtube.com/watch?v=bMkIQW8xfMo",
       },
     {
       image: require("./assets/IMG/DoNuong/Bachtuocnuongsate.png"),
@@ -703,6 +719,7 @@ const foodIems = {
     like: "321",
     cmt: "42",
     share: "12",
+    link: "https://www.youtube.com/watch?v=aRKSNXD8fiI",
       },
     {
       image: require("./assets/IMG/DoNuong/Ganuongmatong.png"),
@@ -739,6 +756,7 @@ const foodIems = {
     like: "41",
     cmt: "12",
     share: "10",
+    link: "https://www.youtube.com/watch?v=5zwkm67dYio",
       },
     {
       image: require("./assets/IMG/DoNuong/Thitxiennuongraucu.png"),
@@ -776,6 +794,7 @@ const foodIems = {
     like: "41",
     cmt: "12",
     share: "7",
+    link: "https://www.youtube.com/watch?v=n4kOCDi9saA",
       },
     {
       image: require("./assets/IMG/DoNuong/Sohuyetnuongmohanh.png"),
@@ -810,6 +829,7 @@ const foodIems = {
     like: "26",
     cmt: "12",
     share: "8",
+    link: "https://www.youtube.com/watch?v=2IA7A5XKgV8",
       },
     {
       image: require("./assets/IMG/DoNuong/Tomnuongmuoiot.jpg"),
@@ -847,6 +867,7 @@ const foodIems = {
     like: "482",
     cmt: "145",
     share: "102",
+    link: "https://www.youtube.com/watch?v=NEt_wN-QXV0",
       },
     {
       image: require("./assets/IMG/DoNuong/Suonsunnuong.png"),
@@ -877,6 +898,7 @@ const foodIems = {
     like: "211",
     cmt: "24",
     share: "12",
+    link: "https://www.youtube.com/watch?v=vOCncSXJOKE",
       },
     {
       image: require("./assets/IMG/DoNuong/Bonuonglalot.png"),
@@ -913,6 +935,7 @@ const foodIems = {
     like: "241",
     cmt: "24",
     share: "12",
+    link: "https://www.youtube.com/watch?v=REGejJEeKYE",
       },
   ],
   Anvat:[
@@ -953,6 +976,7 @@ const foodIems = {
     like: "142",
     cmt: "42",
     share: "24",
+    link: "https://www.youtube.com/watch?v=7IOw1Km77GQ",
       },
     {
       image: require("./assets/IMG/MonAnVat/Trungcutlonxaome.png"),
@@ -990,6 +1014,7 @@ const foodIems = {
     like: "120",
     cmt: "42",
     share: "12",
+    link: "https://www.youtube.com/watch?v=2xvEzD65jVQ",
       },
     {
       image: require("./assets/IMG/MonAnVat/Khoaitaynghien.png"),
@@ -1024,6 +1049,7 @@ const foodIems = {
     like: "211",
     cmt: "42",
     share: "12",
+    link: "https://www.youtube.com/watch?v=mcWHyTRvCt8",
       },
     {
       image: require("./assets/IMG/MonAnVat/Bapxaomohanh.png"),
@@ -1053,6 +1079,7 @@ const foodIems = {
     like: "42",
     cmt: "22",
     share: "32",
+    link: "https://www.youtube.com/watch?v=rZLng4VWyAA",
       },
     {
       image: require("./assets/IMG/MonAnVat/Chagiohaisanphomai.png"),
@@ -1102,6 +1129,7 @@ const foodIems = {
     like: "124",
     cmt: "42",
     share: "22",
+    link: "https://www.youtube.com/watch?v=MAorND03pZE",
       },
     {
       image: require("./assets/IMG/MonAnVat/Xoailac.png"),
@@ -1133,6 +1161,7 @@ const foodIems = {
     like: "422",
     cmt: "142",
     share: "97", 
+    link: "https://www.youtube.com/watch?v=Jbl1z5nXcE4",
     },
     {
       image: require("./assets/IMG/MonAnVat/Changangamxatac.png"),
@@ -1171,6 +1200,7 @@ const foodIems = {
     like: "142",
     cmt: "22",
     share: "12",
+    link: "https://www.youtube.com/watch?v=6sqv4rrUA2g",
       },
     {
       image: require("./assets/IMG/MonAnVat/Goicuon.png"),
@@ -1210,6 +1240,7 @@ const foodIems = {
     like: "210",
     cmt: "23",
     share: "12",
+    link: "https://www.youtube.com/watch?v=3mAwGlLSN0U",
       },
   ],
   NuocCham:[
@@ -1243,6 +1274,7 @@ const foodIems = {
     like: "122",
     cmt: "32",
     share: "12",
+    link: "https://www.youtube.com/watch?v=9PztwHOSImU",
       },
     {
       image: require("./assets/IMG/NuocCham/Muoitieuchanh.png"),
@@ -1274,6 +1306,7 @@ const foodIems = {
     like: "424",
     cmt: "211",
     share: "51",
+    link: "https://www.youtube.com/watch?v=bhPYRES5s14",
       },
     {
       image: require("./assets/IMG/NuocCham/Mamtom.png"),
@@ -1310,6 +1343,7 @@ const foodIems = {
     like: "110",
     cmt: "61",
     share: "21",
+    link: "https://www.youtube.com/watch?v=lvENCtGGi-U",
       },
     {
       image: require("./assets/IMG/NuocCham/Nuocmamgung.png"),
@@ -1340,6 +1374,7 @@ const foodIems = {
     like: "111",
     cmt: "42",
     share: "21",
+    link: "https://www.youtube.com/watch?v=wCzzQjoAIuA",
       },
     {
       image: require("./assets/IMG/NuocCham/Muoiotchanh.png"),
@@ -1371,6 +1406,7 @@ const foodIems = {
     like: "211",
     cmt: "41",
     share: "12",
+    link: "https://www.youtube.com/watch?v=lEsqGQdyiA4",
       },
     {
       image: require("./assets/IMG/NuocCham/Nuocmamme.png"),
@@ -1399,6 +1435,7 @@ const foodIems = {
     like: "213",
     cmt: "51",
     share: "12",
+    link: "https://www.youtube.com/watch?v=CdaxL1Sloio",
     },
     {
       image: require("./assets/IMG/NuocCham/Nuocchamchao.png"),
@@ -1428,6 +1465,7 @@ const foodIems = {
     like: "25",
     cmt: "22",
     share: "12",
+    link: "https://www.youtube.com/watch?v=qJlRNee5FiQ",
       },
     {
       image: require("./assets/IMG/NuocCham/Mamnem.png"),
@@ -1455,6 +1493,7 @@ const foodIems = {
     like: "111",
     cmt: "21",
     share: "11",
+    link: "https://www.youtube.com/watch?v=n7o91nJ3sw0",
       },
   ],
     Nuoctraicay:[
@@ -1481,6 +1520,7 @@ const foodIems = {
     like: "251",
     cmt: "92",
     share: "32",
+    link: "https://www.youtube.com/watch?v=3QBLawH1x8U",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepduahau.png"),
@@ -1507,6 +1547,7 @@ const foodIems = {
     like: "411",
     cmt: "52",
     share: "22",
+    link: "https://www.youtube.com/watch?v=2m00FijZc6Q",
       },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepthom.png"),
@@ -1534,6 +1575,7 @@ const foodIems = {
     like: "111",
     cmt: "22",
     share: "12",
+    link: "https://www.youtube.com/watch?v=yM8X64QPFQo",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepbidao.png"),
@@ -1559,6 +1601,7 @@ const foodIems = {
     like: "211",
     cmt: "31",
     share: "12",
+    link: "https://www.youtube.com/watch?v=ckmXw6u2Tyg",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Sinhtodau.png"),
@@ -1588,6 +1631,7 @@ const foodIems = {
     like: "1030",
     cmt: "512",
     share: "251",
+    link: "https://www.youtube.com/watch?v=O1Qwo45VX-8",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Sinhtobo.png"),
@@ -1618,6 +1662,7 @@ const foodIems = {
     like: "1000",
     cmt: "611",
     share: "421",
+    link: "https://www.youtube.com/watch?v=r2okrddqFSs",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Nuocepluu.png"),
@@ -1647,6 +1692,7 @@ const foodIems = {
     like: "211",
     cmt: "22",
     share: "12",
+    link: "https://www.youtube.com/watch?v=H3Z97OK_VlA",
         },
       {
         image: require("./assets/IMG/NuocTraiCay/Sinhtodua.png"),
@@ -1676,6 +1722,7 @@ const foodIems = {
     like: "411",
     cmt: "42",
     share: "11",
+    link: "https://www.youtube.com/watch?v=ZJKk2QLI6AA",
         },
     ], 
     Salad:[
@@ -1721,6 +1768,7 @@ const foodIems = {
     like: "214",
     cmt: "42",
     share: "12",
+    link: "https://www.youtube.com/watch?v=I0S0iLdrbAY",
         },
       {
         image: require("./assets/IMG/Salad/Saladhoaqua.png"),
@@ -1758,6 +1806,7 @@ const foodIems = {
     like: "421",
     cmt: "211",
     share: "61",
+    link: "https://www.youtube.com/watch?v=3EYGJbC6jMM",
         },
       {
         image: require("./assets/IMG/Salad/Saladmuc.png"),
@@ -1795,6 +1844,7 @@ const foodIems = {
     like: "421",
     cmt: "72",
     share: "12",
+    link: "https://www.youtube.com/watch?v=R6juZ5MIzCc",
         },
       {
         image: require("./assets/IMG/Salad/Saladtrungcahoi.png"),
@@ -1828,6 +1878,7 @@ const foodIems = {
     like: "611",
     cmt: "126",
     share: "21",
+    link: "https://www.youtube.com/watch?v=0qlp4bnlUMw",
         },
       {
         image: require("./assets/IMG/Salad/Saladdaugiam.png"),
@@ -1868,6 +1919,7 @@ const foodIems = {
     like: "616",
     cmt: "51",
     share: "12",
+    link: "https://www.youtube.com/watch?v=QO_hCo-Mg6A",
         },
       {
         image: require("./assets/IMG/Salad/Saladbapcaitim.png"),
@@ -1904,6 +1956,7 @@ const foodIems = {
     like: "422",
     cmt: "51",
     share: "22",
+    link: "https://www.youtube.com/watch?v=PUS9Up_3EWw",
         },
       {
         image: require("./assets/IMG/Salad/Saladrongnhothanhcua.png"),
@@ -1927,6 +1980,7 @@ const foodIems = {
     like: "611",
     cmt: "311",
     share: "48",
+    link: "https://www.youtube.com/watch?v=Xw52v4BaW4g",
         },
       {
         image: require("./assets/IMG/Salad/Saladkiwi.png"),
@@ -1959,6 +2013,7 @@ const foodIems = {
     like: "411",
     cmt: "51",
     share: "22",
+    link: "https://www.youtube.com/watch?v=LexiwqXSJFw",
       },
     ],
     foodIemsSoup : [
@@ -2004,6 +2059,7 @@ const foodIems = {
     like: "712",
     cmt: "521",
     share: "141",
+    link: "https://www.youtube.com/watch?v=LwCmy6CiRRs",
         },
       {
         image: require("./assets/IMG/Sup/Suphotvitlon.png"),
@@ -2039,6 +2095,7 @@ const foodIems = {
     like: "532",
     cmt: "242",
     share: "97",
+    link: "https://www.youtube.com/watch?v=yaTmqIQT3uw",
         },
       {
         image: require("./assets/IMG/Sup/Supluon.png"),
@@ -2074,6 +2131,7 @@ const foodIems = {
     like: "511",
     cmt: "221",
     share: "41",
+    link: "https://www.youtube.com/watch?v=xfxIe3VByyY",
         },
       {
         image: require("./assets/IMG/Sup/Supga.jpg"),
@@ -2112,6 +2170,7 @@ const foodIems = {
     like: "541",
     cmt: "211",
     share: "51",
+    link: "https://www.youtube.com/watch?v=A4InI8YnpeY",
         },
       {
         image: require("./assets/IMG/Sup/Supcahoi.png"),
@@ -2152,6 +2211,7 @@ const foodIems = {
     like: "411",
     cmt: "211",
     share: "51",
+    link: "https://www.youtube.com/watch?v=Erky_YOpUng",
         },
       {
         image: require("./assets/IMG/Sup/Supmangtaynammo.jpg"),
@@ -2183,6 +2243,7 @@ const foodIems = {
     like: "511",
     cmt: "221",
     share: "92",
+    link: "https://www.youtube.com/watch?v=eYLVlRORGA8",
         },
       {
         image: require("./assets/IMG/Sup/Suphautrungbachthao.png"),
@@ -2231,6 +2292,7 @@ const foodIems = {
     like: "611",
     cmt: "211",
     share: "71", 
+    link: "https://www.youtube.com/watch?v=2X3Um555Oe8",
         },
       {
         image: require("./assets/IMG/Sup/Supbaongutoyen.jpg"),
@@ -2273,6 +2335,7 @@ const foodIems = {
     like: "524",
     cmt: "422",
     share: "123",
+    link: "https://www.youtube.com/watch?v=pxOxal4IywE",
         },
     ]
     };

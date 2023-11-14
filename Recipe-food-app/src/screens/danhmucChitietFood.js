@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { StyleSheet, View, ScrollView, Text, Image, Pressable, FlatList } from "react-native";
+import { StyleSheet, View, ScrollView, Text, Image, Pressable, FlatList, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 // import Icon from 'react-native-vector-icons/FontAwesome'; // Chọn icon theo thư viện bạn muốn sử dụng
 // import Icon2 from 'react-native-vector-icons/MaterialIcons';
@@ -37,6 +37,26 @@ const dmctFood = ({ navigation, route }) => {
             autoHide: true,
         });
     };
+
+    // Thêm
+    const [isPlaying, setPlaying] = useState(false); // Trạng thái phát video
+    const playerRef = useRef(null); // Tham chiếu đến ReactPlayer
+  
+    // Hàm xử lý sự kiện khi nhấn vào màn hình
+    const handlePress = () => {
+      // Nếu đang phát thì dừng, ngược lại thì tiếp tục phát
+      setPlaying(!isPlaying); // Giá trị ngược của của nó
+    };
+  
+    // Hàm xử lý sự kiện khi video được sẵn sàng
+    const handleReady = () => {
+      // Kiểm tra nếu đang phát thì tạm dừng
+      if (isPlaying) {
+        playerRef.current.seekTo(0); // Di chuyển đến thời điểm 0 để tạm dừng
+        setPlaying(false);
+      }
+    };
+    //
 
     return(
         <View style={styles.container}>
@@ -140,6 +160,17 @@ const dmctFood = ({ navigation, route }) => {
                 <Text style={styles.testvideo}>Recipe Video</Text>
                 <Comment/>
             </View>
+            <TouchableOpacity style={styles.videoContainer} onPress={handlePress}>
+                <ReactPlayer
+                ref={playerRef}
+                url={item.link}
+                width={'100%'}
+                height={220}
+                playing={isPlaying}
+                controls={true}     // thanh điều khiển
+                onReady={handleReady}
+                />
+            </TouchableOpacity>
 
         </View>
     );
@@ -285,11 +316,17 @@ const styles = StyleSheet.create({
         //paddingHorizontal: 20,
     },
     viewvideo:{
-        flex: 1,
+        marginTop: 10,
+        marginLeft: 15,
     },
     testvideo:{
-        height: '100%',
-        width: '100%',
+        fontSize: 20,
+        fontWeight: '500',
     },
+    videoContainer: {
+        marginTop: 10,
+        width: '100%',
+        height: 220,
+      },
 });
 export default dmctFood;
