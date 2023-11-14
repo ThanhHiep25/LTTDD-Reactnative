@@ -44,7 +44,7 @@ const colors = route.params.colorItem;
                 <Pressable
                   onPress={() => {
                     navigation.navigate("home");
-                  }}
+                     }}
                 >
                   <Image
                     source={require("../../assets/IMG/Banh/back.png")}

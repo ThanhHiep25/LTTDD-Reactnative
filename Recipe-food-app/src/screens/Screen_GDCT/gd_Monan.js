@@ -1,6 +1,7 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, Text, Image, Pressable } from "react-native";
+import { Comment } from "./Comment";
 
 const GD_CT = () => {
   const navigation = useNavigation();
@@ -51,6 +52,9 @@ const GD_CT = () => {
         <Text style={styles.text2}>{item.buoc3}</Text>
 
       </View>
+      <View>
+        <Comment/>
+      </View>
     </View>
   );
 };
@@ -88,18 +92,20 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   text: {
+    fontFamily: 'Arial',
     fontSize: 24,
     fontWeight: 700,
     color: "#E87104",
   },
-  text1: {
+  text1: { 
+    fontFamily: 'Arial',
     fontSize: 20,
     fontWeight: 700,
     color: "#64CA2",
   },
   text2: {
+    fontFamily: 'Arial',
     fontSize: 16,
-    fontWeight: 600,
     color: "#64CA2",
     margin: 30,
     textAlign: "justify",
