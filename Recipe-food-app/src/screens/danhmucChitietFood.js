@@ -159,7 +159,7 @@ const dmctFood = ({ navigation, route }) => {
                 
             <View style={styles.viewvideo}>
                 <Text style={styles.testvideo}>Recipe Video</Text>
-                <Comment/>
+                
             </View>
             <TouchableOpacity style={styles.videoContainer} onPress={handlePress}>
                 <ReactPlayer
@@ -172,7 +172,7 @@ const dmctFood = ({ navigation, route }) => {
                 onReady={handleReady}
                 />
             </TouchableOpacity>
-
+            <Comment/>
         </View>
     );
 };
