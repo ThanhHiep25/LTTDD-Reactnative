@@ -8,15 +8,14 @@ import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
 import Thongtincanhan from "../screens/Thongtincanhan";
 import GD_CT from "../screens/Screen_GDCT/gd_Monan";
-
 import dmBanh from "../screens/danhmucFood";
 import dmctFood from "../screens/danhmucChitietFood";
+
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="welcome" component={WelcomeScreen} />
@@ -26,8 +25,6 @@ const AppNavigator = () => {
         <Stack.Screen name="setting" component={Setting} />
         <Stack.Screen name="thongtincanhan" component={Thongtincanhan} />
         <Stack.Screen name="dmctFood" component={dmctFood} />
-
-
       </Stack.Navigator>
     </NavigationContainer>
   );

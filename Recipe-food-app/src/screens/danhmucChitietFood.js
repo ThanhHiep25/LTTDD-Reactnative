@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import Toast from 'react-native-toast-message';
 //import YoutubePlayer from 'react-native-youtube-iframe';
-import ReactPlayer from 'react-player/youtube';
+import { Comment } from "./Screen_GDCT/Comment";
 
 const dmctFood = ({ navigation, route }) => {
     const { item } = route.params;
@@ -158,7 +158,7 @@ const dmctFood = ({ navigation, route }) => {
                 
             <View style={styles.viewvideo}>
                 <Text style={styles.testvideo}>Recipe Video</Text>
-
+                <Comment/>
             </View>
             <TouchableOpacity style={styles.videoContainer} onPress={handlePress}>
                 <ReactPlayer
