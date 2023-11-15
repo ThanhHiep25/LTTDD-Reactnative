@@ -298,11 +298,11 @@ const styles = StyleSheet.create({
         color: "#FF9900",
         marginLeft: 45,
     },
-    testdes1:{
+    textdes1:{
         fontSize: 16,
-        //marginLeft: 15,
-        //paddingHorizontal: 20,
-        //marginVertical: 16,
+        marginLeft: 15,
+        paddingHorizontal: 30,
+        marginVertical: 16, 
     },
     text2:{
         fontSize: 18,
@@ -310,10 +310,10 @@ const styles = StyleSheet.create({
         color:'#64CA25',
         marginLeft: 45,
     },
-    testdes2:{
+    textdes2:{
         fontSize: 16,
         marginLeft: 10,
-        //paddingHorizontal: 20,
+        paddingHorizontal: 20,
     },
     viewvideo:{
         marginTop: 10,
