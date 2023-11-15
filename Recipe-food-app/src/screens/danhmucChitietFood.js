@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import Toast from 'react-native-toast-message';
 //import YoutubePlayer from 'react-native-youtube-iframe';
+import ReactPlayer from 'react-player/youtube';
 import { Comment } from "./Screen_GDCT/Comment";
 
 const dmctFood = ({ navigation, route }) => {
