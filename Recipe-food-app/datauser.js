@@ -5,7 +5,10 @@ const User = [
     email: "abc",
     title: "Good ",
     pass: "1",
-    imgUser: require("./assets/IMG/home/User.png"),
+    imgUser:"https://cdn.glitch.global/a2f08375-f202-47c4-8950-a18cdb1db74f/unnamed%20(2).png",
+    date: "11/11/2011",
+    sothich: "Ngủ",
+    yeuthich: "Chuối",
   },
   {
     id: 2,

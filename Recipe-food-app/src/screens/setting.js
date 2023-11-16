@@ -24,7 +24,7 @@ const Setting = ({navigation}) => {
       </View>
 
       <View style={styles.view1}>
-        <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('thongtin',user)}}>
+        <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('thongtincanhan',user)}}>
           <Text style={styles.textPre}>Thông tin cá nhân</Text>
           <Image
             source={require("../../assets/IMG/setting/thongtin.gif")}
@@ -32,7 +32,7 @@ const Setting = ({navigation}) => {
           />
         </Pressable>
 
-        <Pressable style={styles.Pre}>
+        <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('csdk')}}>
           <Text style={styles.textPre}>Chính sách và điều khoản</Text>
           <Image
             source={require("../../assets/IMG/setting/chinhsach.gif")}

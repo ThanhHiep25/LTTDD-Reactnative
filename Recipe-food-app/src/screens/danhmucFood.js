@@ -12,14 +12,13 @@ import {
   SafeAreaView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+
 import datamonan from "../../dataMonan";
 import * as Animatable from "react-native-animatable";
-const dmBanh = ({ navigation, route }) => {
-  const colors = route.params.colorItem;
-  const id = route.params.id;
-  var [dsmonan, setDsmonan] = useState([]);
+import dataDM from "./../../dataDanhmuc";
+const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 
-  //chạy lại setDsmonan nếu id thay đổi
+const dmBanh = ({ navigation, route }) => { //chạy lại setDsmonan nếu id thay đổi
   useEffect(() => {
     if (id == 1) setDsmonan(datamonan.Banh);
     else if (id == 2) setDsmonan(datamonan.foodIemsSoup);
@@ -30,20 +29,25 @@ const dmBanh = ({ navigation, route }) => {
     else if (id == 7) setDsmonan(datamonan.Salad);
     else if (id == 8) setDsmonan(datamonan.NuocCham);
   }, []);
+const colors = route.params.colorItem;
+  const id = route.params.id;
+  var [dsmonan, setDsmonan] = useState([]);
+  const foodItems = route.params.dsmon;
   return (
-    <LinearGradient colors={route.params.bgcl} style={style.container}>
+    <ScrollView>
+      <LinearGradient colors={route.params.bgcl} style={style.container}>
       <View style={style.container}>
-        <ScrollView style={style.container}>
+        <View style={style.container}>
           <View style={style.container}>
             <View style={style.header}>
               <View style={style.containerheader1}>
                 <Pressable
                   onPress={() => {
-                    navigation.navigate("home");
-                  }}
+                    navigation.goBack();
+                     }}
                 >
                   <Image
-                    source={require("./../../assets/IMG/dmBanh/back.png")}
+                    source={require("../../assets/IMG/Banh/back.png")}
                     style={style.backLogo}
                   ></Image>
                 </Pressable>
@@ -58,16 +62,21 @@ const dmBanh = ({ navigation, route }) => {
                 <Text style={style.Titletext}> {route.params.title}</Text>
               </View>
 
-              <FlatList
+             <FlatList
                 numColumns={2}
                 data={dsmonan}
                 renderItem={({ item, index }) => {
                   return (
-                    <Animatable.View animation="fadeIn" duration={1000}>
-                      <SafeAreaView
+
+                       <Animatable.View animation="fadeIn" duration={1000}>
+                        <SafeAreaView>
+                        <Pressable
                         style={{
                           ...style.fooditem,
                           backgroundColor: colors[index % colors.length],
+                        }}
+                        onPress={() => {
+                          navigation.navigate('dmctFood', {item: item})
                         }}
                       >
                         <Image
@@ -76,7 +85,7 @@ const dmBanh = ({ navigation, route }) => {
                         />
                         <Text style={style.nameFood}>{item.Name}</Text>
                         <View style={style.nguyenlieu}>
-                          <Text style={style.detailsFood}>Nguyên liệu</Text>
+                          <Text style={style.detailsFood}>Mô tả</Text>
                           <Text
                             ellipsizeMode="tail"
                             numberOfLines={4}
@@ -85,16 +94,41 @@ const dmBanh = ({ navigation, route }) => {
                             {item.details}
                           </Text>
                         </View>
-                      </SafeAreaView>
+                      </Pressable>
+                        </SafeAreaView>
+                      
                     </Animatable.View>
-                  );
-                }}
+
+                    // <SafeAreaView
+                    //   style={{
+                    //     ...style.fooditem,
+                    //     backgroundColor: colors[index % colors.length],
+                    //   }}
+                    // >
+                    //   <Image source={item.image} style={style.imagesFooditem} />
+                    //   <Text style={style.nameFood}>{item.Name}</Text>
+                    //   <View style={style.nguyenlieu}>
+                    //     <Text style={style.detailsFood}>Nguyên liệu</Text>
+                    //     <Text
+                    //       ellipsizeMode="tail"
+                    //       numberOfLines={4}
+                    //       style={style.detailsFood && { marginLeft: 20 }}
+                    //     >
+                    //       {item.details}
+                    //     </Text>
+                    //   </View>
+                    // </SafeAreaView>
+                  
+                  ) }
+                }
               />
             </View>
           </View>
-        </ScrollView>
+        </View>
       </View>
     </LinearGradient>
+    </ScrollView>
+    
   );
 };
 
@@ -172,4 +206,6 @@ const style = StyleSheet.create({
     width: 130,
   },
 });
+
 export default dmBanh;
+

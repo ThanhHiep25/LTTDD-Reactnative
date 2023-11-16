@@ -16,11 +16,15 @@ import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+//import foodIems from "../../dataMonan";
+
 
 const Home = ({ navigation }) => {
   const route = useRoute();
   const user = route.params;
 
+  //var [dsmonan, setDsmonan] = useState([]);
+ 
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState([]);
 
@@ -45,14 +49,14 @@ const Home = ({ navigation }) => {
 
         <Pressable>
           <Image
-            source={require("../../assets/IMG/home/User.png")}
+            source={{uri:user.img}}
             style={styles.img1}
           />
         </Pressable>
       </View>
 
       <View style={styles.view1}>
-        <Text style={styles.text}>Chào mừng,</Text>
+        <Text style={styles.text}>Chào mừng,{user.name}</Text>
         <Text style={styles.text1}>Nay chúng ta bắt đầu nấu gì đây !!</Text>
       </View>
 
@@ -114,6 +118,7 @@ const Home = ({ navigation }) => {
                 style={styles.Pre}
                 onPress={() => {
                   navigation.navigate("gdct", item);
+                  user
                 }}
               >
                 <View style={styles.view3_1}>
@@ -144,18 +149,22 @@ const Home = ({ navigation }) => {
               data={dataDanhMuc}
               numColumns={4}
               renderItem={({ item }) => (
+
+
                 <Pressable
                   style={styles.Pre1}
                   onPress={() => {
-                    navigation.navigate("dmbanh", {
+                    navigation.navigate("danhmucFood", {
                       bgcl: item.bgcl,
                       title: item.name,
                       img: item.imgLocal,
                       colorItem: item.colorItem,
                       id: item.id,
                     });
+
                   }}
                 >
+    
                   <Image source={item.imgLocal} style={styles.img4} />
                   <Text style={styles.textPre2}>{item.name}</Text>
                 </Pressable>
@@ -232,6 +241,7 @@ const styles = StyleSheet.create({
   img1: {
     width: 70,
     height: 70,
+    borderRadius:50,
     resizeMode: "contain",
   },
   img3: {
