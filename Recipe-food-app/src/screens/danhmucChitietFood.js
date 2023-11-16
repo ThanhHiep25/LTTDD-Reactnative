@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     tmota:{
-        fontSize: 15,
+        fontSize: 18,
         fontWeight: '400',
         marginLeft: 15,
         marginTop: 10,

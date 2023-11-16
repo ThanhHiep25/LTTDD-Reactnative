@@ -10,7 +10,7 @@ import Thongtincanhan from "../screens/Thongtincanhan";
 import GD_CT from "../screens/Screen_GDCT/gd_Monan";
 import dmBanh from "../screens/danhmucFood";
 import dmctFood from "../screens/danhmucChitietFood";
-
+import CS_DK from "../screens/ChinhsachvaDieukhoan";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -24,6 +24,7 @@ const AppNavigator = () => {
         <Stack.Screen name="name" component={NameScreen} />
         <Stack.Screen name="setting" component={Setting} />
         <Stack.Screen name="thongtincanhan" component={Thongtincanhan} />
+        <Stack.Screen name="csdk" component={CS_DK} />
         <Stack.Screen name="dmctFood" component={dmctFood} />
       </Stack.Navigator>
     </NavigationContainer>
