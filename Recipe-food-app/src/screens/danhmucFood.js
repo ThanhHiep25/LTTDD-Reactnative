@@ -43,7 +43,7 @@ const colors = route.params.colorItem;
               <View style={style.containerheader1}>
                 <Pressable
                   onPress={() => {
-                    navigation.navigate("home");
+                    navigation.goBack();
                      }}
                 >
                   <Image

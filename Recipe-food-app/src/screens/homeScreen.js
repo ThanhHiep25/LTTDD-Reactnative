@@ -49,14 +49,14 @@ const Home = ({ navigation }) => {
 
         <Pressable>
           <Image
-            source={require("../../assets/IMG/home/User.png")}
+            source={{uri:user.img}}
             style={styles.img1}
           />
         </Pressable>
       </View>
 
       <View style={styles.view1}>
-        <Text style={styles.text}>Chào mừng,</Text>
+        <Text style={styles.text}>Chào mừng,{user.name}</Text>
         <Text style={styles.text1}>Nay chúng ta bắt đầu nấu gì đây !!</Text>
       </View>
 
@@ -240,6 +240,7 @@ const styles = StyleSheet.create({
   img1: {
     width: 70,
     height: 70,
+    borderRadius:50,
     resizeMode: "contain",
   },
   img3: {

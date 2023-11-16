@@ -1,35 +1,41 @@
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, Text, Image, Pressable } from "react-native";
 
 const Thongtincanhan = () => {
+  const navigation = useNavigation();
   const route = useRoute();
-  const user = route.params; 
+  const user = route.params;
   return (
     <View style={styles.contrainer}>
       <View style={styles.view}>
-        <Image style={styles.img} />
+        <Image style={styles.img} source={{uri:user.img}} />
         <Text style={styles.text}>{user.name}</Text>
       </View>
 
       <View style={styles.view1}>
         <View style={styles.view1_1}>
           <Text style={styles.text1}>Thông tin :</Text>
-          <Text style={styles.text1_1}>Email : </Text>
-          <Text style={styles.text1_1}>Ngày bắt đầu :</Text>
+          <Text style={styles.text1_1}>Email : {user.email}</Text>
+          <Text style={styles.text1_1}>Ngày bắt đầu :{user.date}</Text>
         </View>
       </View>
 
       <View style={styles.view1}>
         <View style={styles.view1_1}>
           <Text style={styles.text1}>Sở thích :</Text>
-          <Text style={styles.text1_1}>Món ăn yêu thích : </Text>
-          <Text style={styles.text1_1}>Những món ăn đã nấu :</Text>
+          <Text style={styles.text1_1}>Món ăn yêu thích : {user.sothich}</Text>
+          <Text style={styles.text1_1}>Những món ăn đã nấu : {user.yeuthich}</Text>
         </View>
       </View>
 
       <View style={styles.view2}>
-        <Pressable style={styles.Pre}>
+        <Pressable
+          style={styles.Pre}
+          onPress={() => {
+            navigation.navigate("welcome");
+          }}
+        >
           <Text style={styles.textPre}>Đăng xuất</Text>
         </Pressable>
       </View>
@@ -44,6 +50,7 @@ const styles = StyleSheet.create({
   },
   view: {
     alignItems: "center",
+    marginTop: 100
   },
   view1: {
     marginTop: 40,
@@ -71,6 +78,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     resizeMode: "contain",
+    borderRadius:50
   },
   text: {
     fontSize: 20,
