@@ -32,7 +32,7 @@ const Setting = ({navigation}) => {
           />
         </Pressable>
 
-        <Pressable style={styles.Pre}>
+        <Pressable style={styles.Pre} onPress={()=>{navigation.navigate('csdk')}}>
           <Text style={styles.textPre}>Chính sách và điều khoản</Text>
           <Image
             source={require("../../assets/IMG/setting/chinhsach.gif")}

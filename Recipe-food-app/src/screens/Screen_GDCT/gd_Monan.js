@@ -1,12 +1,33 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
-import React from "react";
-import { StyleSheet, View, Text, Image, Pressable } from "react-native";
+import React, { useState, useEffect, useRef } from "react";
+import { StyleSheet, View, Text, Image, Pressable, TouchableOpacity } from "react-native";
 import { Comment } from "./Comment";
+import ReactPlayer from 'react-player/youtube';
 
 const GD_CT = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const item = route.params;
+
+  // Thêm
+  const [isPlaying, setPlaying] = useState(false); // Trạng thái phát video
+  const playerRef = useRef(null); // Tham chiếu đến ReactPlayer
+
+  // Hàm xử lý sự kiện khi nhấn vào màn hình
+  const handlePress = () => {
+    // Nếu đang phát thì dừng, ngược lại thì tiếp tục phát
+    setPlaying(!isPlaying); // Giá trị ngược của của nó
+  };
+
+  // Hàm xử lý sự kiện khi video được sẵn sàng
+  const handleReady = () => {
+    // Kiểm tra nếu đang phát thì tạm dừng
+    if (isPlaying) {
+      playerRef.current.seekTo(0); // Di chuyển đến thời điểm 0 để tạm dừng
+      setPlaying(false);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.view}>
@@ -52,6 +73,22 @@ const GD_CT = () => {
         <Text style={styles.text2}>{item.buoc3}</Text>
 
       </View>
+
+      <View>         
+        <Text style={styles.text1}>Recipe Video </Text>
+        <TouchableOpacity style={styles.videoContainer} onPress={handlePress}>
+                <ReactPlayer
+                ref={playerRef}
+                url={item.linkytb}
+                width={'100%'}
+                height={220}
+                playing={isPlaying}
+                controls={true}     // thanh điều khiển
+                onReady={handleReady}
+                />
+        </TouchableOpacity>
+      </View>
+
       <View>
         <Comment/>
       </View>
@@ -109,6 +146,11 @@ const styles = StyleSheet.create({
     color: "#64CA2",
     margin: 30,
     textAlign: "justify",
+  },
+  videoContainer: {
+    marginTop: 10,
+    width: '100%',
+    height: 220,
   },
 });
 

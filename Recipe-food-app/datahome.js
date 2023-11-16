@@ -46,6 +46,7 @@ const datahome = [
       " thả hành boa rô, thì là vào cho thơm.\n\n",
       "- Dọn kèm rau, bún ra cùng với lẩu và thưởng thức.\n",
     ],
+    linkytb: "https://www.youtube.com/watch?v=1XnOkWdlUC4",
     type: "Lẩu",
   },
   {
@@ -97,6 +98,7 @@ const datahome = [
       " cho hành lá, ngò rí, hành phi lên trên và rắc thêm 1 ít tiêu nữa",
       " là có thể dùng ngay được rồi. Món cháo sườn nên ăn lúc còn nóng bạn nhé.\n",
     ],
+    linkytb: "https://www.youtube.com/watch?v=QtcCmgObWAg",
     type: "Cháo",
   },
   {
@@ -149,6 +151,7 @@ const datahome = [
       " xà lách và kim chi chấm thêm nước xốt sa tế thì món ăn lại càng được phối trộn tinh tế",
       " hơn, “nâng cấp” hương vị tuyệt bậc luôn.\n\n",
     ],
+    linkytb: "https://www.youtube.com/watch?v=bMkIQW8xfMo",
     type: "Đồ nướng",
   },
   {
@@ -198,6 +201,7 @@ const datahome = [
       " Ăn một miếng, bạn có thể cảm nhận được thịt cua mềm ngọt,",
       " bí đỏ béo ngậy, tan ngay trong miệng, rất hấp dẫn.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=LwCmy6CiRRs",
     type: "Súp",
   },
   {
@@ -241,6 +245,7 @@ const datahome = [
     buoc3: [
       "- Bạn cắt bắp thành từng khúc dài 3 - 4cm rồi cho vào nồi lẩu để nước lẩu Thái được ngọt hơn.\n\n",
     ],
+    linkytb: "https://www.youtube.com/watch?v=pSBwgYfoA00",
     type: "Lẩu",
   },
   {
@@ -283,6 +288,7 @@ const datahome = [
       "-- Mẹo hay: Bạn có thể thêm chút đường nâu lên trên mặt kem trứng,",
       " sau đó dùng dụng cụ khò lửa để hơ lửa trên bề mặt kem trứng có màu vàng hơi cháy hấp dẫn.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=7IOw1Km77GQ",
     type: "Thức uống",
   },
   {
@@ -309,6 +315,7 @@ const datahome = [
     buoc3: [
       "- Sau khi xay xong, ta lọc hỗn hợp qua rây hoặc vải mùng là đã xong rồi đấy.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=3QBLawH1x8U",
     type: "Thức uống",
   },
   {
@@ -353,6 +360,7 @@ const datahome = [
       "- Khi ăn bạn sẽ cảm nhận được sự hòa quyện đậm đà của sa tế, vị thơm của tỏi,",
       " sả và vị cay của ớt,... Tất cả sẽ tạo nên một món ăn thơm ngon, hài hòa, tròn vị.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=aRKSNXD8fiI",
     type: "Đồ nướng",
   },
   {
@@ -400,6 +408,7 @@ const datahome = [
       " táo đỏ và vị cay cay của gừng và rau răm vô cùng hấp dẫn.\n\n",
       "- Khi thưởng thức súp hột vịt lộn, bạn cho vào một ít tiêu xay để kích thích vị giác.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=yaTmqIQT3uw",
     type: "Súp",
   },
   {
@@ -438,6 +447,7 @@ const datahome = [
       "- Vị chua cay của nước lẩu hòa quyện với vị ngọt từ hải sản khi",
       " ăn kèm với bún là rất hấp dẫn luôn đó nha.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=mLPMIUFyARU",
     type: "Lẩu",
   },
   {
@@ -490,6 +500,7 @@ const datahome = [
       " cuối cùng bạn cho đậu hủ non, tàu hủ ky và phần hành baro đã phi vào, rồi tắt  bếp.\n\n",
       "- Vậy là lẩu nấm chay đã hoàn thành rồi, cho lẩu lên bàn ăn và thưởng thức thôi.\n\n",
     ],
+    linkytb: "https://www.youtube.com/watch?v=-neKwXGbYM0",
     type: "Lẩu",
   },
   {
@@ -533,6 +544,7 @@ const datahome = [
       " bên ngoài lớp da phải có màu vàng óng ả của mật ong.\n\n",
       "- Hơn nữa, thịt gà phải có mùi thơm cũng như thấm vị thật đậm đà mới là ngon.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=5zwkm67dYio",
     type: "Đồ nướng",
   },
   {
@@ -572,6 +584,7 @@ const datahome = [
     buoc3: [
       "- Khi thịt đã chín đều các mặt bạn cho ra đĩa, và mời mọi người thưởng thức nhé.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=n4kOCDi9saA",
     type: "Đồ nướng",
   },
   {
@@ -616,6 +629,7 @@ const datahome = [
       " và múc từng muỗng mỡ hành lên bề mặt từng con, nướng chừng 10 phút là",
       " bạn có thể thưởng thức món sò huyết này rồi.",
     ],
+    linkytb: "https://www.youtube.com/watch?v=2IA7A5XKgV8",
     type: "Đồ nướng",
   },
 ];
