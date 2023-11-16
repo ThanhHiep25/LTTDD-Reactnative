@@ -7,7 +7,6 @@ import NameScreen from "../screens/name";
 import Home from "../screens/homeScreen";
 import Setting from "../screens/setting";
 import Thongtincanhan from "../screens/Thongtincanhan";
-
 import GD_CT from "../screens/Screen_GDCT/gd_Monan";
 import dmBanh from "../screens/danhmucFood";
 import dmctFood from "../screens/danhmucChitietFood";
