@@ -52,7 +52,10 @@ const HeaderName = () => {
   };
   return (
     <View style={styles.container}>
-      <Toast ref={(ref) => Toast.setRef(ref)} />
+      <View>
+        <Toast ref={(ref) => Toast.setRef(ref)} />
+      </View>
+      
       <Image
         source={require("../../../assets/IMG/namell/lacai.png")}
         style={styles.img}
@@ -107,7 +110,6 @@ const HeaderName = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 4,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -178,7 +180,7 @@ const styles = StyleSheet.create({
   img: {
     width: 100,
     height: 100,
-    marginTop: 60,
+    marginTop: 100,
   },
   imgRa: {
     width: 200,
