@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   view: {
     alignItems: "center",
-    marginTop: 100,
+    marginTop: 40,
   },
   view1: {
     marginTop: 40,

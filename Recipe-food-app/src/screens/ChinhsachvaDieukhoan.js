@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     },
     view:{
         flexDirection: 'row',
+        
     },
     img: {
         width: 60,
@@ -85,26 +86,30 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         marginHorizontal: 10,
         paddingHorizontal: 10,
+        margin: 30
     },
     test:{
+        fontFamily:'Arial',
         marginTop: 10,
         fontSize: 24,
-        fontWeight: '800',
+        fontWeight: '700',
         marginLeft: 20,
         marginTop: 10,
         color: "#ff4757",
     },
     t1:{
+        fontFamily: 'Arial',
         fontSize: 20,
-        fontWeight: '600',
+        fontWeight: 600,
         marginTop: 15,
         textAlign: 'justify',
         textDecorationLine: 'underline',
         fontStyle: 'italic',
     },
     t2:{
-        fontSize: 18,
-        fontWeight: '400',
+        fontFamily: 'Arial',
+        fontSize: 16,
+        fontWeight: 400,
         marginTop: 10,
     }
 });

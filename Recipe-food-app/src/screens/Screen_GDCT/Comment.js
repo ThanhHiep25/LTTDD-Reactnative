@@ -19,6 +19,9 @@ export const Comment = () => {
   const [comment, setComment] = useState();
   const navigation = useNavigation();
   const user = route.params;
+  console.log('====================================');
+  console.log(user);
+  console.log('====================================');
   useEffect(() => {
     fetch("https://654460405a0b4b04436c4cda.mockapi.io/user")
       .then((res) => res.json())
@@ -84,7 +87,7 @@ export const Comment = () => {
               source={require("../../../assets/IMG/user.png")}
               style={styles.img}
             />
-            <Text style={styles.textcm}></Text>
+            <Text style={styles.textcm}>{user.name}</Text>
           </View>
 
           <View style={styles.view2}>
@@ -101,11 +104,8 @@ export const Comment = () => {
                 fetch("https://654460405a0b4b04436c4cda.mockapi.io/user", {
                   method: "POST",
                   body: JSON.stringify({
-                    email: "al@gmail",
-                    name: "Tien2",
-                    job: "ádasd",
-                    img: "dfgfdff",
-                    pass: "pass",
+                    email: user.mail,
+                    name: user.name,
                     comment: comment,
                   }),
                   headers: {

@@ -118,6 +118,7 @@ const Home = ({ navigation }) => {
                 style={styles.Pre}
                 onPress={() => {
                   navigation.navigate("gdct", item);
+                  user
                 }}
               >
                 <View style={styles.view3_1}>

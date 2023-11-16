@@ -1,13 +1,21 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import React, { useState, useEffect, useRef } from "react";
-import { StyleSheet, View, Text, Image, Pressable, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  Pressable,
+  TouchableOpacity,
+} from "react-native";
 import { Comment } from "./Comment";
-import ReactPlayer from 'react-player/youtube';
+import ReactPlayer from "react-player/youtube";
 
 const GD_CT = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const item = route.params;
+  const user = route.params;
 
   // Thêm
   const [isPlaying, setPlaying] = useState(false); // Trạng thái phát video
@@ -57,7 +65,6 @@ const GD_CT = () => {
       <View style={styles.view2}>
         <Text style={styles.text}>{item.name}</Text>
       </View>
-
       <View style={styles.view2}>
         <Text style={styles.text1}>Nguyên liệu :</Text>
         <Text style={styles.text2}>{item.nguyenlieu}</Text>
@@ -71,26 +78,25 @@ const GD_CT = () => {
 
         <Text style={styles.text1}>Bước 3: Hoàn thành. </Text>
         <Text style={styles.text2}>{item.buoc3}</Text>
-
       </View>
 
-      <View>         
+      <View>
         <Text style={styles.text1}>Recipe Video </Text>
         <TouchableOpacity style={styles.videoContainer} onPress={handlePress}>
-                <ReactPlayer
-                ref={playerRef}
-                url={item.linkytb}
-                width={'100%'}
-                height={220}
-                playing={isPlaying}
-                controls={true}     // thanh điều khiển
-                onReady={handleReady}
-                />
+          <ReactPlayer
+            ref={playerRef}
+            url={item.linkytb}
+            width={"100%"}
+            height={220}
+            playing={isPlaying}
+            controls={true} // thanh điều khiển
+            onReady={handleReady}
+          />
         </TouchableOpacity>
       </View>
 
       <View>
-        <Comment/>
+        <Comment />
       </View>
     </View>
   );
@@ -129,19 +135,19 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   text: {
-    fontFamily: 'Arial',
+    fontFamily: "Arial",
     fontSize: 24,
     fontWeight: 700,
     color: "#E87104",
   },
-  text1: { 
-    fontFamily: 'Arial',
+  text1: {
+    fontFamily: "Arial",
     fontSize: 20,
     fontWeight: 700,
     color: "#64CA2",
   },
   text2: {
-    fontFamily: 'Arial',
+    fontFamily: "Arial",
     fontSize: 16,
     color: "#64CA2",
     margin: 30,
@@ -149,7 +155,7 @@ const styles = StyleSheet.create({
   },
   videoContainer: {
     marginTop: 10,
-    width: '100%',
+    width: "100%",
     height: 220,
   },
 });
