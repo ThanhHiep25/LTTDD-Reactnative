@@ -28,7 +28,6 @@ const AppNavigator = () => {
         <Stack.Screen name="setting" component={Setting} />
         <Stack.Screen name="thongtincanhan" component={Thongtincanhan} />
         <Stack.Screen name="csdk" component={CS_DK} />
-        <Stack.Screen name="dmctFood" component={dmctFood} />
       </Stack.Navigator>
     </NavigationContainer>
   );
