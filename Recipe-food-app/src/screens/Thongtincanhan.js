@@ -8,8 +8,18 @@ const Thongtincanhan = () => {
   const user = route.params;
   return (
     <View style={styles.contrainer}>
+      <Pressable
+        onPress={() => {
+          navigation.goBack();
+        }}
+      >
+        <Image
+          source={require("../../assets/IMG/Banh/back.png")}
+          style={styles.backLogo}
+        ></Image>
+      </Pressable>
       <View style={styles.view}>
-        <Image style={styles.img} source={{uri:user.img}} />
+        <Image style={styles.img} source={{ uri: user.img }} />
         <Text style={styles.text}>{user.name}</Text>
       </View>
 
@@ -25,7 +35,9 @@ const Thongtincanhan = () => {
         <View style={styles.view1_1}>
           <Text style={styles.text1}>Sở thích :</Text>
           <Text style={styles.text1_1}>Món ăn yêu thích : {user.sothich}</Text>
-          <Text style={styles.text1_1}>Những món ăn đã nấu : {user.yeuthich}</Text>
+          <Text style={styles.text1_1}>
+            Những món ăn đã nấu : {user.yeuthich}
+          </Text>
         </View>
       </View>
 
@@ -50,7 +62,7 @@ const styles = StyleSheet.create({
   },
   view: {
     alignItems: "center",
-    marginTop: 100
+    marginTop: 100,
   },
   view1: {
     marginTop: 40,
@@ -78,7 +90,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     resizeMode: "contain",
-    borderRadius:50
+    borderRadius: 50,
   },
   text: {
     fontSize: 20,
@@ -110,6 +122,11 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: 700,
+  },
+  backLogo: {
+    margin:30,
+    width: 50,
+    height: 50,
   },
 });
 
