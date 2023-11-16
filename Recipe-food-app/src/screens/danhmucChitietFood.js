@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import Toast from 'react-native-toast-message';
 //import YoutubePlayer from 'react-native-youtube-iframe';
+import ReactPlayer from 'react-player/youtube';
 import { Comment } from "./Screen_GDCT/Comment";
 
 const dmctFood = ({ navigation, route }) => {
@@ -158,7 +159,7 @@ const dmctFood = ({ navigation, route }) => {
                 
             <View style={styles.viewvideo}>
                 <Text style={styles.testvideo}>Recipe Video</Text>
-                <Comment/>
+                
             </View>
             <TouchableOpacity style={styles.videoContainer} onPress={handlePress}>
                 <ReactPlayer
@@ -171,7 +172,7 @@ const dmctFood = ({ navigation, route }) => {
                 onReady={handleReady}
                 />
             </TouchableOpacity>
-
+            <Comment/>
         </View>
     );
 };
@@ -279,7 +280,7 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     tmota:{
-        fontSize: 15,
+        fontSize: 18,
         fontWeight: '400',
         marginLeft: 15,
         marginTop: 10,
@@ -298,11 +299,11 @@ const styles = StyleSheet.create({
         color: "#FF9900",
         marginLeft: 45,
     },
-    testdes1:{
+    textdes1:{
         fontSize: 16,
-        //marginLeft: 15,
-        //paddingHorizontal: 20,
-        //marginVertical: 16,
+        marginLeft: 15,
+        paddingHorizontal: 30,
+        marginVertical: 16, 
     },
     text2:{
         fontSize: 18,
@@ -310,10 +311,10 @@ const styles = StyleSheet.create({
         color:'#64CA25',
         marginLeft: 45,
     },
-    testdes2:{
+    textdes2:{
         fontSize: 16,
         marginLeft: 10,
-        //paddingHorizontal: 20,
+        paddingHorizontal: 20,
     },
     viewvideo:{
         marginTop: 10,
