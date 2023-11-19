@@ -465,7 +465,7 @@ const style = StyleSheet.create({
   khungsearch:{
     
       flexDirection: "row",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       alignItems: "center",
     borderBottomColor:'#CBC9D4',
     borderBottomWidth:1
