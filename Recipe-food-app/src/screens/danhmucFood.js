@@ -13,11 +13,18 @@ import {
   TextInput,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import Icon from "react-native-vector-icons/Ionicons";
 
 import datamonan from "../../dataMonan";
 import * as Animatable from "react-native-animatable";
 
 const dmBanh = ({ navigation, route }) => {
+  const colors = route.params.colorItem;
+  const id = route.params.id;
+  var [dsmonan, setDsmonan] = useState([]);
+  var [dsmonanNew, setDsmonanNew] = useState([]);
+  const foodItems = route.params.dsmon;
+  var [selectedFilter, setSelectedFilter] = useState(null);
   //chạy lại setDsmonan nếu id thay đổi
   useEffect(() => {
     if (id == 1) {
@@ -46,11 +53,7 @@ const dmBanh = ({ navigation, route }) => {
       setDsmonanNew(datamonan.NuocCham);
     }
   }, []);
-  const colors = route.params.colorItem;
-  const id = route.params.id;
-  var [dsmonan, setDsmonan] = useState([]);
-  var [dsmonanNew, setDsmonanNew] = useState([]);
-  const foodItems = route.params.dsmon;
+
   return (
     <ScrollView>
       <LinearGradient colors={route.params.bgcl} style={style.container}>
@@ -98,65 +101,78 @@ const dmBanh = ({ navigation, route }) => {
             <View style={style.filter}>
               {/* all */}
               <Pressable
-                style={style.buttonFilter}
+                style={{
+                  ...style.buttonFilter,
+                  backgroundColor: selectedFilter === "All" ? "#FCA34D" : null,
+                }}
                 onPress={() => {
                   setDsmonanNew(dsmonan);
-                  console.log(dsmonanNew)
+                  console.log(dsmonanNew);
+                  setSelectedFilter("All");
                 }}
               >
-                <Text style={style.filterText}>All</Text>
+                <Text style={{...style.filterText,color: selectedFilter==="All" ? "#FFFFFF":"#949292"}}>All</Text>
               </Pressable>
               {/* Giảm dần */}
-              {/* <Pressable
-                style={style.buttonFilter}
+
+              <Pressable
+                style={{
+                  ...style.buttonFilter,
+                  backgroundColor:
+                    selectedFilter === "Giamdan" ? "#FCA34D" : null,
+                }}
                 onPress={() => {
-                  console.log(dsmonanNew)
+                  setSelectedFilter("Giamdan");
                   setDsmonanNew(
-                    dsmonan.sort(
+                    [...dsmonan].sort(
                       (a, b) => parseFloat(b.kcal) - parseFloat(a.kcal)
                     )
-                    
                   );
                 }}
               >
-                <Text style={style.filterText}>&darr; Calo</Text>
-              </Pressable> */}
-              <Pressable
-  style={style.buttonFilter}
-  onPress={() => {
-    setDsmonanNew([...dsmonan].sort((a, b) => parseFloat(b.kcal) - parseFloat(a.kcal)));
-  }}
->
-  <Text style={style.filterText}>&darr; Calo</Text>
-</Pressable>
+                <Text style={{...style.filterText,color: selectedFilter==="Giamdan" ? "#FFFFFF":"#949292"}}>Calo &darr;</Text>
+              </Pressable>
 
               {/* Tăng dần */}
-              {/* <Pressable
-                style={style.buttonFilter}
+
+              <Pressable
+                style={{
+                  ...style.buttonFilter,
+                  backgroundColor:
+                    selectedFilter === "tangdan" ? "#FCA34D" : null,
+                }}
                 onPress={() => {
-                  console.log(dsmonanNew)
+                  setSelectedFilter("tangdan");
                   setDsmonanNew(
-                    dsmonan.sort(
+                    [...dsmonan].sort(
                       (a, b) => parseFloat(a.kcal) - parseFloat(b.kcal)
                     )
                   );
                 }}
               >
-                <Text style={style.filterText}>&uarr; Calo</Text>
-              </Pressable> */}
-              <Pressable
-  style={style.buttonFilter}
-  onPress={() => {
-    setDsmonanNew([...dsmonan].sort((a, b) => parseFloat(a.kcal) - parseFloat(b.kcal)));
-  }}
->
-  <Text style={style.filterText}>&uarr; Calo</Text>
-</Pressable>
+                <Text style={{...style.filterText,color: selectedFilter==="tangdan" ? "#FFFFFF":"#949292"}}>Calo &uarr;</Text>
+              </Pressable>
 
               {/* <Image
                 style={{ resizeMode: "contain", width: 25, height: 25 }}
                 source={require("../../assets/IMG/icon _filter_.png")}
               /> */}
+              <Pressable
+                style={{
+                  ...style.buttonFilter,
+                  backgroundColor: selectedFilter === "like" ? "#FCA34D" : null,
+                }}
+                onPress={() => {
+                  setSelectedFilter("like");
+                  setDsmonanNew(
+                    [...dsmonan].sort(
+                      (a, b) => parseFloat(b.like) - parseFloat(a.like)
+                    )
+                  );
+                }}
+              >
+                <Text style={{...style.filterText,color: selectedFilter==="like" ? "#FFFFFF":"#949292"}}>Like &darr;</Text>
+              </Pressable>
             </View>
             <View style={style.cangiua}>
               <FlatList
@@ -184,11 +200,39 @@ const dmBanh = ({ navigation, route }) => {
                             <Text style={style.detailsFood}>Mô tả</Text>
                             <Text
                               ellipsizeMode="tail"
-                              numberOfLines={4}
+                              numberOfLines={2}
                               style={style.detailsFood && { marginLeft: 20 }}
                             >
                               {item.details}
                             </Text>
+                            <View style={{ flexDirection: "row" }}>
+                              <View
+                                style={{
+                                  justifyContent: "flex-start",
+                                  alignItems: "center",
+                                  flexDirection: "row",
+                                }}
+                              >
+                                <Icon name="flame" size={25} color="red" />
+                                <Text style={{}}>{item.kcal} </Text>
+                              </View>
+                              <View
+                                style={{
+                                  justifyContent: "flex-end",
+                                  alignItems: "center",
+                                  flexDirection: "row",
+                                }}
+                              >
+                                <Icon
+                                  name="thumbs-up-outline"
+                                  size={15}
+                                  color="green"
+                                />
+                                <Text style={{ fontSize: 15 }}>
+                                  {item.like}
+                                </Text>
+                              </View>
+                            </View>
                           </View>
                         </Pressable>
                       </SafeAreaView>
@@ -323,6 +367,7 @@ const style = StyleSheet.create({
     borderRadius: 10,
     flexDirection: "row",
     marginRight: 10,
+    
   },
 });
 
