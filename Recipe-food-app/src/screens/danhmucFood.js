@@ -10,50 +10,63 @@ import {
   Pressable,
   FlatList,
   SafeAreaView,
+  TextInput,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import datamonan from "../../dataMonan";
 import * as Animatable from "react-native-animatable";
-import dataDM from "./../../dataDanhmuc";
-const colors = ["#CDDFFC", "#E8CA7B", "#FBCCA5", "#FCE5A9"];
 
-const dmBanh = ({ navigation, route }) => { //chạy lại setDsmonan nếu id thay đổi
+const dmBanh = ({ navigation, route }) => {
+  //chạy lại setDsmonan nếu id thay đổi
   useEffect(() => {
-    if (id == 1) setDsmonan(datamonan.Banh);
-    else if (id == 2) setDsmonan(datamonan.foodIemsSoup);
-    else if (id == 3) setDsmonan(datamonan.nuong);
-    else if (id == 4) setDsmonan(datamonan.Lau);
-    else if (id == 5) setDsmonan(datamonan.Nuoctraicay);
-    else if (id == 6) setDsmonan(datamonan.Anvat);
-    else if (id == 7) setDsmonan(datamonan.Salad);
-    else if (id == 8) setDsmonan(datamonan.NuocCham);
+    if (id == 1) {
+      setDsmonan(datamonan.Banh);
+      setDsmonanNew(datamonan.Banh);
+    } else if (id == 2) {
+      setDsmonan(datamonan.foodIemsSoup);
+      setDsmonanNew(datamonan.foodIemsSoup);
+    } else if (id == 3) {
+      setDsmonan(datamonan.nuong);
+      setDsmonanNew(datamonan.nuong);
+    } else if (id == 4) {
+      setDsmonan(datamonan.Lau);
+      setDsmonanNew(datamonan.Lau);
+    } else if (id == 5) {
+      setDsmonan(datamonan.Nuoctraicay);
+      setDsmonanNew(datamonan.Nuoctraicay);
+    } else if (id == 6) {
+      setDsmonan(datamonan.Anvat);
+      setDsmonanNew(datamonan.Anvat);
+    } else if (id == 7) {
+      setDsmonan(datamonan.Salad);
+      setDsmonanNew(datamonan.Salad);
+    } else if (id == 8) {
+      setDsmonan(datamonan.NuocCham);
+      setDsmonanNew(datamonan.NuocCham);
+    }
   }, []);
-const colors = route.params.colorItem;
+  const colors = route.params.colorItem;
   const id = route.params.id;
   var [dsmonan, setDsmonan] = useState([]);
+  var [dsmonanNew, setDsmonanNew] = useState([]);
   const foodItems = route.params.dsmon;
   return (
     <ScrollView>
       <LinearGradient colors={route.params.bgcl} style={style.container}>
-      <View style={style.container}>
         <View style={style.container}>
-          <View style={style.container}>
-            <View style={style.header}>
-              <View style={style.containerheader1}>
-                <Pressable
-                  onPress={() => {
-                    navigation.goBack();
-                     }}
-                >
-                  <Image
-                    source={require("../../assets/IMG/Banh/back.png")}
-                    style={style.backLogo}
-                  ></Image>
-                </Pressable>
-              </View>
-            </View>
-            <View style={style.body}>
+          <View style={style.header}>
+            <View style={style.containerheader1}>
+              <Pressable
+                onPress={() => {
+                  navigation.goBack();
+                }}
+              >
+                <Image
+                  source={require("../../assets/IMG/Banh/back.png")}
+                  style={style.backLogo}
+                />
+              </Pressable>
               <View style={style.titlePage}>
                 <Image
                   source={route.params.img}
@@ -61,74 +74,133 @@ const colors = route.params.colorItem;
                 ></Image>
                 <Text style={style.Titletext}> {route.params.title}</Text>
               </View>
+            </View>
+          </View>
+          <View style={style.body}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <TextInput
+                style={style.searchBar}
+                placeholder="Search Recipe Food"
+              ></TextInput>
+              <Pressable onPress={() => {}}>
+                <Image
+                  source={require("../../assets/IMG/home/search.png")}
+                  style={style.imgSe}
+                />
+              </Pressable>
+            </View>
+            <View style={style.filter}>
+              {/* all */}
+              <Pressable
+                style={style.buttonFilter}
+                onPress={() => {
+                  setDsmonanNew(dsmonan);
+                  console.log(dsmonanNew)
+                }}
+              >
+                <Text style={style.filterText}>All</Text>
+              </Pressable>
+              {/* Giảm dần */}
+              {/* <Pressable
+                style={style.buttonFilter}
+                onPress={() => {
+                  console.log(dsmonanNew)
+                  setDsmonanNew(
+                    dsmonan.sort(
+                      (a, b) => parseFloat(b.kcal) - parseFloat(a.kcal)
+                    )
+                    
+                  );
+                }}
+              >
+                <Text style={style.filterText}>&darr; Calo</Text>
+              </Pressable> */}
+              <Pressable
+  style={style.buttonFilter}
+  onPress={() => {
+    setDsmonanNew([...dsmonan].sort((a, b) => parseFloat(b.kcal) - parseFloat(a.kcal)));
+  }}
+>
+  <Text style={style.filterText}>&darr; Calo</Text>
+</Pressable>
 
-             <FlatList
+              {/* Tăng dần */}
+              {/* <Pressable
+                style={style.buttonFilter}
+                onPress={() => {
+                  console.log(dsmonanNew)
+                  setDsmonanNew(
+                    dsmonan.sort(
+                      (a, b) => parseFloat(a.kcal) - parseFloat(b.kcal)
+                    )
+                  );
+                }}
+              >
+                <Text style={style.filterText}>&uarr; Calo</Text>
+              </Pressable> */}
+              <Pressable
+  style={style.buttonFilter}
+  onPress={() => {
+    setDsmonanNew([...dsmonan].sort((a, b) => parseFloat(a.kcal) - parseFloat(b.kcal)));
+  }}
+>
+  <Text style={style.filterText}>&uarr; Calo</Text>
+</Pressable>
+
+              {/* <Image
+                style={{ resizeMode: "contain", width: 25, height: 25 }}
+                source={require("../../assets/IMG/icon _filter_.png")}
+              /> */}
+            </View>
+            <View style={style.cangiua}>
+              <FlatList
                 numColumns={2}
-                data={dsmonan}
+                data={dsmonanNew}
                 renderItem={({ item, index }) => {
                   return (
-
-                       <Animatable.View animation="fadeIn" duration={1000}>
-                        <SafeAreaView>
+                    <Animatable.View animation="fadeIn" duration={1000}>
+                      <SafeAreaView>
                         <Pressable
-                        style={{
-                          ...style.fooditem,
-                          backgroundColor: colors[index % colors.length],
-                        }}
-                        onPress={() => {
-                          navigation.navigate('dmctFood', {item: item})
-                        }}
-                      >
-                        <Image
-                          source={item.image}
-                          style={style.imagesFooditem}
-                        />
-                        <Text style={style.nameFood}>{item.Name}</Text>
-                        <View style={style.nguyenlieu}>
-                          <Text style={style.detailsFood}>Mô tả</Text>
-                          <Text
-                            ellipsizeMode="tail"
-                            numberOfLines={4}
-                            style={style.detailsFood && { marginLeft: 20 }}
-                          >
-                            {item.details}
-                          </Text>
-                        </View>
-                      </Pressable>
-                        </SafeAreaView>
-                      
+                          style={{
+                            ...style.fooditem,
+                            backgroundColor: colors[index % colors.length],
+                          }}
+                          onPress={() => {
+                            navigation.navigate("dmctFood", { item: item });
+                          }}
+                        >
+                          <Image
+                            source={item.image}
+                            style={style.imagesFooditem}
+                          />
+                          <Text style={style.nameFood}>{item.Name}</Text>
+                          <View style={style.nguyenlieu}>
+                            <Text style={style.detailsFood}>Mô tả</Text>
+                            <Text
+                              ellipsizeMode="tail"
+                              numberOfLines={4}
+                              style={style.detailsFood && { marginLeft: 20 }}
+                            >
+                              {item.details}
+                            </Text>
+                          </View>
+                        </Pressable>
+                      </SafeAreaView>
                     </Animatable.View>
-
-                    // <SafeAreaView
-                    //   style={{
-                    //     ...style.fooditem,
-                    //     backgroundColor: colors[index % colors.length],
-                    //   }}
-                    // >
-                    //   <Image source={item.image} style={style.imagesFooditem} />
-                    //   <Text style={style.nameFood}>{item.Name}</Text>
-                    //   <View style={style.nguyenlieu}>
-                    //     <Text style={style.detailsFood}>Nguyên liệu</Text>
-                    //     <Text
-                    //       ellipsizeMode="tail"
-                    //       numberOfLines={4}
-                    //       style={style.detailsFood && { marginLeft: 20 }}
-                    //     >
-                    //       {item.details}
-                    //     </Text>
-                    //   </View>
-                    // </SafeAreaView>
-                  
-                  ) }
-                }
+                  );
+                }}
               />
             </View>
           </View>
         </View>
-      </View>
-    </LinearGradient>
+      </LinearGradient>
     </ScrollView>
-    
   );
 };
 
@@ -140,9 +212,6 @@ const style = StyleSheet.create({
   body: {
     display: "flex",
     flex: "9",
-
-    justifyContent: "center",
-    alignItems: "center",
   },
   header: {
     padding: 10,
@@ -154,7 +223,7 @@ const style = StyleSheet.create({
     borderRadius: 15,
   },
   containerheader1: {
-    marginTop: "50px",
+    marginTop: "20px",
   },
   backLogo: {
     marginLeft: "10px",
@@ -163,13 +232,15 @@ const style = StyleSheet.create({
   },
   lambanhLogo: {
     marginTop: "10px",
-    height: "100px",
-    width: "100px",
+    height: "50px",
+    width: "50px",
+    resizeMode: "contain",
   },
   titlePage: {
     alignItems: "center",
     justifyContent: "center",
-    marginHorizontal: "50px",
+
+    flex: "1",
   },
   Titletext: {
     marginTop: "10px",
@@ -204,6 +275,54 @@ const style = StyleSheet.create({
   },
   nguyenlieu: {
     width: 130,
+  },
+  searchBar: {
+    width: 300,
+    height: 50,
+    backgroundColor: "#d6d6d684",
+    borderRadius: 10,
+    padding: 10,
+    fontSize: 16,
+    fontWeight: 600,
+    color: "#949292",
+  },
+  imgSe: {
+    height: 40,
+    width: 40,
+    resizeMode: "contain",
+    marginLeft: 20,
+    borderRadius: 5,
+  },
+  cangiua: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  filter: {
+    flexDirection: "row",
+    padding: "10px",
+    justifyContent: "flex-start",
+    borderBottomWidth: 1,
+    borderBottomColor: "black",
+    marginVertical: 10,
+    alignItems: "center",
+
+    margin: "5%",
+  },
+  filterText: {
+    fontSize: 20,
+    fontWeight: 600,
+    color: "#949292",
+  },
+  buttonFilter: {
+    width: 70,
+    height: 30,
+    borderBlockColor: "black",
+    borderWidth: 1,
+    alignContent: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    flexDirection: "row",
+    marginRight: 10,
   },
 });
 
