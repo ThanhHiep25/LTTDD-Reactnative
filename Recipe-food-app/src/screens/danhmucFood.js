@@ -17,6 +17,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 
 import datamonan from "../../dataMonan";
 import * as Animatable from "react-native-animatable";
+import Fuse from "fuse.js";
 
 const dmBanh = ({ navigation, route }) => {
   const colors = route.params.colorItem;
@@ -24,7 +25,18 @@ const dmBanh = ({ navigation, route }) => {
   var [dsmonan, setDsmonan] = useState([]);
   var [dsmonanNew, setDsmonanNew] = useState([]);
   const foodItems = route.params.dsmon;
-  var [selectedFilter, setSelectedFilter] = useState(null);
+  var [selectedFilter, setSelectedFilter] = useState("All");
+  var [searchInput, setSearchInput] = useState("");
+  var [searchResult, setSearchResult] = useState([]);
+  const fuse = new Fuse(dsmonan, {
+    keys: ["Name"],
+  });
+  const handleSearch = (text) => {
+    setSearchInput(text);
+    const result = fuse.search(text);
+    setSearchResult(result);
+  };
+
   //chạy lại setDsmonan nếu id thay đổi
   useEffect(() => {
     if (id == 1) {
@@ -52,13 +64,14 @@ const dmBanh = ({ navigation, route }) => {
       setDsmonan(datamonan.NuocCham);
       setDsmonanNew(datamonan.NuocCham);
     }
-  }, []);
+  }, [id]);
 
   return (
     <ScrollView>
       <LinearGradient colors={route.params.bgcl} style={style.container}>
         <View style={style.container}>
           <View style={style.header}>
+            {/* title */}
             <View style={style.containerheader1}>
               <Pressable
                 onPress={() => {
@@ -80,24 +93,31 @@ const dmBanh = ({ navigation, route }) => {
             </View>
           </View>
           <View style={style.body}>
+            {/* thanh search */}
             <View
               style={{
                 flexDirection: "row",
                 justifyContent: "center",
                 alignItems: "center",
+               
+                
               }}
             >
-              <TextInput
-                style={style.searchBar}
-                placeholder="Search Recipe Food"
-              ></TextInput>
+                <TextInput
+                  style={style.searchBar}
+                  placeholder="Search Recipe Food"
+                  onChangeText={handleSearch}
+                  value={searchInput}
+                />
               <Pressable onPress={() => {}}>
+              
                 <Image
                   source={require("../../assets/IMG/home/search.png")}
                   style={style.imgSe}
                 />
               </Pressable>
             </View>
+{/* lọc */}
             <View style={style.filter}>
               {/* all */}
               <Pressable
@@ -109,9 +129,17 @@ const dmBanh = ({ navigation, route }) => {
                   setDsmonanNew(dsmonan);
                   console.log(dsmonanNew);
                   setSelectedFilter("All");
+                  setSearchInput("")
                 }}
               >
-                <Text style={{...style.filterText,color: selectedFilter==="All" ? "#FFFFFF":"#949292"}}>All</Text>
+                <Text
+                  style={{
+                    ...style.filterText,
+                    color: selectedFilter === "All" ? "#FFFFFF" : "#949292",
+                  }}
+                >
+                  All
+                </Text>
               </Pressable>
               {/* Giảm dần */}
 
@@ -122,6 +150,7 @@ const dmBanh = ({ navigation, route }) => {
                     selectedFilter === "Giamdan" ? "#FCA34D" : null,
                 }}
                 onPress={() => {
+                  setSearchInput("")
                   setSelectedFilter("Giamdan");
                   setDsmonanNew(
                     [...dsmonan].sort(
@@ -130,7 +159,14 @@ const dmBanh = ({ navigation, route }) => {
                   );
                 }}
               >
-                <Text style={{...style.filterText,color: selectedFilter==="Giamdan" ? "#FFFFFF":"#949292"}}>Calo &darr;</Text>
+                <Text
+                  style={{
+                    ...style.filterText,
+                    color: selectedFilter === "Giamdan" ? "#FFFFFF" : "#949292",
+                  }}
+                >
+                  Calo &darr;
+                </Text>
               </Pressable>
 
               {/* Tăng dần */}
@@ -142,6 +178,7 @@ const dmBanh = ({ navigation, route }) => {
                     selectedFilter === "tangdan" ? "#FCA34D" : null,
                 }}
                 onPress={() => {
+                  setSearchInput("")
                   setSelectedFilter("tangdan");
                   setDsmonanNew(
                     [...dsmonan].sort(
@@ -150,7 +187,14 @@ const dmBanh = ({ navigation, route }) => {
                   );
                 }}
               >
-                <Text style={{...style.filterText,color: selectedFilter==="tangdan" ? "#FFFFFF":"#949292"}}>Calo &uarr;</Text>
+                <Text
+                  style={{
+                    ...style.filterText,
+                    color: selectedFilter === "tangdan" ? "#FFFFFF" : "#949292",
+                  }}
+                >
+                  Calo &uarr;
+                </Text>
               </Pressable>
 
               {/* <Image
@@ -163,6 +207,7 @@ const dmBanh = ({ navigation, route }) => {
                   backgroundColor: selectedFilter === "like" ? "#FCA34D" : null,
                 }}
                 onPress={() => {
+                  setSearchInput("")
                   setSelectedFilter("like");
                   setDsmonanNew(
                     [...dsmonan].sort(
@@ -171,8 +216,41 @@ const dmBanh = ({ navigation, route }) => {
                   );
                 }}
               >
-                <Text style={{...style.filterText,color: selectedFilter==="like" ? "#FFFFFF":"#949292"}}>Like &darr;</Text>
+                <Text
+                  style={{
+                    ...style.filterText,
+                    color: selectedFilter === "like" ? "#FFFFFF" : "#949292",
+                  }}
+                >
+                  Like &darr;
+                </Text>
               </Pressable>
+            </View>
+            {/* khung search */}
+            <View style={style.cangiua}>
+              {searchInput.length > 0 && (
+                <ScrollView style={style.searchTab}>
+                  {searchResult.map((result) => (
+                    <Pressable
+                      onPress={() => {
+                        navigation.navigate("dmctFood", { item: result.item });
+                      }}
+                      style={style.khungsearch}
+                    >
+                      <Text
+                        style={style.searchResulttext}
+                        key={result.item.Name}
+                      >
+                        {result.item.Name}
+                      </Text>
+                      <Image
+                        style={style.imgSearch}
+                        source={result.item.image}
+                      />
+                    </Pressable>
+                  ))}
+                </ScrollView>
+              )}
             </View>
             <View style={style.cangiua}>
               <FlatList
@@ -334,7 +412,7 @@ const style = StyleSheet.create({
     height: 40,
     width: 40,
     resizeMode: "contain",
-    marginLeft: 20,
+    marginLeft:10,
     borderRadius: 5,
   },
   cangiua: {
@@ -346,7 +424,7 @@ const style = StyleSheet.create({
     padding: "10px",
     justifyContent: "flex-start",
     borderBottomWidth: 1,
-    borderBottomColor: "black",
+    borderBottomColor: "#CBC9D4",
     marginVertical: 10,
     alignItems: "center",
 
@@ -367,8 +445,31 @@ const style = StyleSheet.create({
     borderRadius: 10,
     flexDirection: "row",
     marginRight: 10,
-    
   },
+  searchTab: {
+    flex: "1",
+    width: "95%",
+    backgroundColor: "white",
+  },
+  searchResulttext: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "black",
+    opacity: "200%",
+  },
+  imgSearch:{
+    width:100,
+    height:100,
+    resizeMode:'contain'
+  },
+  khungsearch:{
+    
+      flexDirection: "row",
+      justifyContent: "space-around",
+      alignItems: "center",
+    borderBottomColor:'#CBC9D4',
+    borderBottomWidth:1
+  }
 });
 
 export default dmBanh;
