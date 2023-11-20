@@ -69,12 +69,6 @@ export const Comment = () => {
 
                   <View style={styles.view2}>
                     <Text style={styles.text1}>{item.comment}</Text>
-                    <Pressable>
-                      <Image
-                        source={require("../../../assets/IMG/edit-text.png")}
-                        style={styles.img1}
-                      />
-                    </Pressable>
                   </View>
                 </View>
               )}
@@ -95,7 +89,7 @@ export const Comment = () => {
               multiline
               numberOfLines={5}
               style={styles.textIn}
-              placeholder="comment for you"
+              placeholder=". . ."
               value={comment}
               onChangeText={(text) => setComment(text)}
             />
