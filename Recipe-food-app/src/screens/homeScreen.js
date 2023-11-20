@@ -16,16 +16,34 @@ import datahome from "../../datahome";
 import dataDanhMuc from "../../dataDanhmuc";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+import Fuse from "fuse.js";
+import datamonan from "../../dataMonan";
 //import foodIems from "../../dataMonan";
 
-
 const Home = ({ navigation }) => {
+  const [search, setSearch] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  // Chuyển đối tượng thành mảng các đối tượng để sử dụng Fuse
+  const dataArray = Object.values(datamonan).flatMap(items => items);
+
+  const fuse = new Fuse(dataArray, {
+    keys: ["Name"],
+  });
+  const handleSearch = (text) => {
+    setSearch(text);
+    const result = fuse.search(text).slice(0,4);
+    setSearchResult(result);
+    console.log(text)
+    console.log(dataArray)
+    console.log(result)
+    console.log(datamonan)
+  };
+
   const route = useRoute();
   const user = route.params;
 
   //var [dsmonan, setDsmonan] = useState([]);
- 
-  const [search, setSearch] = useState("");
+
   const [selected, setSelected] = useState([]);
 
   const onDeletePress = (index) => {
@@ -48,10 +66,7 @@ const Home = ({ navigation }) => {
         </Pressable>
 
         <Pressable>
-          <Image
-            source={{uri:user.img}}
-            style={styles.img1}
-          />
+          <Image source={{ uri: user.img }} style={styles.img1} />
         </Pressable>
       </View>
 
@@ -64,11 +79,9 @@ const Home = ({ navigation }) => {
         <TextInput
           style={styles.textIn}
           placeholder="Search Recipe Food"
+          onChangeText={handleSearch}
           value={search}
-          onChangeText={(text) => {
-            setSearch(text);
-          }}
-        ></TextInput>
+        />
         <Pressable
           onPress={() => {
             const dataSearch = datahome.filter((item) => {
@@ -82,6 +95,26 @@ const Home = ({ navigation }) => {
             style={styles.imgSe}
           />
         </Pressable>
+      </View>
+      {/* search */}
+      <View style={styles.cangiua}>
+        {search.length > 0 && (
+          <ScrollView style={styles.searchTab}>
+            {searchResult.map((result) => (
+              <Pressable
+                onPress={() => {
+                  navigation.navigate("dmctFood", { item: result.item });
+                }}
+                style={styles.khungsearch}
+              >
+                <Text style={styles.searchResulttext} key={result.item.Name}>
+                  {result.item.Name}
+                </Text>
+                <Image style={styles.imgSearch} source={result.item.image} />
+              </Pressable>
+            ))}
+          </ScrollView>
+        )}
       </View>
 
       <View style={styles.view2}>
@@ -118,7 +151,7 @@ const Home = ({ navigation }) => {
                 style={styles.Pre}
                 onPress={() => {
                   navigation.navigate("gdct", item);
-                  user
+                  user;
                 }}
               >
                 <View style={styles.view3_1}>
@@ -149,8 +182,6 @@ const Home = ({ navigation }) => {
               data={dataDanhMuc}
               numColumns={4}
               renderItem={({ item }) => (
-
-
                 <Pressable
                   style={styles.Pre1}
                   onPress={() => {
@@ -161,10 +192,8 @@ const Home = ({ navigation }) => {
                       colorItem: item.colorItem,
                       id: item.id,
                     });
-
                   }}
                 >
-    
                   <Image source={item.imgLocal} style={styles.img4} />
                   <Text style={styles.textPre2}>{item.name}</Text>
                 </Pressable>
@@ -241,7 +270,7 @@ const styles = StyleSheet.create({
   img1: {
     width: 70,
     height: 70,
-    borderRadius:50,
+    borderRadius: 50,
     resizeMode: "contain",
   },
   img3: {
@@ -356,6 +385,44 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 700,
     marginRight: 20,
+  },
+  searchBar: {
+    width: 300,
+    height: 50,
+    backgroundColor: "#d6d6d684",
+    borderRadius: 10,
+    padding: 10,
+    fontSize: 16,
+    fontWeight: 600,
+    color: "#949292",
+  },
+
+  cangiua: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  searchTab: {
+    flex: "1",
+    width: "95%",
+    backgroundColor: "white",
+  },
+  searchResulttext: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "black",
+    opacity: "200%",
+  },
+  imgSearch: {
+    width: 100,
+    height: 100,
+    resizeMode: "contain",
+  },
+  khungsearch: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderBottomColor: "#CBC9D4",
+    borderBottomWidth: 1,
   },
 });
 

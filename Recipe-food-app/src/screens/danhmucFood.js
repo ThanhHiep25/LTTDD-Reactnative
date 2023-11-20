@@ -422,13 +422,12 @@ const style = StyleSheet.create({
   filter: {
     flexDirection: "row",
     padding: "10px",
-    justifyContent: "flex-start",
+    justifyContent: "space-around",
     borderBottomWidth: 1,
     borderBottomColor: "#CBC9D4",
-    marginVertical: 10,
     alignItems: "center",
-
-    margin: "5%",
+    marginHorizontal:"5%"
+    
   },
   filterText: {
     fontSize: 20,
@@ -463,7 +462,6 @@ const style = StyleSheet.create({
     resizeMode:'contain'
   },
   khungsearch:{
-    
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
