@@ -12,16 +12,17 @@ import {
 } from "react-native";
 
 var url = "https://65557a0784b36e3a431dc70d.mockapi.io/comment";
+
 export const Comment = () => {
   const route = useRoute();
   const [state, setState] = useState([]);
   const [comment, setComment] = useState();
   const navigation = useNavigation();
+  const [name, setName] = useState();
   const user = route.params;
-  console.log('====================================');
+  console.log("====================================");
   console.log(user);
-  console.log('====================================');
-
+  console.log("====================================");
   const fetchData = () => {
     fetch(url)
       .then((res) => res.json())
@@ -32,7 +33,7 @@ export const Comment = () => {
         setState(data);
       });
   };
-  
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -59,15 +60,13 @@ export const Comment = () => {
                       onPress={() => {
                         var link = url + "/" + item.id;
                         fetch(link, {
-                          method: "DELETE"
-                          
-                        })
-                        .then((data) => {
+                          method: "DELETE",
+                        }).then((data) => {
                           console.log("====================================");
                           console.log(data);
                           console.log("====================================");
-                          fetchData()
-                        })
+                          fetchData();
+                        });
                       }}
                     >
                       <Image
@@ -91,7 +90,12 @@ export const Comment = () => {
               source={require("../../../assets/IMG/user.png")}
               style={styles.img}
             />
-            <Text style={styles.textcm}>{user.name}</Text>
+            <TextInput
+              placeholder="Nhập tên của bạn"
+              value={name}
+              onChangeText={(text)=>{setName(text)}}
+              style={styles.textcm}
+            ></TextInput>
           </View>
 
           <View style={styles.view2}>
@@ -108,8 +112,7 @@ export const Comment = () => {
                 fetch(url, {
                   method: "POST",
                   body: JSON.stringify({
-                    email: user.mail,
-                    name: user.name,
+                    name: name,
                     comment: comment,
                   }),
                   headers: {
@@ -121,7 +124,7 @@ export const Comment = () => {
                     console.log("====================================");
                     console.log(data);
                     console.log("====================================");
-                    fetchData()
+                    fetchData();
                   });
                 setComment("");
               }}
@@ -165,7 +168,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#E5D4FF",
     padding: 20,
     borderRadius: 20,
-    marginTop:0,
+    marginTop: 0,
     marginBottom: 100,
   },
   view1: {
@@ -186,7 +189,7 @@ const styles = StyleSheet.create({
   },
   view4: {
     margin: 20,
-    marginTop:0,
+    marginTop: 0,
     alignItems: "center",
     height: 250,
     borderRadius: 10,
@@ -211,9 +214,12 @@ const styles = StyleSheet.create({
   textcm: {
     fontSize: 18,
     fontFamily: "Arial",
-    fontWeight: 500,
+    fontWeight: 600,
     marginLeft: 20,
     color: "#535151",
+    height:50,
+    width: 200,
+    padding:10
   },
   text1: {
     fontSize: 16,
