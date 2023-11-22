@@ -234,6 +234,7 @@ const dmBanh = ({ navigation, route }) => {
                     <Pressable
                       onPress={() => {
                         navigation.navigate("dmctFood", { item: result.item });
+                        setSearchInput("")
                       }}
                       style={style.khungsearch}
                     >

@@ -24,19 +24,15 @@ const Home = ({ navigation }) => {
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   // Chuyển đối tượng thành mảng các đối tượng để sử dụng Fuse
-  const dataArray = Object.values(datamonan).flatMap(items => items);
+  const dataArray = Object.values(datamonan).flatMap((items) => items);
 
   const fuse = new Fuse(dataArray, {
     keys: ["Name"],
   });
   const handleSearch = (text) => {
     setSearch(text);
-    const result = fuse.search(text).slice(0,4);
+    const result = fuse.search(text).slice(0, 4);
     setSearchResult(result);
-    console.log(text)
-    console.log(dataArray)
-    console.log(result)
-    console.log(datamonan)
   };
 
   const route = useRoute();
@@ -65,7 +61,11 @@ const Home = ({ navigation }) => {
           ></Image>
         </Pressable>
 
-        <Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("thongtincanhan", user);
+          }}
+        >
           <Image source={{ uri: user.img }} style={styles.img1} />
         </Pressable>
       </View>
@@ -104,6 +104,7 @@ const Home = ({ navigation }) => {
               <Pressable
                 onPress={() => {
                   navigation.navigate("dmctFood", { item: result.item });
+                  setSearch("");
                 }}
                 style={styles.khungsearch}
               >
@@ -117,7 +118,7 @@ const Home = ({ navigation }) => {
         )}
       </View>
 
-      <View style={styles.view2}>
+      {/* <View style={styles.view2}>
         <FlatList
           data={selected}
           horizontal={true}
@@ -137,7 +138,7 @@ const Home = ({ navigation }) => {
           )}
           keyExtractor={(item) => item.id}
         />
-      </View>
+      </View> */}
 
       <View style={styles.view2}>
         <Text style={styles.text2}>Công thức nấu mới : </Text>
@@ -223,14 +224,16 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   view2: {
-    marginTop: 20,
-    margin: 20,
+  
+   marginHorizontal:20
+   
   },
   view2_1: {
     marginTop: 10,
     flexDirection: "row",
-    margin: 20,
+   justifyContent:'center',
     alignItems: "center",
+   
   },
   view3: {
     margin: 16,
