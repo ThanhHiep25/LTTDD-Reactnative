@@ -11,8 +11,7 @@ import {
   ScrollView,
 } from "react-native";
 
-var url = "https://654460405a0b4b04436c4cda.mockapi.io/user";
-
+var url = "https://65557a0784b36e3a431dc70d.mockapi.io/comment";
 export const Comment = () => {
   const route = useRoute();
   const [state, setState] = useState([]);
@@ -22,8 +21,9 @@ export const Comment = () => {
   console.log('====================================');
   console.log(user);
   console.log('====================================');
-  useEffect(() => {
-    fetch("https://654460405a0b4b04436c4cda.mockapi.io/user")
+
+  const fetchData = () => {
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         console.log("====================================");
@@ -31,7 +31,11 @@ export const Comment = () => {
         console.log("====================================");
         setState(data);
       });
-  }, [state]);
+  };
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -55,9 +59,15 @@ export const Comment = () => {
                       onPress={() => {
                         var link = url + "/" + item.id;
                         fetch(link, {
-                          method: "DELETE",
-                        });
-                        setState(...state);
+                          method: "DELETE"
+                          
+                        })
+                        .then((data) => {
+                          console.log("====================================");
+                          console.log(data);
+                          console.log("====================================");
+                          fetchData()
+                        })
                       }}
                     >
                       <Image
@@ -95,7 +105,7 @@ export const Comment = () => {
             />
             <Pressable
               onPress={() => {
-                fetch("https://654460405a0b4b04436c4cda.mockapi.io/user", {
+                fetch(url, {
                   method: "POST",
                   body: JSON.stringify({
                     email: user.mail,
@@ -111,9 +121,9 @@ export const Comment = () => {
                     console.log("====================================");
                     console.log(data);
                     console.log("====================================");
+                    fetchData()
                   });
                 setComment("");
-                setState(...state);
               }}
             >
               <Image
