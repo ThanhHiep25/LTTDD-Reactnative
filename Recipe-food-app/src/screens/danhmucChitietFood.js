@@ -84,16 +84,6 @@ const dmctFood = ({ navigation, route }) => {
           source={require("../../assets/IMG/Lau/lau2.gif")}
           style={styles.img1}
         />
-
-        <Pressable
-          onPress={() => {
-            navigation.navigate("home");
-          }}
-        >
-          <View style={styles.iconhome}>
-            <Icon name="home" size={25} color="white" />
-          </View>
-        </Pressable>
       </View>
 
       <View style={styles.view2}>
