@@ -116,29 +116,6 @@ const Home = ({ navigation }) => {
           </ScrollView>
         )}
       </View>
-
-      <View style={styles.view2}>
-        <FlatList
-          data={selected}
-          horizontal={true}
-          scrollToOverflowEnabled={true}
-          renderItem={({ item }) => (
-            <View style={styles.view3}>
-              <View style={styles.PreSe}>
-                <Text style={styles.textPreSe}>{item.name}</Text>
-                <Pressable onPress={onDeletePress}>
-                  <Image
-                    source={require("../../assets/IMG/setting/delete1.png")}
-                    style={styles.imgDelete}
-                  />
-                </Pressable>
-              </View>
-            </View>
-          )}
-          keyExtractor={(item) => item.id}
-        />
-      </View>
-
       <View style={styles.view2}>
         <Text style={styles.text2}>Công thức nấu mới : </Text>
         <FlatList
@@ -221,10 +198,11 @@ const styles = StyleSheet.create({
   },
   view1: {
     margin: 20,
+    marginTop:0
   },
   view2: {
-    marginTop: 20,
     margin: 20,
+    marginTop:0
   },
   view2_1: {
     marginTop: 10,

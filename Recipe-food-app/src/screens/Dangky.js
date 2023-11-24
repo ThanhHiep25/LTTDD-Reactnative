@@ -20,12 +20,19 @@ const Dangky = () => {
   const [name, setName] = useState();
   const [img, setImg] = useState();
 
-  const handleCheck = () => {
-    const user = User.find((user) => user.email == mail);
-    if (user) {
-      showToast();
-    } else {
-      fetch(url, {
+  const handleCheck = async () => {
+  const user = User.find((user) => user.email == mail);
+  if (user) {
+    showToast("Email đã được sử dụng. Vui lòng sử dụng email khác.");
+  } else {
+    // Kiểm tra dữ liệu đầu vào
+    if (!name || !pass || !mail  || !ngay) {
+      showToast("Vui lòng điền đầy đủ thông tin");
+      return;
+    }
+
+    try {
+      const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
           name: name,
@@ -40,14 +47,23 @@ const Dangky = () => {
           "Content-type": "application/json; charset=UTF-8",
         },
       });
-      showToast("Đăng ký thành công");
-      setMail("");
-      setImg("");
-      setName("");
-      setNgay("");
-      setPass("");
+
+      // Kiểm tra phản hồi từ yêu cầu fetch
+      if (response.ok) {
+        showToast("Đăng ký thành công");
+        setMail("");
+        setImg("");
+        setName("");
+        setNgay("");
+        setPass("");
+      } else {
+        showToast("Đăng ký thất bại, vui lòng thử lại");
+      }
+    } catch (error) {
+      showToast("Có lỗi xảy ra, vui lòng thử lại");
     }
-  };
+  }
+};
   const showToast = (message) => {
     Toast.show({
       type: "error",

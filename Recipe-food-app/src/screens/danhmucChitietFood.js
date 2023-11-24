@@ -195,8 +195,8 @@ const styles = StyleSheet.create({
   },
   iconback: {
     //flexDirection: 'row',
-    marginLeft: 10,
     marginTop: 10,
+    marginBottom:10,
     alignItems: "center",
     backgroundColor: "orange",
     borderRadius: 50,
@@ -290,10 +290,10 @@ const styles = StyleSheet.create({
   },
   v3: {
     marginTop: 25,
-    marginRight: 100,
+    margin: 20,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     //paddingHorizontal: 50, // điều chỉnh giá trị này để tăng khoảng cách
   },
   text1: {
@@ -301,27 +301,27 @@ const styles = StyleSheet.create({
     fontFamily: "Arial",
     fontWeight: 700,
     color: "#FF9900",
-    marginLeft: 45,
+    
   },
-  testdes1: {
+  textdes1: {
     fontFamily: 'Arial',
     fontSize: 16,
-    //marginLeft: 15,
-    //paddingHorizontal: 20,
-    //marginVertical: 16,
+    margin:10,
+    textAlign:"justify"
   },
   text2: {
     fontFamily: 'Arial',
     fontSize: 18,
     fontWeight: 700,
     color: "#64CA25",
-    marginLeft: 45,
+    
   },
-  testdes2: {
+  textdes2: {
     fontFamily: 'Arial',
     fontSize: 16,
     marginLeft: 10,
-    //paddingHorizontal: 20,
+    margin:10,
+    textAlign:"justify"
   },
   viewvideo: {
     marginTop: 10,
